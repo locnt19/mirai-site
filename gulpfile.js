@@ -168,7 +168,7 @@ gulp.task('serve', function () {
 			gulp.parallel('globalJs', 'globalCss')
 		),
 		gulp.watch([
-				'./src/img/**/**.{svg,gif,png,jpg,jpeg}'
+				'./src/assets/**/**.{svg,gif,png,jpg,jpeg}'
 			],
 			gulp.series('cleanImages', 'copyImages')
 		),
