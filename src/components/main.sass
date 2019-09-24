@@ -1,7 +1,49 @@
 @import "stylesheet/_mixins.sass"
 @import "header/index.sass"
 @import "footer/index.sass"
+
+
+$title-color: #007DC6
+$main-color: #38A8D9
+$text-color: #666666
+$second-color: #00B1FF
+$third-color: #A5EBFF
+$fourth-color: #ECFBFF
+$fifth-color: #DDDDDD
+
+
 body
 	font-family: 'Darker Grotesque', sans-serif
-	color: #666
+	color: $text-color
 	font-weight: 500
+	font-size: 16px
+a
+	text-decoration: none
+.title
+	font-weight: 900
+	font-size: 28px
+	line-height: 1.5
+	text-transform: uppercase
+	color: $title-color
+.sub-title
+	font-weight: 700
+	font-size: 24px
+	text-transform: uppercase
+@media (max-width: 991.97px)
+	body
+		font-size: 15px
+	.title
+		font-size: 24px
+	.sub-title
+		font-size: 18px
+@media (max-width: 767.97px)
+	body
+		font-size: 14px
+	.title
+		font-size: 18px
+	.sub-title
+		font-size: 16px
+
+@import "home-banner/index.sass"
+@import "viec-lam/index.sass"
+@import "thong-ke/index.sass"

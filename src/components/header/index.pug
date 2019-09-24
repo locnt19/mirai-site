@@ -1,1 +1,50 @@
-header Header
+header
+	.header-top
+		.container
+			.row
+				.header-top-inner
+					.header-left
+						p
+							span.mdi.mdi-email
+							span Email: contact@miraihuman.com
+						p
+							span.mdi.mdi-phone
+							span Hotline: 0902 538 164
+					.header-logo
+						a(href="/")
+							img(src="img/logo-header.png", alt="logo-desktop")
+							img(src="img/logo.png", alt="logo-mobile")
+					.header-right
+						form.search-box(action="", method="get")
+							input(type="text" placeholder="Tìm kiếm...")
+							button(type="submit").mdi.mdi-magnify
+						.language-bar
+							a(href="/")
+								img(src="img/flag-jp.png", alt="jp")
+							a(href="/")
+								img(src="img/flag-vn.png", alt="vn")
+	.header-bottom
+		.container
+			.row
+				.col-12(style="display:flex")
+					.toggle-menu
+						span
+						span
+						span
+						span
+						span
+						span
+				.header-bottom-inner
+					nav.navbar-left
+						a(href="/").active
+							span.mdi.mdi-home
+							span TRANG CHỦ
+						a(href="/") GIỚI THIỆU
+						a(href="/") LIÊN HỆ
+						a(href="/") TIN TỨC
+						a(href="/") HỎI ĐÁP
+					nav.navbar-right
+						a(href="/") THỰC TẬP SINH
+						a(href="/") KỸ SƯ VIỆT - NHẬT
+						a(href="/") DU HỌC SINH
+						a(href="/") ĐÀO TẠO

@@ -1,0 +1,80 @@
+section.viec-lam
+	.container
+		.row
+			.col-12.viec-lam-title
+				h2.title việc làm mirai
+				nav.viec-lam-tabs
+					li(tabs="tai-nhat-ban") tại nhật bản
+					li(tabs="ky-su-thong-dich-vien") kỹ sư & thông dịch viên
+					li(tabs="dieu-duong-ho-ly").active hộ lý - điều dưỡng
+			.col-12.tabs-content
+				.row.content-header
+					.col-md-6 VỊ TRÍ
+					.col-4.col-md-2 NHẬT NGỮ
+					.col-4.col-md-2 MỨC LƯƠNG
+					.col-4.col-md-2 ĐỊA ĐIỂM
+				.tabs-content-wrap(tabs="tai-nhat-ban")
+					-for(i = 0; i < 8; i++)
+						.row.content-item
+							.col-md-6.hot
+								a(href="/") [tabs tai nhat ban] 1 NAM - CHẾ TẠO KIM LOẠI TẤM DÙNG TRONG XÂY DỰNG
+							.col-4.col-md-2 không
+							.col-4.col-md-2 35~40tr
+							.col-4.col-md-2
+								a(href="/") hiroshima
+				.tabs-content-wrap(tabs="dieu-duong-ho-ly").active
+					-for(i = 0; i < 8; i++)
+						.row.content-item
+							.col-md-6.hot
+								a(href="/") [tabs dieu duong ho ly] 1 NAM - CHẾ TẠO KIM LOẠI TẤM DÙNG TRONG XÂY DỰNG
+							.col-4.col-md-2 không
+							.col-4.col-md-2 35~40tr
+							.col-4.col-md-2
+								a(href="/") hiroshima
+				.tabs-content-wrap(tabs="ky-su-thong-dich-vien")
+					.row.content-item
+						.col-md-6.hot
+							a(href="/") [tabs ky-su-thong-dich-vien] [ THỰC TẬP SINH NHẬT BẢN ] 1 NAM - CHẾ TẠO KIM LOẠI TẤM DÙNG TRONG XÂY DỰNG
+						.col-4.col-md-2 không
+						.col-4.col-md-2 35~40tr
+						.col-4.col-md-2
+							a(href="/") hiroshima
+					-for(i = 0; i < 6; i++)
+						.row.content-item
+							.col-md-6
+								a(href="/") [tabs ky-su-thong-dich-vien] TUYỂN 12 NỮ ĐIỀU DƯỠNG
+							.col-4.col-md-2 không
+							.col-4.col-md-2 35~40tr
+							.col-4.col-md-2
+								a(href="/") hiroshima
+					.row.content-item
+						.col-md-6.new
+							a(href="/") [tabs ky-su-thong-dich-vien] 12 ~ 13 NAM - CHẾ TẠO KIM LOẠI TẤM DÙNG TRONG XÂY DỰNG
+						.col-4.col-md-2 không
+						.col-4.col-md-2 35~40tr
+						.col-4.col-md-2
+							a(href="/") hiroshima
+				.row.content-bottom
+					.col-lg-7.col-xl-6.bottom-left
+						p THÔNG TIN LIÊN LẠC:
+						.info
+							p
+								span.mdi.mdi-email
+								span Email: contact@miraihuman.com
+							p
+								span.mdi.mdi-phone
+								span Hotline: 0902 538 164
+					.col-lg-5.col-xl-6.bottom-right
+						.tabs-pagination
+							a(href="/").first-page.isDisabled
+								span.mdi.mdi-chevron-double-left
+							a(href="/").back-page.isDisabled
+								span.mdi.mdi-chevron-left
+							a(href="/").current-page 1
+							a(href="/") 2
+							a(href="/") 3
+							a(href="/").next-page
+								span.mdi.mdi-chevron-right
+							a(href="/").last-page
+								span.mdi.mdi-chevron-double-right
+							a(href="/").see-all Xem tất cả

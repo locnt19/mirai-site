@@ -1,0 +1,186 @@
+.viec-lam
+	padding: 30px 0
+.viec-lam-title
+	display: flex
+	justify-content: space-between
+	align-items: flex-end
+	box-shadow: 0 1px 0 0 $second-color
+.viec-lam-tabs
+	margin-right: -15px
+	li
+		display: inline-block
+		list-style: none
+		text-transform: uppercase
+		font-weight: 600
+		line-height: 30px
+		padding: 0 15px
+		position: relative
+		cursor: pointer
+		&:before
+			background: url('../img/Path 30.png')
+			width: 15px
+			height: 30px
+			position: absolute
+			left: -15px
+			top: 0
+		&:not(:first-child)
+			margin-left: 10px
+		&.active,
+		&:hover
+			color: #fff
+			background: $second-color
+			&:before
+				content: ''
+.content-header
+	margin-top: 10px
+	line-height: 40px
+	font-weight: 700
+	text-align: center
+	background: $third-color
+	color: $title-color
+	div:first-child
+		text-align: left
+.tabs-content-wrap
+	&:not(.active)
+		display: none
+.content-item
+	text-transform: uppercase
+	padding: 12px 0
+	color: $title-color
+	align-items: center
+	text-align: center
+	div:first-child
+		text-align: left
+	a
+		&:visited
+			color: $title-color
+	.hot,
+	.new
+		position: relative
+		&:after
+			text-transform: lowercase
+			content: 'hot'
+			font-weight: 900
+			color: red
+			font-size: 14px
+			position: absolute
+			margin-left: 2px
+			bottom: 5px
+	.new
+		&:after
+			content: 'new'
+	.col-6
+		text-align: left
+	&:nth-child(even)
+		background: $fourth-color
+	&:hover
+		z-index: 1
+		box-shadow: 0 0 5px 1px rgba(0,0,0,.3)
+.content-bottom
+	margin-top: 10px
+	box-shadow: 0 -1px 0 0 $second-color
+	.bottom-left
+		color: #fff
+		line-height: 30px
+		background: $second-color
+		display: flex
+		justify-content: space-between
+		position: relative
+		&:after
+			content: ''
+			background: url('../img/Path 31.png')
+			width: 15px
+			height: 30px
+			position: absolute
+			right: -15px
+			top: 0
+		.info
+			display: flex
+			align-items: center
+			position: relative
+			p:nth-child(2)
+					margin-left: 10px
+			span
+				&.mdi
+					position: absolute
+				&:nth-child(2)
+					margin-left: 20px
+	.bottom-right
+		padding-right: 0
+	.tabs-pagination
+		display: flex
+		align-items: center
+		justify-content: flex-end
+		a
+			line-height: 30px
+			display: block
+			margin: 0 10px
+			&:last-child
+				margin-right: 0
+			&.isDisabled
+				color: $fifth-color
+				pointer-events: none
+			&.current-page
+				position: relative
+				color: #fff
+				&:before
+					content: ''
+					z-index: -1
+					width: 20px
+					height: 20px
+					background: url('../img/Polygon 1.png')
+					position: absolute
+					top: 50%
+					left: 50%
+					transform: translate(-50%, -50%)
+@media (max-width: 991.97px)
+	.content-bottom
+			.bottom-left
+				&:after
+					content: none
+			.bottom-right
+				padding-right: 15px
+			.tabs-pagination
+				justify-content: center
+@media (max-width: 767.97px)
+	.viec-lam
+		padding: 15px 0
+	.viec-lam-title
+		flex-direction: column
+		.title
+			margin: 0 auto 15px
+	.content-header
+		div:first-child
+			text-align: center
+	.content-item
+		div:first-child
+			text-align: center
+			margin-bottom: 10px
+@media (max-width: 575.97px)
+	.viec-lam-tabs
+		margin: 0
+		width: 100%
+		display: flex
+		overflow-x: scroll
+		margin-bottom: 10px
+		padding-left: 15px
+		padding-bottom: 5px
+		&::-webkit-scrollbar
+				height: 5px
+		&::-webkit-scrollbar-track
+				background: #E5E5E5
+		&::-webkit-scrollbar-thumb
+				border-radius: 99px
+				background: rgb(0, 72, 146,.3)
+		li
+			white-space: nowrap
+	.content-bottom
+		.bottom-left
+			display: block
+			.info
+				display: block
+				p
+					margin: 0 !important
+		.bottom-right
+			padding-right: 15px
+			margin-top: 10px
