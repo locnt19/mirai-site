@@ -2,27 +2,62 @@ $(document).ready(function () {
 	// all script write here
 
 	// Slider
-	var homeBanner = new Swiper('.swiper-container', {
+	var homeBanner = new Swiper('.home-banner .swiper-container', {
 		loop: true,
-		// Effect
 		effect: 'coverflow',
-		grabCursor: true,
+		speed: 1500,
+		lazy: true,
 		coverflowEffect: {
 			rotate: 50,
 			stretch: 0,
 			depth: 100,
 			modifier: 1,
-			slideShadows : true,
-		},
-		// Navigation arrows
-		navigation: {
-			nextEl: '.btn-prev',
-			prevEl: '.btn-next',
+			slideShadows: true,
 		},
 		pagination: {
-			el: '.pagination',
+			el: '.home-banner .pagination',
+			clickable: true
 		},
-		
+	});
+	var hoatDongMirai = new Swiper('.hoat-dong-mirai .swiper-container', {
+		slidesPerView: 2,
+		spaceBetween: 30,
+		loop: true,
+		centeredSlides: true,
+		autoplay: {
+			delay: 2000,
+			disableOnInteraction: false,
+		},
+		lazy: true,
+		speed: 1500,
+		breakpoints: {
+			576: {
+				slidesPerView: 1
+			}
+		},
+		pagination: {
+			el: '.hoat-dong-mirai .pagination',
+			clickable: true
+		},
+	});
+	var camNhanHocVien = new Swiper('.cam-nhan-hoc-vien .swiper-container', {
+		slidesPerView: 2,
+		spaceBetween: 30,
+		loop: true,
+		autoplay: {
+			delay: 3000,
+			disableOnInteraction: false,
+		},
+		speed: 3000,
+		breakpoints: {
+			767.97: {
+				slidesPerView: 1
+			}
+		},
+		pagination: {
+			el: '.cam-nhan-hoc-vien .pagination',
+			clickable: true,
+		},
 	});
 
 	// Resposive
@@ -50,5 +85,26 @@ $(document).ready(function () {
 			}
 		})
 	})
-	
+
+
+	// back-2-top
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 100) {
+			$('.btn-back-2-top').fadeIn()
+		}
+		else $('.btn-back-2-top').fadeOut()
+	})
+	$('.btn-back-2-top').click(function () {
+		$('html, body').animate({ scrollTop: 0 }, 1000);
+		return false;
+	})
+
+
+	// stuff-hoi-dap
+	$('.toggle-stuff').click(function () {
+		$('.stuff-hoi-dap').toggleClass('active')
+	})
+
+
+
 });

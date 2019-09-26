@@ -1,0 +1,74 @@
+.contact-now
+	.btn-contact-now
+		z-index: 100
+		width: 60px
+		height: 60px
+		position: fixed
+		background: #FF0000
+		border-radius: 99px
+		bottom: 50%
+		transform: translateY(-50%)
+		right: 15px
+		cursor: pointer
+		animation: pulse 1.5s infinite
+		&:before
+			color: #fff
+			position: absolute
+			font-size: 30px
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			content: '\F3F6'
+			display: inline-block
+			font-family: 'Material Design Icons'
+			text-rendering: auto
+			line-height: 1
+			-webkit-font-smoothing: antialiased
+			-moz-osx-font-smoothing: grayscale
+		&:after
+			position: absolute
+			content: ''
+			border-radius: 50%
+			z-index: -2
+			background: #FF0000
+			width: 60px
+			height: 60px
+			top: 0
+			left: 0
+			animation: circle-animation 3s infinite
+@media (max-width: 575.97px)
+	.contact-now
+		.btn-contact-now
+			width: 40px
+			height: 40px
+			&:before
+				font-size: 24px
+			&:after
+				width: 40px
+				height: 40px
+@keyframes pulse
+	0%
+		transform: scale(1) rotate(10deg)
+	25%
+		transform: scale(1.1) rotate(0)
+	50% 
+		transform: scale(1) rotate(-10deg)
+	75%
+		transform: scale(1) rotate(0deg)
+	100%
+		transform: scale(1) rotate(10deg)
+@keyframes circle-animation
+	0%
+		opacity: .8
+	25% 
+		transform: scale(1.2)
+		opacity: .6
+	50% 
+		transform: scale(1.4)
+		opacity: .4
+	75% 
+		transform: scale(1.6)
+		opacity: .2
+	100% 
+		transform: scale(1.8)
+		opacity: .0

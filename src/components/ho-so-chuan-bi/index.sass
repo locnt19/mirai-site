@@ -1,0 +1,56 @@
+.ho-so-chuan-bi
+	padding: 60px 0
+	.ho-so-inner
+		display: flex
+		align-items: center
+	.title
+		white-space: nowrap
+	.left
+		text-align: center
+		position: relative
+	.content
+		color: $title-color
+		font-size: 24px
+		line-height: 1.5
+	.bulkhead
+		margin-right: 70px
+		width: 20px
+		height: 100%
+		border-radius: 100%
+		background: #ffffff
+		box-shadow: 7px 0 6px 0 rgba(0,0,0,.15)
+		transform: rotate(30deg) translateX(10px)
+	.right
+		width: 100%
+	.mdi
+		&:before
+			color: $title-color
+			position: absolute
+			left: 0
+			top: 2px
+	.item
+		color: $eighth-color
+		line-height: 1.5
+		position: relative
+		margin-bottom: 10px
+		span, p
+			padding-left: 20px
+@media (max-width: 1199.97px)
+	.ho-so-chuan-bi
+		.bulkhead
+			margin: 0 90px 0 15px
+@media (max-width: 991.97px)
+	.ho-so-chuan-bi
+		.ho-so-inner
+			flex-direction: column
+		.left
+			margin: 0
+		.content
+			font-size: 20px
+		.bulkhead
+			display: none
+		.right
+			margin-top: 15px
+@media (max-width: 767.97px)
+		.content
+			font-size: 16px
