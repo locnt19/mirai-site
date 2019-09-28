@@ -9,10 +9,6 @@ $sixth-color: #E1E1E1
 $seventh-color: #F1F1F1
 $eighth-color: #B9B9B9
 
-@import "stylesheet/_mixins.sass"
-@import "header/index.sass"
-@import "footer/index.sass"
-
 body
 	font-family: 'Darker Grotesque', sans-serif
 	color: $text-color
@@ -30,6 +26,10 @@ a
 	font-weight: 700
 	font-size: 24px
 	text-transform: uppercase
+.color-title
+	color: $title-color
+.fw-700
+	font-weight: 700
 .text-center
 	text-align: center
 .see-more
@@ -46,6 +46,109 @@ a
 		-webkit-font-smoothing: antialiased
 		-moz-osx-font-smoothing: grayscale
 		transform: translate(25%,25%)
+.hot,
+.new
+	position: relative
+	&:after
+		text-transform: lowercase
+		content: 'hot'
+		font-weight: 900
+		color: red
+		font-size: 14px
+		position: absolute
+		margin-left: 2px
+		bottom: 5px
+.new
+	&:after
+		content: 'new'
+.tabs-pagination
+	display: flex
+	align-items: center
+	justify-content: flex-end
+	a
+		line-height: 30px
+		display: block
+		margin: 0 10px
+		color: $text-color
+		&:last-child
+			margin-right: 0
+		&.isDisabled
+			color: $fifth-color
+			pointer-events: none
+		&.current-page
+			position: relative
+			color: #fff
+			&:before
+				content: ''
+				z-index: -1
+				width: 20px
+				height: 20px
+				background: url('../img/Polygon 1.png')
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+.posted
+	margin-top: 7px
+	padding-left: 15px
+	font-size: 12px
+	position: relative
+	&:before
+		content: '\F150'
+		display: inline-block
+		font-family: 'Material Design Icons'
+		font-size: inherit
+		text-rendering: auto
+		line-height: 1
+		-webkit-font-smoothing: antialiased
+		-moz-osx-font-smoothing: grayscale
+		position: absolute
+		top: 0
+		left: 0
+.line
+	margin: 30px 0 10px
+	height: 2px
+	background: $seventh-color
+.navbar-center
+	margin: 15px 0 30px
+	display: flex
+	align-items: center
+	justify-content: center
+	a
+		color: $text-color
+	li
+		list-style: none
+		background: $seventh-color
+		padding: 10px 15px
+		text-transform: uppercase
+		font-weight: 700
+		transition: all .1s ease-in-out
+		&:not(:first-child)
+			margin-left: 2px
+		&.active, &:hover
+			background: $title-color
+			a
+				color: #fff
+.form-item
+	width: 100%
+	margin-bottom: 15px
+	label
+		color: $title-color
+	input, textarea
+		margin-top: 7px
+		width: 100%
+		padding: 8px 15px
+		background: $seventh-color
+		border: 1px solid $eighth-color
+		border-radius: 4px
+		font-family: Darker Grotesque,sans-serif
+		font-weight: 700
+		color: $title-color
+		&::placeholder
+			color: $eighth-color
+			font-weight: 400
+	textarea
+		height: 150px
 @media (max-width: 991.97px)
 	body
 		font-size: 15px
@@ -53,6 +156,8 @@ a
 		font-size: 24px
 	.sub-title
 		font-size: 18px
+	.tabs-pagination
+		justify-content: center
 @media (max-width: 767.97px)
 	body
 		font-size: 14px
@@ -60,7 +165,19 @@ a
 		font-size: 18px
 	.sub-title
 		font-size: 16px
+	.navbar-center
+		flex-wrap: wrap
+		margin-bottom: 15px
+		li
+			margin-bottom: 2px
 
+
+@import "stylesheet/_mixins.sass"
+@import "header/index.sass"
+@import "footer/index.sass"
+
+
+// home page
 @import "home-banner/index.sass"
 @import "don-hang-noi-bat/index.sass"
 @import "viec-lam/index.sass"
@@ -76,3 +193,34 @@ a
 @import "back-2-top/index.sass"
 @import "contact-now/index.sass"
 @import "stuff-hoi-dap/index.sass"
+
+
+// about page
+@import "banner/index.sass"
+@import "breadcrumb/index.sass"
+@import "gioi-thieu/index.sass"
+@import "viec-lam-mirai/index.sass"
+
+
+// hoi-dap page
+@import "hoi-dap/index.sass"
+
+
+// news page
+@import "news/index.sass"
+
+
+// news-detail
+@import "news-detail/index.sass"
+
+
+// hinh-anh, video page
+@import "media/index.sass"
+
+
+// contact page
+@import "contact/index.sass"
+
+
+// tuyen-dung page
+@import "tuyen-dung/index.sass"

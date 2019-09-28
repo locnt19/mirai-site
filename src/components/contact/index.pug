@@ -1,0 +1,44 @@
+section.contact
+	.container
+		.text-center
+			h2.title liên hệ
+			p Quý khách vui lòng điền thông tin vào mẫu bên dưới và gửi những góp ý, thắc mắc cho Mirai Human.
+			p Chúng tôi sẽ phản hồi email của quý khách trong thời gian sớm nhất.
+		.row
+			.col-md-3.padding-0
+				.contact-wrap
+					.item
+						h3.item-title trụ sở chính
+						p.mdi.mdi-map-marker 26/4 - 26/5 Lê Thánh Tôn, P. Bến Nghé, Quận 1, HCM, Việt Nam
+						p.mdi.mdi-phone (+84) 6686 3208
+					.item
+						h3.item-title TRUNG TÂM ĐÀO TẠO
+						p.mdi.mdi-map-marker 155 Trần Trọng Cung, P. Tân Thuận Đông, Quận 7, HCM, Việt Nam
+						p.mdi.mdi-phone (+84) 6686 3208
+					.item
+						h3.item-title văn phòng tại nhật
+						p.mdi.mdi-map-marker 〒141-0021 Tokyouto Shinagawaku Kamioosaki 2 Choume 13 Ban 32 Gou Tomita Biru 401
+						p.mdi.mdi-phone (+84) 6686 3208
+			.col-md-9
+				.maps
+					iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.885689624953!2d106.73300971417142!3d10.74329256274364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175257802175f77%3A0xc66eb0394d7b9fcb!2sMirai%20Human!5e0!3m2!1svi!2s!4v1569634429025!5m2!1svi!2s" frameborder="0" style="border:0;" allowfullscreen="")
+					//- iframe(src="https://www.google.com/maps/d/u/0/embed?mid=1cJfGRXlcv8t2B_BDpL82zLvoxn9XeUMW")
+			.col-12
+				form(method="post").row.contact-form
+					.form-item.col-md-6
+						label(for="name") Họ và tên
+						input(type="text" id="name" placeholder="Nhập họ và tên")
+					.form-item.col-md-6
+						label(for="email") Email
+						input(type="text" id="email" placeholder="exemple@email.com")
+					.form-item.col-md-6
+						label(for="title") Tiêu đề
+						input(type="text" id="title" placeholder="Nhập tiêu đề")
+					.form-item.col-md-6
+						label(for="phone") Số điện thoại
+						input(type="text" id="phone" placeholder="Nhập Số điện thoại")
+					.form-item.col-12
+						label(for="content") Nội dung
+						textarea(id="content" placeholder="Nhập nội dung...")
+					.col-12(style="text-align: right")
+						input(type="submit", value="GỬI").contact-send

@@ -1,0 +1,120 @@
+.gioi-thieu
+	padding: 0 0 30px
+	line-height: 1.5
+	.text-center
+		margin-bottom: 30px
+		order: -1
+	.logo
+		img
+			width: 100%
+	.img-wrap
+		margin-top: 20px
+		margin-bottom: 30px
+		img
+			width: 100%
+	.gioi-thieu-content
+		display: flex
+		flex-wrap: wrap
+		margin-top: 30px
+		justify-content: space-between
+	.item
+		display: flex
+		flex: 0 0 45%
+		max-width: 45%
+		margin-bottom: 30px
+	.item-content
+		margin-left: 15px
+		h4
+			line-height: 1
+			font-weight: 600
+			color: $title-color
+			text-transform: uppercase
+	.hexagon
+		flex: 0 0 55px
+		max-width: 55px
+		height: 50px
+		position: relative
+		span
+			z-index: 1
+			font-size: 28px
+			color: $title-color
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 55px
+			height: 50px
+			z-index: -1
+			background: url('../img/hexagon.png') no-repeat
+	.sck
+		margin-top: 30px
+		display: flex
+		align-items: center
+		justify-content: space-around
+		img
+			width: 200px
+	.sidebar-right
+		a
+			color: $text-color
+		li
+			line-height: 1
+			list-style: none
+			padding: 17px 15px
+			background: #FAFAFA
+			&:not(:first-child)
+				border-top: 1px solid #fff
+			&.active, &:hover
+				border-left: 4px solid $third-color
+				a
+					font-weight: 900
+	.contact-us
+		padding: 15px
+		background: $third-color
+		h3
+			color: $title-color
+			font-weight: 900
+			font-size: 18px
+		.btn-contact
+			display: inline-block
+			background: $title-color
+			padding: 8px 15px
+			color: #fff
+			border-radius: 4px
+			font-weight: 700
+			margin: 15px 0
+@media (max-width: 991.97px)
+	.gioi-thieu
+		.sck
+			img
+				width: 150px
+@media (max-width: 767.97px)
+	.gioi-thieu
+		.text-center
+			margin-bottom: 15px
+		.logo
+			width: 150px
+			margin: 0 auto 15px
+		.img-wrap
+			margin: 15px 0
+		.gioi-thieu-content
+			margin-top: 15px
+		.item
+			flex: 0 0 100%
+			max-width: 100%
+			margin-bottom: 15px
+		.sck
+			margin-top: 0
+			img
+				width: 100px
+		.sidebar-right
+			margin-top: 30px
+@media (max-width: 575.97px)
+	.gioi-thieu
+		.sck
+			img
+				width: 50px

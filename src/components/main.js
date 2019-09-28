@@ -1,9 +1,21 @@
 $(document).ready(function () {
 	// all script write here
 
+	// back-2-top
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 100) {
+			$('.btn-back-2-top').fadeIn()
+		} else $('.btn-back-2-top').fadeOut()
+	})
+	$('.btn-back-2-top').click(function () {
+		$('html, body').animate({
+			scrollTop: 0
+		}, 1000);
+	})
+
 	// Slider
 	var homeBanner = new Swiper('.home-banner .swiper-container', {
-		loop: true,
+		// loop: true,
 		effect: 'coverflow',
 		speed: 1500,
 		lazy: true,
@@ -87,24 +99,24 @@ $(document).ready(function () {
 	})
 
 
-	// back-2-top
-	$(window).scroll(function () {
-		if ($(this).scrollTop() > 100) {
-			$('.btn-back-2-top').fadeIn()
-		}
-		else $('.btn-back-2-top').fadeOut()
-	})
-	$('.btn-back-2-top').click(function () {
-		$('html, body').animate({ scrollTop: 0 }, 1000);
-		return false;
-	})
-
-
 	// stuff-hoi-dap
 	$('.toggle-stuff').click(function () {
 		$('.stuff-hoi-dap').toggleClass('active')
 	})
 
+	$('.hoi-dap .item-title').click(function () {
+		$(this).parent().toggleClass('active');
+		$(this).siblings('.item-content').slideToggle();
+	})
 
-
+	// tuyen-dung-popup
+	$('.tuyen-dung .btn-so-yeu-li-lich').click(function () {
+		$('.tuyen-dung-popup').addClass('active')
+		$('.tuyen-dung-popup-background').addClass('active')
+	})
+	// close popup
+	$('.tuyen-dung-popup .mdi-close').click(function () {
+		$('.tuyen-dung-popup').removeClass('active')
+		$('.tuyen-dung-popup-background').removeClass('active')
+	})
 });

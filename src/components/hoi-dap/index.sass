@@ -1,0 +1,71 @@
+.hoi-dap
+	padding: 15px 0
+	.sidebar
+		li
+			list-style: none
+			background: $seventh-color
+			padding: 15px
+			line-height: 1
+			cursor: pointer
+			&:not(:first-child)
+				border-top: 1px solid #fff
+			&.active, &:hover
+				border-left: 4px solid $third-color
+				font-weight: 700
+	.hoi-dap-content
+		counter-reset: item
+	.sub-title
+		margin-bottom: 15px
+		text-transform: none
+		color: $title-color
+	.item
+		&.active
+			.item-title
+				box-shadow: 0 1px 0 0 $seventh-color
+				font-weight: 700
+				color: $title-color
+				&:before, &:after
+					color: $title-color
+				&:after
+					transform: scaleY(-1) translateY(50%)
+	.item-title
+		position: relative
+		cursor: pointer
+		padding: 15px
+		padding-left: 60px
+		padding-right: 30px
+		border-top: 1px solid $seventh-color
+		user-select: none
+		&:before
+			font-family: 'Lobster', cursive
+			color: #C9C9C9
+			font-size: 30px
+			counter-increment: item
+			content: counter(item, decimal-leading-zero)
+			position: absolute
+			top: 50%
+			left: 15px
+			transform: translateY(-50%)
+		&:after
+			font-size: initial
+			content: '\F140'
+			display: inline-block
+			font-family: 'Material Design Icons'
+			text-rendering: auto
+			line-height: 1
+			-webkit-font-smoothing: antialiased
+			-moz-osx-font-smoothing: grayscale
+			position: absolute
+			top: 50%
+			right: 15px
+			transform: translateY(-50%)
+	.item-content
+		line-height: 1.5
+		padding: 15px
+		padding-bottom: 30px
+		display: none
+@media (max-width: 767.97px)
+	.hoi-dap
+		padding-top: 0
+		.hoi-dap-content
+			margin-top: 15px

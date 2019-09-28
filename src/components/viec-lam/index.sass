@@ -53,21 +53,6 @@
 		text-align: left
 	a
 		color: $title-color
-	.hot,
-	.new
-		position: relative
-		&:after
-			text-transform: lowercase
-			content: 'hot'
-			font-weight: 900
-			color: red
-			font-size: 14px
-			position: absolute
-			margin-left: 2px
-			bottom: 5px
-	.new
-		&:after
-			content: 'new'
 	.col-6
 		text-align: left
 	&:nth-child(even)
@@ -106,33 +91,6 @@
 					margin-left: 20px
 	.bottom-right
 		padding-right: 0
-	.tabs-pagination
-		display: flex
-		align-items: center
-		justify-content: flex-end
-		a
-			line-height: 30px
-			display: block
-			margin: 0 10px
-			color: $text-color
-			&:last-child
-				margin-right: 0
-			&.isDisabled
-				color: $fifth-color
-				pointer-events: none
-			&.current-page
-				position: relative
-				color: #fff
-				&:before
-					content: ''
-					z-index: -1
-					width: 20px
-					height: 20px
-					background: url('../img/Polygon 1.png')
-					position: absolute
-					top: 50%
-					left: 50%
-					transform: translate(-50%, -50%)
 @media (max-width: 991.97px)
 	.content-bottom
 			.bottom-left
@@ -140,8 +98,6 @@
 					content: none
 			.bottom-right
 				padding-right: 15px
-			.tabs-pagination
-				justify-content: center
 @media (max-width: 767.97px)
 	.viec-lam
 		padding: 15px 0

@@ -1,0 +1,55 @@
+.contact
+	padding-bottom: 30px
+	.text-center
+		margin-bottom: 30px
+		p
+			line-height: 1.5
+	.item
+		background: #FAFAFA
+		padding: 15px
+		margin-bottom: 1px
+		p
+			position: relative
+			line-height: 1.5
+			padding-left: 20px
+			&:before
+				position: absolute
+				top: 2px
+				left: 0
+	.item-title
+		cursor: pointer
+		margin-bottom: 10px
+		font-size: 20px
+		font-weight: 700
+		color: $title-color
+		text-transform: uppercase
+	.maps
+		height: 100%
+		iframe
+			width: 100%
+			height: 100%
+	.contact-form
+		margin-top: 30px
+	.contact-send
+		padding: 10px 40px
+		background: $title-color
+		color: #ffffff
+		font-weight: 700
+		border: none
+		border-radius: 4px
+@media (max-width: 767.97px)
+	.contact
+		.contact-wrap
+			margin-bottom: 15px
+		.maps
+			iframe
+				height: 300px
+@media (max-width: 575.97px)
+	.contact
+		.maps
+			iframe
+				height: 200px
+@media (min-width: 768px)
+	.contact
+		.padding-0
+			padding: 0

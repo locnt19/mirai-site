@@ -1,0 +1,43 @@
+.hinh-anh
+	padding: 0 0 60px
+	.hinh-anh-wrap
+		margin-top: 15px
+		columns: 4
+		column-gap: 15px
+	.img-wrap
+		width: 100%
+		margin-bottom: 15px
+		overflow: hidden
+		break-inside: avoid
+		padding: 10px
+		border: 1px solid $text-color
+		background: #fff
+		img
+			max-width: 100%
+	.see-more
+		margin-top: 30px
+		position: relative
+		left: 50%
+		transform: translateX(-50%)
+		&:after
+			content: '\F045'
+@media (max-width: 991.97px)
+	.hinh-anh
+		.hinh-anh-wrap
+			columns: 3
+@media (max-width: 767.97px)
+	.hinh-anh
+		padding: 20px 0 70px
+		.hinh-anh-wrap
+			columns: 2
+		.see-more
+			margin-top: 10px
+@media (max-width: 575.97px)
+	.hinh-anh
+		padding: 0 0 30px
+		.hinh-anh-wrap
+			columns: 2
+			column-gap: 10px
+		.img-wrap
+			padding: 7px
+			margin-bottom: 10px
