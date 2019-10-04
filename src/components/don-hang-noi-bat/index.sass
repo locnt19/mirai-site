@@ -4,6 +4,7 @@
 		font-size: 20px
 		line-height: 35px
 		text-align: center
+		font-weight: 600
 		&-1
 			color: #364B44
 			background: #55efc4
@@ -20,15 +21,50 @@
 		line-height: 1.5
 		margin-top: 30px
 		overflow: hidden
+		&:hover
+			transition: transform .25s ease-in-out
+			margin-bottom: 0
+			box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3)
+			transform: translateY(-5px)
+			.item-content
+				box-shadow: 0 0px 2px 0px rgba(0,0,0,.3)
+				.parallelogram
+					&:before
+						left: -180%
+			&.item-1
+				.item-content
+					background: rgba(#55efc4, .15)
+			&.item-2
+				.item-content
+					background: rgba(#ffeaa7, .15)
+			&.item-3
+				.item-content
+					background: rgba(#ff7675, .15)
+			&.item-4
+				.item-content
+					background: rgba(#fffa65, .15)
 	.item-content
 		padding: 15px
+		box-shadow: inset 0 0 3px 0 rgba(0,0,0,.3)
 	.parallelogram
-		margin-top: 15px
-		width: 90%
+		width: 100%
 		height: 150px
 		transform: skew(-20deg)
 		overflow: hidden
 		margin: 0 auto
+		margin-top: 15px
+		position: relative
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: 180%
+			height: 100%
+			width: 100%
+			background: rgba(255,255,255,.5)
+			z-index: 1
+			transform: skew(45deg)
+			transition: .6s
 		img
 			transform: skew(20deg)
 			width: 100%
@@ -36,6 +72,8 @@
 			object-fit: cover
 @media (max-width: 767.97px)
 	.don-hang-noi-bat
+		.item
+			margin-top: 15px
 		.sub-title
 			font-size: 18px
 			line-height: 30px
@@ -48,3 +86,8 @@
 			line-height: 25px
 		.item-content
 			padding-top: 10px
+		.item
+			width: 250px
+			margin: 15px auto 0
+		.parallelogram
+				height: 150px

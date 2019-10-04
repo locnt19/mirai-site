@@ -1,6 +1,6 @@
 {
 	"name": "mirai-human",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"description": "Front end build tool using Gulp, Pug, Sass",
 	"main": "gulpfile.js",
 	"repository": "https://github.com/locnt19/gulp-pug-sass.git",

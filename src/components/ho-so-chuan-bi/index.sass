@@ -1,56 +1,88 @@
 .ho-so-chuan-bi
 	padding: 60px 0
-	.ho-so-inner
+	.right-inner
 		display: flex
-		align-items: center
-	.title
-		white-space: nowrap
-	.left
-		text-align: center
-		position: relative
-	.content
-		color: $title-color
-		font-size: 24px
-		line-height: 1.5
-	.bulkhead
-		margin-right: 70px
-		width: 20px
-		height: 100%
-		border-radius: 100%
-		background: #ffffff
-		box-shadow: 7px 0 6px 0 rgba(0,0,0,.15)
-		transform: rotate(30deg) translateX(10px)
-	.right
-		width: 100%
+	.inner
+		&-2, &-3
+			padding-left: 15px
 	.mdi
 		&:before
-			color: $title-color
+			color: #fff
 			position: absolute
+			font-size: 24px
 			left: 0
-			top: 2px
+			top: -5px
 	.item
-		color: $eighth-color
+		color: #fff
 		line-height: 1.5
 		position: relative
 		margin-bottom: 10px
-		span, p
-			padding-left: 20px
-@media (max-width: 1199.97px)
-	.ho-so-chuan-bi
-		.bulkhead
-			margin: 0 90px 0 15px
-@media (max-width: 991.97px)
-	.ho-so-chuan-bi
-		.ho-so-inner
-			flex-direction: column
-		.left
-			margin: 0
-		.content
-			font-size: 20px
-		.bulkhead
-			display: none
-		.right
-			margin-top: 15px
+		padding-left: 30px
+	.img-wrap
+		margin-top: 15px
+		img
+			width: 100%
+
+//- style sticket -*/
+$width: 40px
+$half-width: $width/2
+$bg: #fff
+.ticket-wrap
+	margin-top: 30px
+	padding: 15px
+	border: 1px solid #CDDCDC
+	box-shadow: 0 0 10px 0 #CDDCDC
+.ticket-inner
+	background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%)
+	overflow: hidden
+	position: relative
+	padding: 0
+	&:before,
+	&:after
+		content: ''
+		position: absolute
+		width: $width
+		height: $width
+		background: $bg
+		border-radius: 99px
+		top: -$half-width
+	&:before
+		left: -$half-width
+	&:after
+		right: -$half-width
+	.ticket
+		position: relative
+		padding: 20px
+		&:before,
+		&:after
+			content: ''
+			position: absolute
+			width: $width
+			height: $width
+			background: $bg
+			border-radius: 99px
+			bottom: -$half-width
+		&:before
+			left: -$half-width
+		&:after
+			right: -$half-width
+
 @media (max-width: 767.97px)
-		.content
-			font-size: 16px
+	.ho-so-chuan-bi
+		.item
+			padding-left: 20px
+		.mdi
+			&:before
+				font-size: 16px
+				top: -2px
+		.right-inner
+			flex-wrap: wrap
+			.inner-3
+				flex: 0 0 100%
+				max-width: 100%
+				padding: 0
+@media (max-width: 575.97px)
+	.ho-so-chuan-bi
+		padding: 30px 
+	.ticket-wrap
+		margin-top: 15px

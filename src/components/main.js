@@ -1,23 +1,53 @@
 $(document).ready(function () {
 	// all script write here
+	AOS.init();
 
 	// back-2-top
 	$(window).scroll(function () {
 		if ($(this).scrollTop() > 100) {
 			$('.btn-back-2-top').fadeIn()
 		} else $('.btn-back-2-top').fadeOut()
+
+		// count number
+		if ($(this).scrollTop() > 1100) {
+			$('.sum span').each(function () {
+				var $this = $(this),
+					countTo = $this.attr('data-count');
+				$({
+					countNum: $this.text()
+				}).animate({
+					countNum: countTo
+				}, {
+					duration: 2500,
+					easing: 'linear',
+					step: function () {
+						$this.text(Math.floor(this.countNum));
+					},
+					complete: function () {
+						$this.text(this.countNum);
+					}
+				});
+			});
+		}
+
 	})
+
 	$('.btn-back-2-top').click(function () {
 		$('html, body').animate({
 			scrollTop: 0
-		}, 1000);
+		}, 1500);
+	})
+
+	// stuff hoi-dap
+	$('.lien-he-ngay p, .lien-he-ngay img').click(function () {
+		$('.form-lien-he-ngay').fadeToggle('fast')
 	})
 
 	// Slider
 	var homeBanner = new Swiper('.home-banner .swiper-container', {
-		// loop: true,
+		loop: true,
 		effect: 'coverflow',
-		speed: 1500,
+		speed: 2500,
 		lazy: true,
 		coverflowEffect: {
 			rotate: 50,
@@ -25,6 +55,10 @@ $(document).ready(function () {
 			depth: 100,
 			modifier: 1,
 			slideShadows: true,
+		},
+		autoplay: {
+			delay: 2500,
+			disableOnInteraction: false,
 		},
 		pagination: {
 			el: '.home-banner .pagination',
@@ -43,7 +77,7 @@ $(document).ready(function () {
 		lazy: true,
 		speed: 1500,
 		breakpoints: {
-			576: {
+			575.97: {
 				slidesPerView: 1
 			}
 		},
@@ -62,7 +96,7 @@ $(document).ready(function () {
 		},
 		speed: 3000,
 		breakpoints: {
-			767.97: {
+			575.97: {
 				slidesPerView: 1
 			}
 		},
