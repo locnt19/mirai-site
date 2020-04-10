@@ -1,14 +1,13 @@
 {
 	"font": [
-		"bower_components/mdi/fonts/*",
-		"bower_components/font-awesome/webfonts/*",
-		"bower_components/linearicons/dist/web-font/fonts/*"
+		"bower_components/mdi/fonts/*"
 	],
 	"globalJs": [
 		"bower_components/jquery/dist/jquery.min.js",
 		"bower_components/swiper/dist/js/swiper.min.js",
 		"bower_components/fancybox/dist/jquery.fancybox.min.js",
-		"bower_components/aos/dist/aos.js"
+		"bower_components/aos/dist/aos.js",
+		"bower_components/vanilla-lazyload/dist/lazyload.min.js"
 	],
 	"globalCss": [
 		"src/components/stylesheet/reset.min.css",
