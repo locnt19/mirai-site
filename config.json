@@ -4,7 +4,7 @@
 	],
 	"globalJs": [
 		"bower_components/jquery/dist/jquery.min.js",
-		"bower_components/swiper/dist/js/swiper.min.js",
+		"bower_components/swiper/package/js/swiper.min.js",
 		"bower_components/fancybox/dist/jquery.fancybox.min.js",
 		"bower_components/aos/dist/aos.js",
 		"bower_components/vanilla-lazyload/dist/lazyload.min.js"
@@ -12,7 +12,7 @@
 	"globalCss": [
 		"src/components/stylesheet/reset.min.css",
 		"bower_components/bootstrap/dist/css/bootstrap-grid.min.css",
-		"bower_components/swiper/dist/css/swiper.min.css",
+		"bower_components/swiper/package/css/swiper.min.css",
 		"bower_components/fancybox/dist/jquery.fancybox.min.css",
 		"bower_components/mdi/css/materialdesignicons.min.css",
 		"bower_components/aos/dist/aos.css",

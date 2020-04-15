@@ -71,7 +71,7 @@ gulp.task('js', function () {
 		.pipe(babel({
 			presets: ['@babel/preset-env']
 		}))
-		.pipe(uglify())
+		// .pipe(uglify())
 		.pipe(srcmap.write('.'))
 		.pipe(rename({
 			suffix: '.min'
@@ -120,7 +120,7 @@ gulp.task('css', function () {
 			prefixer({
 				cascade: false,
 			}),
-			cssnano(),
+			// cssnano(),
 			cssDeclarationSorter({
 				order: 'smacss'
 			})

@@ -15,6 +15,8 @@ $eighth-color: #B9B9B9
 ::selection
 	color: #fff
 	background: $title-color
+*, ::before, ::after
+	box-sizing: border-box
 
 body
 	font-family: 'MiraiHuman-font', sans-serif
@@ -45,7 +47,7 @@ a
 	margin-top: 5px
 	color: $title-color
 	&:after
-		content: '\F054'
+		content: '\F0054'
 		display: inline-block
 		font-family: 'Material Design Icons'
 		font-size: inherit
@@ -54,21 +56,21 @@ a
 		-webkit-font-smoothing: antialiased
 		-moz-osx-font-smoothing: grayscale
 		transform: translate(25%,25%)
-.hot,
-.new
-	position: relative
-	&:after
-		text-transform: lowercase
-		content: 'hot'
-		font-weight: 900
-		color: red
-		font-size: 14px
-		position: absolute
-		margin-left: 2px
-		bottom: 5px
-.new
-	&:after
-		content: 'new'
+// .hot,
+// .new
+// 	position: relative
+// 	&:after
+// 		text-transform: lowercase
+// 		content: 'hot'
+// 		font-weight: 900
+// 		color: red
+// 		font-size: 14px
+// 		position: absolute
+// 		margin-left: 2px
+// 		bottom: 5px
+// .new
+// 	&:after
+// 		content: 'new'
 .tabs-pagination
 	display: flex
 	align-items: center
@@ -102,7 +104,7 @@ a
 	font-size: 12px
 	position: relative
 	&:before
-		content: '\F150'
+		content: '\F0150'
 		display: inline-block
 		font-family: 'Material Design Icons'
 		font-size: inherit

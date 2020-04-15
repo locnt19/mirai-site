@@ -1,43 +1,20 @@
 function LazyLoadFunction() {
-	function logElementEvent(eventName, element) {
-		console.log(Date.now(), eventName, element.getAttribute("data-src"));
-	}
-	var callback_enter = function (element) {
-		logElementEvent("🔑 ENTERED", element);
-	};
-	var callback_exit = function (element) {
-		logElementEvent("🚪 EXITED", element);
-	};
-	var callback_loading = function (element) {
-		logElementEvent("⌚ LOADING", element);
-	};
-	var callback_loaded = function (element) {
-		logElementEvent("👍 LOADED", element);
-	};
-	var callback_error = function (element) {
-		logElementEvent("💀 ERROR", element);
-		element.src = `https://via.placeholder.com/256/?text=Not found`;
-	};
-	var callback_finish = function () {
-		logElementEvent("✔️ FINISHED", document.documentElement);
-	};
 	var lazyLoad = new LazyLoad({
-		elements_selector: ".lazy",
-		// Assign the callbacks defined above
-		callback_enter: callback_enter,
-		callback_exit: callback_exit,
-		callback_loading: callback_loading,
-		callback_loaded: callback_loaded,
-		callback_error: callback_error,
-		callback_finish: callback_finish
+		elements_selector: ".lazy"
 	});
 	lazyLoad.update();
 }
 
 
 $(document).ready(function () {
-	// all script write here
-	AOS.init();
+	document.querySelector('.header-mobile__button__open').addEventListener('click', function () {
+		document.querySelector('#header-mobile__nav').classList.add('open');
+		document.querySelector('body').classList.add('offcanvas-container');
+	})
+	document.querySelector('.header-mobile__button__close').addEventListener('click', function () {
+		document.querySelector('#header-mobile__nav').classList.remove('open');
+		document.querySelector('body').classList.remove('offcanvas-container');
+	})
 
 	// back-2-top
 	$(window).scroll(function () {
@@ -45,46 +22,40 @@ $(document).ready(function () {
 			$('.btn-back-2-top').fadeIn()
 		} else $('.btn-back-2-top').fadeOut()
 
-		// count number
-		if ($(this).scrollTop() > 1100) {
-			$('.sum span').each(function () {
-				var $this = $(this),
-					countTo = $this.attr('data-count');
-				$({
-					countNum: $this.text()
-				}).animate({
-					countNum: countTo
-				}, {
-					duration: 2500,
-					easing: 'linear',
-					step: function () {
-						$this.text(Math.floor(this.countNum));
-					},
-					complete: function () {
-						$this.text(this.countNum);
-					}
-				});
-			});
-		}
-
+		// // count number
+		// if ($(this).scrollTop() > 1100) {
+		// 	$('.sum span').each(function () {
+		// 		var $this = $(this),
+		// 			countTo = $this.attr('data-count');
+		// 		$({
+		// 			countNum: $this.text()
+		// 		}).animate({
+		// 			countNum: countTo
+		// 		}, {
+		// 			duration: 2500,
+		// 			easing: 'linear',
+		// 			step: function () {
+		// 				$this.text(Math.floor(this.countNum));
+		// 			},
+		// 			complete: function () {
+		// 				$this.text(this.countNum);
+		// 			}
+		// 		});
+		// 	});
+		// }
 	})
 
 	$('.btn-back-2-top').click(function () {
 		$('html, body').animate({
 			scrollTop: 0
-		}, 1500);
-	})
-
-	// stuff hoi-dap
-	$('.lien-he-ngay p, .lien-he-ngay img').click(function () {
-		$('.form-lien-he-ngay').fadeToggle('fast')
+		}, 1000);
 	})
 
 	// Slider
-	var homeBanner = new Swiper('.home-banner .swiper-container', {
+	new Swiper('.home-banner .swiper-container', {
 		loop: true,
 		effect: 'coverflow',
-		speed: 2500,
+		speed: 3000,
 		lazy: true,
 		coverflowEffect: {
 			rotate: 50,
@@ -94,7 +65,7 @@ $(document).ready(function () {
 			slideShadows: true,
 		},
 		autoplay: {
-			delay: 2500,
+			delay: 10000,
 			disableOnInteraction: false,
 		},
 		pagination: {
@@ -102,58 +73,57 @@ $(document).ready(function () {
 			clickable: true
 		},
 	});
-	var hoatDongMirai = new Swiper('.hoat-dong-mirai .swiper-container', {
-		slidesPerView: 2,
+	new Swiper('.hoat-dong-mirai .swiper-container', {
 		spaceBetween: 30,
 		loop: true,
 		centeredSlides: true,
 		autoplay: {
-			delay: 2000,
+			delay: 5000,
 			disableOnInteraction: false,
 		},
-		lazy: true,
 		speed: 1500,
 		breakpoints: {
-			575.97: {
-				slidesPerView: 1
+			slidesPerView: 1,
+			768: {
+				slidesPerView: 3
 			}
 		},
 		pagination: {
-			el: '.hoat-dong-mirai .pagination',
+			el: '.hoat-dong-mirai .swiper-pagination',
 			clickable: true
 		},
 	});
-	var camNhanHocVien = new Swiper('.cam-nhan-hoc-vien .swiper-container', {
-		slidesPerView: 2,
+	new Swiper('.cam-nhan-hoc-vien .swiper-container', {
+		slidesPerView: 1,
 		spaceBetween: 30,
 		loop: true,
-		autoplay: {
-			delay: 3000,
-			disableOnInteraction: false,
-		},
-		speed: 3000,
+		// autoplay: {
+		// 	delay: 8000,
+		// 	disableOnInteraction: false,
+		// },
+		speed: 2000,
 		breakpoints: {
-			575.97: {
-				slidesPerView: 1
+			768: {
+				slidesPerView: 2
 			}
 		},
 		pagination: {
-			el: '.cam-nhan-hoc-vien .pagination',
-			clickable: true,
+			el: '.cam-nhan-hoc-vien .swiper-pagination',
+			clickable: true
 		},
 	});
 
-	// Resposive
-	const windowSize = $(window).width();
-	if (windowSize <= 768) {
-		$('.header-bottom .row .col-12').prepend($('.header-right'))
-		$('.header-bottom-inner').append($('.search-box'))
-		$('.header-bottom-inner').append($('.header-left'))
-	}
-	$('.toggle-menu').on('click', function () {
-		$(this).toggleClass('open')
-		$('.header-bottom-inner').slideToggle()
-	});
+	// // Resposive
+	// const windowSize = $(window).width();
+	// if (windowSize <= 768) {
+	// 	$('.header-bottom .row .col-12').prepend($('.header-right'))
+	// 	$('.header-bottom-inner').append($('.search-box'))
+	// 	$('.header-bottom-inner').append($('.header-left'))
+	// }
+	// $('.toggle-menu').on('click', function () {
+	// 	$(this).toggleClass('open')
+	// 	$('.header-bottom-inner').slideToggle()
+	// });
 
 
 	// Tabs viec lam

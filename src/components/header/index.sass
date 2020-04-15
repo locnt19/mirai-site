@@ -1,296 +1,387 @@
-header
-	background: $title-color
+// header
+// 	background: $title-color
+// 	z-index: 1000
+// 	position: sticky
+// 	top: 0
+// 	left: 0
+// .header-top
+// 	background: #ffffff
+// 	position: relative
+// 	&:before
+// 		content: ''
+// 		position: absolute
+// 		top: calc(100% - 1px)
+// 		left: 0
+// 		background: url('../img/bg-top-header.png')
+// 		width: 100%
+// 		height: 15px
+// .header-top-inner,
+// .header-bottom-inner
+// 	display: flex
+// 	flex: 0 0 100%
+// 	max-width: 100%
+// .header-top-inner
+// 	width: 100%
+// 	height: 40px
+// 	justify-content: space-between
+// 	position: relative
+// 	z-index: 2
+// .header-left,
+// .header-right
+// 	display: flex
+// 	align-items: center
+// .header-left
+// 	position: relative
+// 	font-size: 14px
+// 	p:nth-child(2)
+// 			margin-left: 10px
+// 	span
+// 		&.mdi
+// 			position: absolute
+// 		&:nth-child(2)
+// 			margin-left: 20px
+// .header-logo
+// 	position: absolute
+// 	top: 0
+// 	left: 50%
+// 	transform: translateX(-50%)
+// 	img:last-child
+// 		display: none
+// .language-bar
+// 	a
+// 		display: inline-block
+// 		&:nth-child(2)
+// 			margin-left: 10px
+// .search-box
+// 	display: flex
+// 	margin-right: 15px
+// 	button
+// 		border: none
+// 		background: none
+// 		font-size: 24px
+// 		color: #D9D9D9
+// 		position: relative
+// 		margin-left: 15px
+// 		&:before
+// 			position: absolute
+// 			top: 50%
+// 			left: 50%
+// 			transform: translate(-50%, -50%)
+// 	input
+// 		font-family: 'MiraiHuman-font', sans-serif
+// 		font-size: 16px
+// 		width: 230px
+// 		padding: 0 10px
+// 		border: none
+// 		background: none
+// 		box-shadow: 0 1px 0 0px #D9D9D9
+// 		&::placeholder
+// 			color: #D9D9D9
+// 		&:focus
+// 			outline: none
+// 			color: $text-color
+// 			box-shadow: 0 2px 0 0px #38A8D9
+// .header-bottom
+// 	a
+// 		display: inline-block
+// 		color: #fff
+// 		font-weight: 600
+// 		text-decoration: none
+// 		padding-bottom: 3px
+// 		&:not(:first-child)
+// 			margin-left: 15px
+// 		&:hover,
+// 		&.active
+// 			transition: all .3s ease-in-out
+// 			box-shadow: 0 2px 0 0px #fff
+// .header-bottom-inner
+// 	z-index: 2
+// 	height: 60px
+// 	display: flex
+// 	align-items: center
+// 	justify-content: space-between
+// 	.navbar-left
+// 		a:first-child
+// 			span:last-child
+// 				display: none
+// .toggle-menu
+// 	display: none
+// @media (max-width: 1199.97px) 
+// 	.header-top
+// 		> img
+// 			height: 80px
+// 	.header-logo
+// 		transform: translate(-50%,11px)
+// 		img
+// 			width: 180px
+// 	.header-top-inner
+// 		height: 32px
+// 	.header-left
+// 		font-size: 14px
+// 	.search-box
+// 		margin-right: 5px
+// 		input
+// 			font-size: 14px
+// 			width: 200px
+// 		button
+// 			transform: scale(0.85)
+// 	.language-bar
+// 		img
+// 			transform: scale(0.85)
+// 		a:nth-child(2)
+// 			margin-left: 0
+// 	.header-bottom
+// 		a
+// 			font-size: 15px
+// 			&:not(:first-child)
+// 				margin-left: 10px
+// 	.header-bottom-inner
+// 		height: 45px
+// @media (min-width: 768.97px) and (max-width: 991.97px)
+// 	.header-left
+// 		display: block
+// 		p:nth-child(2)
+// 			margin: 0
+// 	.search-box
+// 		input
+// 			width: 150px
+// 		button
+// 			transform: scale(0.75)
+// 	.language-bar
+// 		img
+// 			transform: scale(0.75)
+// 	.header-bottom
+// 		a:not(:first-child)
+// 			margin-left: 15px
+// 	.header-bottom-inner
+// 		height: 55px
+// 	.navbar-left
+// 		width: 35%
+// 		a
+// 			margin-bottom: 5px
+// 			&:last-child
+// 				margin-left: 0
+// 	.navbar-right
+// 		width: 40%
+// 		text-align: right
+// 		a
+// 			margin-bottom: 5px
+// @media (max-width: 768px)
+// 	header
+// 		background: #fff
+// 	.header-top-inner
+// 		justify-content: center
+// 	.header-left
+// 		color: #fff
+// 		font-size: 15px
+// 		margin-top: 15px
+// 		display: block
+// 		p:nth-child(2)
+// 			margin-left: 0
+// 			margin-top: 10px
+// 	.header-logo
+// 		position: static
+// 		transform: none
+// 		display: flex
+// 		align-items: center
+// 		justify-content: center
+// 		img
+// 			&:first-child
+// 				display: none
+// 			&:last-child
+// 				display: block
+// 				width: 150px
+// 	.header-bottom
+// 		background: #38a8d9
+// 		a:not(:first-child)
+// 			margin: 0
+// 	.header-top-inner
+// 		height: 60px
+// 		padding-left: 15px
+// 		padding-right: 15px
+// 	.header-bottom-inner
+// 		display: none
+// 		height: auto
+// 		padding-bottom: 30px
+// 		padding-left: 15px
+// 		padding-right: 15px
+// 		position: absolute
+// 		top: 100%
+// 		left: 0
+// 		width: 100%
+// 		background: #38a8d9
+// 		nav
+// 			display: flex
+// 			flex-direction: column
+// 			a
+// 				display: inline-block
+// 				padding: 10px 0
+// 		.navbar-left
+// 			a:first-child
+// 				span
+// 					&:last-child
+// 						display: block
+// 					&:first-child
+// 						display: none
+// 	.search-box
+// 		margin: 0
+// 		button
+// 			color: #fff
+// 		input
+// 			font-size: 15px
+// 			padding-top: 5px
+// 			padding-bottom: 5px
+// 			box-shadow: 0 1px 0 0px #fff
+// 			&::placeholder
+// 				color: #fff
+// 			&:focus
+// 				color: #fff
+// 				box-shadow: 0 2px 0 0px #fff
+// 	.language-bar
+// 		a:hover
+// 			box-shadow: none
+// 	.toggle-menu
+// 		display: block
+// 		margin-left: auto
+// 		width: 60px
+// 		height: 45px
+// 		position: relative
+// 		transform: rotate(0deg) scale(.45)
+// 		transition: .5s ease-in-out
+// 		cursor: pointer
+// 		span
+// 			display: block
+// 			position: absolute
+// 			height: 9px
+// 			width: 50%
+// 			background: #fff
+// 			opacity: 1
+// 			transform: rotate(0deg)
+// 			transition: .25s ease-in-out
+// 			&:nth-child(even)
+// 				left: 50%
+// 				border-radius: 0 9px 9px 0
+// 			&:nth-child(odd)
+// 				left: 0
+// 				border-radius: 9px 0 0 9px
+// 			&:nth-child(1), &:nth-child(2)
+// 				top: 0
+// 			&:nth-child(3), &:nth-child(4)
+// 				top: 18px
+// 			&:nth-child(5), &:nth-child(6)
+// 				top: 36px
+// 		&.open
+// 			span
+// 				&:nth-child(1), &:nth-child(6)
+// 					transform: rotate(45deg)
+// 				&:nth-child(2), &:nth-child(5)
+// 					transform: rotate(-45deg)
+// 				&:nth-child(1)
+// 					left: 5px
+// 					top: 7px
+// 				&:nth-child(2)
+// 					left: calc(50% - 5px)
+// 					top: 7px
+// 				&:nth-child(3)
+// 					left: -50%
+// 					opacity: 0
+// 				&:nth-child(4)
+// 					left: 100%
+// 					opacity: 0
+// 				&:nth-child(5)
+// 					left: 5px
+// 					top: 29px
+// 				&:nth-child(6)
+// 					left: calc(50% - 5px)
+// 					top: 29px
+
+.header
 	z-index: 1000
 	position: sticky
 	top: 0
+	right: 0
 	left: 0
-.header-top
-	background: #ffffff
-	position: relative
-	&:before
-		content: ''
-		position: absolute
-		top: calc(100%-1px)
-		left: 0
-		background: url('../img/bg-top-header.png')
-		width: 100%
-		height: 15px
-.header-top-inner,
-.header-bottom-inner
-	display: flex
-	flex: 0 0 100%
-	max-width: 100%
-.header-top-inner
-	width: 100%
-	height: 40px
-	justify-content: space-between
-	position: relative
-	z-index: 2
-.header-left,
-.header-right
-	display: flex
-	align-items: center
-.header-left
-	position: relative
-	font-size: 14px
-	p:nth-child(2)
-			margin-left: 10px
-	span
-		&.mdi
-			position: absolute
-		&:nth-child(2)
-			margin-left: 20px
-.header-logo
-	position: absolute
-	top: 0
-	left: 50%
-	transform: translateX(-50%)
-	img:last-child
-		display: none
-.language-bar
-	a
-		display: inline-block
-		&:nth-child(2)
-			margin-left: 10px
-.search-box
-	display: flex
-	margin-right: 15px
-	button
-		border: none
-		background: none
-		font-size: 24px
-		color: #D9D9D9
-		position: relative
-		margin-left: 15px
-		&:before
-			position: absolute
-			top: 50%
-			left: 50%
-			transform: translate(-50%, -50%)
-	input
-		font-family: 'MiraiHuman-font', sans-serif
-		font-size: 16px
-		width: 230px
-		padding: 0 10px
-		border: none
-		background: none
-		box-shadow: 0 1px 0 0px #D9D9D9
-		&::placeholder
-			color: #D9D9D9
-		&:focus
-			outline: none
-			color: $text-color
-			box-shadow: 0 2px 0 0px #38A8D9
-.header-bottom
-	a
-		display: inline-block
-		color: #fff
-		font-weight: 600
-		text-decoration: none
-		padding-bottom: 3px
-		&:not(:first-child)
-			margin-left: 15px
-		&:hover,
-		&.active
-			transition: all .3s ease-in-out
-			box-shadow: 0 2px 0 0px #fff
-.header-bottom-inner
-	z-index: 2
-	height: 60px
-	display: flex
-	align-items: center
-	justify-content: space-between
-	.navbar-left
-		a:first-child
-			span:last-child
-				display: none
-.toggle-menu
-	display: none
-@media (max-width: 1199.97px) 
-	.header-top
-		> img
-			height: 80px
-	.header-logo
-		transform: translate(-50%,11px)
-		img
-			width: 180px
-	.header-top-inner
-		height: 32px
-	.header-left
-		font-size: 14px
-	.search-box
-		margin-right: 5px
-		input
-			font-size: 14px
-			width: 200px
-		button
-			transform: scale(0.85)
-	.language-bar
-		img
-			transform: scale(0.85)
-		a:nth-child(2)
-			margin-left: 0
-	.header-bottom
-		a
-			font-size: 15px
-			&:not(:first-child)
-				margin-left: 10px
-	.header-bottom-inner
-		height: 45px
-@media (min-width: 768.97px) and (max-width: 991.97px)
-	.header-left
-		display: block
-		p:nth-child(2)
-			margin: 0
-	.search-box
-		input
-			width: 150px
-		button
-			transform: scale(0.75)
-	.language-bar
-		img
-			transform: scale(0.75)
-	.header-bottom
-		a:not(:first-child)
-			margin-left: 15px
-	.header-bottom-inner
-		height: 55px
-	.navbar-left
-		width: 35%
-		a
-			margin-bottom: 5px
-			&:last-child
-				margin-left: 0
-	.navbar-right
-		width: 40%
-		text-align: right
-		a
-			margin-bottom: 5px
-@media (max-width: 768px)
-	header
-		background: #fff
-	.header-top-inner
-		justify-content: center
-	.header-left
-		color: #fff
-		font-size: 15px
-		margin-top: 15px
-		display: block
-		p:nth-child(2)
-			margin-left: 0
-			margin-top: 10px
-	.header-logo
-		position: static
-		transform: none
+	background: #fff
+	box-shadow: 0 0 4px 0 rgba(0,0,0,.5)
+	&-mobile
 		display: flex
 		align-items: center
-		justify-content: center
-		img
-			&:first-child
-				display: none
-			&:last-child
-				display: block
-				width: 150px
-	.header-bottom
-		background: #38a8d9
-		a:not(:first-child)
-			margin: 0
-	.header-top-inner
-		height: 60px
-		padding-left: 15px
-		padding-right: 15px
-	.header-bottom-inner
-		display: none
-		height: auto
-		padding-bottom: 30px
-		padding-left: 15px
-		padding-right: 15px
-		position: absolute
-		top: 100%
-		left: 0
-		width: 100%
-		background: #38a8d9
-		nav
-			display: flex
-			flex-direction: column
-			a
-				display: inline-block
-				padding: 10px 0
-		.navbar-left
-			a:first-child
-				span
-					&:last-child
-						display: block
-					&:first-child
-						display: none
-	.search-box
-		margin: 0
-		button
-			color: #fff
-		input
-			font-size: 15px
-			padding-top: 5px
-			padding-bottom: 5px
-			box-shadow: 0 1px 0 0px #fff
-			&::placeholder
-				color: #fff
-			&:focus
-				color: #fff
-				box-shadow: 0 2px 0 0px #fff
-	.language-bar
-		a:hover
-			box-shadow: none
-	.toggle-menu
-		display: block
-		margin-left: auto
-		width: 60px
-		height: 45px
+		justify-content: space-between
+		height: 50px
+		padding: 0 15px
+		&__button
+			&__open
+				font-size: 24px
+	&-logo__mobile
+		height: 35px
+	&-lang__flag
+		margin-right: 5px
+		height: 20px
+
+.offcanvas
+	display: none
+	position: fixed
+	top: 0
+	bottom: 0
+	left: 0
+	z-index: 1000
+	&-container
 		position: relative
-		transform: rotate(0deg) scale(.45)
-		transition: .5s ease-in-out
-		cursor: pointer
-		span
-			display: block
+		left: 0
+		transition: left .3s ease-out
+		box-sizing: border-box
+		width: 100%
+		overflow: hidden
+	&-overlay
+		width: 100vw
+		touch-action: none
+		&::before
+			content: ''
 			position: absolute
-			height: 9px
-			width: 50%
-			background: #fff
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			background: rgba(0,0,0,.5)
+			opacity: 0
+			transition: opacity .15s linear
+	&.open
+		display: block
+		&.offcanvas-overlay::before
 			opacity: 1
-			transform: rotate(0deg)
-			transition: .25s ease-in-out
-			&:nth-child(even)
-				left: 50%
-				border-radius: 0 9px 9px 0
-			&:nth-child(odd)
-				left: 0
-				border-radius: 9px 0 0 9px
-			&:nth-child(1), &:nth-child(2)
-				top: 0
-			&:nth-child(3), &:nth-child(4)
-				top: 18px
-			&:nth-child(5), &:nth-child(6)
-				top: 36px
-		&.open
-			span
-				&:nth-child(1), &:nth-child(6)
-					transform: rotate(45deg)
-				&:nth-child(2), &:nth-child(5)
-					transform: rotate(-45deg)
-				&:nth-child(1)
-					left: 5px
-					top: 7px
-				&:nth-child(2)
-					left: calc(50% - 5px)
-					top: 7px
-				&:nth-child(3)
-					left: -50%
-					opacity: 0
-				&:nth-child(4)
-					left: 100%
-					opacity: 0
-				&:nth-child(5)
-					left: 5px
-					top: 29px
-				&:nth-child(6)
-					left: calc(50% - 5px)
-					top: 29px
+		.offcanvas-bar
+			left: 0
+	&-bar
+		position: absolute
+		top: 0
+		bottom: 0
+		left: -270px
+		box-sizing: border-box
+		width: 270px
+		background: #38a8d9
+		overflow-y: auto
+		transition: left .3s ease-out
+	&-header
+		padding: 15px
+		background: #fff
+		box-shadow: 0 0 4px 0 rgba(0,0,0,.5)
+		text-align: center
+	&-nav
+		list-style: none
+		margin: 0
+		padding: 15px
+		color: #fff
+		// font-size: .875rem
+		line-height: 1.5
+		li
+			a
+				padding: 5px 0
+				display: block
+				text-decoration: none
+				color: inherit
+	&-nav__sub
+		margin-left: 25px
+	&-icons
+		font-size: 1.15rem
+		display: inline-block
+		width: 25px

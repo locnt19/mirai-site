@@ -1,93 +1,87 @@
-.don-hang-noi-bat
-	padding: 30px 0
+.donhangnoibat
+	.title
+		margin-top: 30px
 	.sub-title
-		font-size: 20px
-		line-height: 35px
+		font-size: 16px
 		text-align: center
 		font-weight: 600
-		&-1
-			color: #364B44
-			background: #55efc4
-		&-2
-			color: #008B60
-			background: #ffeaa7
-		&-3
-			color: #fff
-			background: #ff7675
-		&-4
-			color: #43BE8C
-			background: #fffa65
-	.item
-		line-height: 1.5
-		margin-top: 30px
-		overflow: hidden
+		padding: 10px 0
+	&-wrapper
+		padding-top: 30px
+		overflow: auto
+		display: flex
+		@media screen and ( min-width: 768px )
+			flex-wrap: wrap
+			justify-content: space-around
+	&-item
+		flex: 0 0 240px
+		width: 240px
+		margin: 0 10px 20px
 		&:hover
-			transition: transform .25s ease-in-out
-			margin-bottom: 0
-			box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3)
-			transform: translateY(-5px)
-			.item-content
-				box-shadow: 0 0px 2px 0px rgba(0,0,0,.3)
-				.parallelogram
-					&:before
-						left: -180%
-			&.item-1
-				.item-content
+			transition: transform .3s ease-in-out
+			@media screen and ( min-width: 768px )
+				box-shadow: 0 0 10px 0 rgba(#000, .3)
+				transform: translateY(-4px)
+				.donhangnoibat-content
+					box-shadow: none
+			.parallelogram::before
+				left: -180%
+		&:nth-of-type(1)
+			.sub-title
+				background: #55efc4
+				color: #364b44
+			&:hover
+				.donhangnoibat-content
 					background: rgba(#55efc4, .15)
-			&.item-2
-				.item-content
+		&:nth-of-type(2)
+			.sub-title
+				background: #ffeaa7
+				color: #008b60
+			&:hover
+				.donhangnoibat-content
 					background: rgba(#ffeaa7, .15)
-			&.item-3
-				.item-content
+		&:nth-of-type(3)
+			.sub-title
+				background: #ff7675
+				color: #fff
+			&:hover
+				.donhangnoibat-content
 					background: rgba(#ff7675, .15)
-			&.item-4
-				.item-content
+		&:nth-of-type(4)
+			.sub-title
+				background: #fffa65
+				color: #43be8c
+			&:hover
+				.donhangnoibat-content
 					background: rgba(#fffa65, .15)
-	.item-content
-		padding: 15px
-		box-shadow: inset 0 0 3px 0 rgba(0,0,0,.3)
-	.parallelogram
-		width: 100%
-		height: 150px
-		transform: skew(-20deg)
+		a
+			color: #007dc6
+	&-content
+		padding: 0 12px 12px
 		overflow: hidden
-		margin: 0 auto
-		margin-top: 15px
-		position: relative
-		&:before
-			content: ''
-			position: absolute
-			top: 0
-			left: 180%
-			height: 100%
-			width: 100%
-			background: rgba(255,255,255,.5)
-			z-index: 1
-			transform: skew(45deg)
-			transition: .6s
-		img
-			transform: skew(20deg)
-			width: 100%
-			height: 100%
-			object-fit: cover
-@media (max-width: 767.97px)
-	.don-hang-noi-bat
-		.item
-			margin-top: 15px
-		.sub-title
-			font-size: 18px
-			line-height: 30px
+		box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, .3)
+		p
+			margin: 10px 0
 		.parallelogram
-			height: 180px
-@media (max-width: 575.97px)
-	.don-hang-noi-bat
-		.sub-title
-			font-size: 16px
-			line-height: 25px
-		.item-content
-			padding-top: 10px
-		.item
-			width: 250px
-			margin: 15px auto 0
-		.parallelogram
-				height: 150px
+			margin-top: 10px
+			position: relative
+			width: 100%
+			height: 150px
+			overflow: hidden
+			transform: skew(-20deg)
+			&::before
+				z-index: 1
+				position: absolute
+				top: 0
+				left: 180%
+				width: 100%
+				height: 100%
+				transform: skew(45deg)
+				background: rgba(255, 255, 255, 0.5)
+				content: ""
+				transition: .6s
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
+				transform: skew(20deg)

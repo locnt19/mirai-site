@@ -1,4 +1,4 @@
-header
+//- header
 	.header-top
 		.container
 			.row
@@ -12,17 +12,17 @@ header
 							span Hotline: 0902 538 164
 					.header-logo
 						a(href="/")
-							img(src="img/logo-header.png", alt="logo-desktop")
-							img(src="img/logo.png", alt="logo-mobile")
+							img.lazy(data-src="img/logo-header.png" alt="logo-desktop")
+							img.lazy(data-src="img/logo.png" alt="logo-mobile")
 					.header-right
-						form.search-box(action="", method="get")
+						form.search-box(action="" method="get")
 							input(type="text" placeholder="Tìm kiếm...")
 							button(type="submit").mdi.mdi-magnify
 						.language-bar
 							a(href="/")
-								img(src="img/flag-jp.png", alt="jp")
+								img.lazy(data-src="img/flag-jp.png" alt="jp")
 							a(href="/")
-								img(src="img/flag-vn.png", alt="vn")
+								img.lazy(data-src="img/flag-vn.png" alt="vn")
 	.header-bottom
 		.container
 			.row
@@ -48,3 +48,64 @@ header
 						a(href="hoi-dap.html") KỸ SƯ VIỆT - NHẬT
 						a(href="hoi-dap.html") DU HỌC SINH
 						a(href="hoi-dap.html") ĐÀO TẠO
+header.header
+	.header-mobile
+		a(href="#")
+			img.header-logo__mobile(src="img/logo.png" alt="logo.png")
+		div(role="button").header-mobile__button__open.mdi.mdi-menu
+	#header-mobile__nav.offcanvas.offcanvas-overlay
+		.offcanvas-bar
+			.offcanvas-header
+				a(href="#")
+					img.lazy.header-logo__mobile(src="img/logo.png" alt="logo.png")
+			ul.offcanvas-nav
+				li.uk-active
+					a(href="#")
+						span.offcanvas-icons.mdi.mdi-home-outline
+						|  Trang chủ
+				li
+					a(href="#")
+						span.offcanvas-icons.mdi.mdi-information-outline
+						span(uk-icon="info").uk-margin-small-right
+						| Giới thiệu
+				li
+					a(href="#")
+						span.offcanvas-icons.mdi.mdi-email-outline
+						| Liên hệ
+				li
+					a(href="#")
+						span.offcanvas-icons.mdi.mdi-briefcase-outline
+						|  Việc làm
+					ul.offcanvas-nav__sub
+						li
+							a(href="#") Đặc định
+						li
+							a(href="#") Điều dưỡng
+						li
+							a(href="#") Kỹ sư
+						li
+							a(href="#") Thực tập sinh
+				li
+					a(href="#")
+						span.offcanvas-icons.mdi.mdi-share-variant
+						| Tin tức
+				li
+					a(href="#")
+						span.offcanvas-icons.mdi.mdi-message-processing-outline
+						| Hỏi đáp
+				li
+					span.offcanvas-icons.mdi.mdi-tools
+					|  Ngôn ngữ
+					ul.offcanvas-nav__sub
+						li
+							a(href="#jp").d-flex.align-items-center
+								img.header-lang__flag(src="img/language/jp.svg" alt="jp.svg")
+								|  Tiếng Nhật
+						li
+							a(href="#vn").d-flex.align-items-center
+								img.header-lang__flag(src="img/language/vn.svg" alt="vn.svg")
+								|  Tiếng Việt
+				li
+					a(href="#" role="button").header-mobile__button__close.mt-4
+						span.offcanvas-icons.mdi.mdi-close
+						| Đóng
