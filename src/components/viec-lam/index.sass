@@ -38,42 +38,43 @@
 	text-align: center
 	background: $title-color
 	color: #fff
+	border-bottom: 1px solid #ccc
 	div:first-child
 		text-align: left
 .tabs-content-wrap
 	&:not(.active)
 		display: none
 .content-item
+	word-wrap: break-word
 	text-transform: uppercase
 	padding: 12px 0
 	color: $title-color
 	align-items: center
-	text-align: center
-	div
-		&:first-child
-			text-align: left
-		&:nth-child(2)
-			font-weight: 600
-			color: #ff4d4d
-		&:nth-child(3)
-			font-weight: 900
-			color: #ff3838
-		&:last-child
-			font-weight: 700
-			a
-				color: #ff9f1a
-	a
-		color: $title-color
-	.col-6
+	border: 1px solid #ccc
+	border-top: none
+	.congviec
 		text-align: left
+		font-weight: 600
+	.luong
+		text-align: center
+		color: #ff9f1a
+		font-weight: 900
+	.diadiem
+		text-align: center
+		color: #6c5ce7
+		font-weight: 600
+	a
+		color: inherit
 	&:nth-child(even)
 		background: $fourth-color
 	&:nth-child(odd)
 		background: #fff
 	&:hover
-		z-index: 1
-		transition: all .15s ease-in-out
-		box-shadow: inset 0 0 5px 0 rgba(0,0,0,.5)
+		background: #007DC6
+		transition: all .1s ease-in
+		*
+			color: #fff
+
 .content-bottom
 	margin-top: 10px
 	box-shadow: 0 -1px 0 0 $title-color
@@ -99,7 +100,7 @@
 			align-items: center
 			position: relative
 			p:nth-child(2)
-					margin-left: 10px
+				margin-left: 10px
 			span
 				&.mdi
 					position: absolute
@@ -109,9 +110,9 @@
 		padding-right: 0
 @media (max-width: 991.97px)
 	.content-bottom
-			.bottom-left
-				&:after
-					content: none
+		.bottom-left
+			&:after
+				content: none
 			.bottom-right
 				padding-right: 15px
 @media (max-width: 767.97px)

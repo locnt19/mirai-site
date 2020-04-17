@@ -5,16 +5,33 @@ function LazyLoadFunction() {
 	lazyLoad.update();
 }
 
+function OpenOffCanvas() {
+	document.querySelector('.offcanvas').classList.add('open');
+	document.querySelector('body').classList.add('offcanvas-container');
+}
+
+function CloseOffCanvas() {
+	document.querySelector('.offcanvas').classList.remove('open');
+	document.querySelector('body').classList.remove('offcanvas-container');
+}
 
 $(document).ready(function () {
 	document.querySelector('.header-mobile__button__open').addEventListener('click', function () {
-		document.querySelector('#header-mobile__nav').classList.add('open');
-		document.querySelector('body').classList.add('offcanvas-container');
+		OpenOffCanvas();
 	})
-	document.querySelector('.header-mobile__button__close').addEventListener('click', function () {
-		document.querySelector('#header-mobile__nav').classList.remove('open');
-		document.querySelector('body').classList.remove('offcanvas-container');
+	document.querySelector('.header-mobile__button__close').addEventListener('click', function (e) {
+		e.preventDefault();
+		CloseOffCanvas();
 	})
+
+	// When the user clicks anywhere outside of the offcanvas, close it
+	window.onclick = function (e) {
+		// console.log(e.target);
+		if (e.target === document.querySelector('.offcanvas.open')) {
+			CloseOffCanvas();
+		}
+	}
+
 
 	// back-2-top
 	$(window).scroll(function () {
@@ -97,10 +114,10 @@ $(document).ready(function () {
 		slidesPerView: 1,
 		spaceBetween: 30,
 		loop: true,
-		// autoplay: {
-		// 	delay: 8000,
-		// 	disableOnInteraction: false,
-		// },
+		autoplay: {
+			delay: 8000,
+			disableOnInteraction: false,
+		},
 		speed: 2000,
 		breakpoints: {
 			768: {
@@ -113,18 +130,19 @@ $(document).ready(function () {
 		},
 	});
 
-	// // Resposive
-	// const windowSize = $(window).width();
-	// if (windowSize <= 768) {
-	// 	$('.header-bottom .row .col-12').prepend($('.header-right'))
-	// 	$('.header-bottom-inner').append($('.search-box'))
-	// 	$('.header-bottom-inner').append($('.header-left'))
-	// }
-	// $('.toggle-menu').on('click', function () {
-	// 	$(this).toggleClass('open')
-	// 	$('.header-bottom-inner').slideToggle()
-	// });
-
+	let homeVideoRight = new Swiper('.home-video .right', {
+		allowSlidePrev: false,
+		allowSlideNext: false
+	});
+	new Swiper('.home-video .left', {
+		slidesPerView: 1,
+		spaceBetween: 15,
+		slideToClickedSlide: true,
+		speed: 2000,
+		thumbs: {
+			swiper: homeVideoRight
+		}
+	});
 
 	// Tabs viec lam
 	$('.viec-lam-title li').on('click', function () {
@@ -144,12 +162,10 @@ $(document).ready(function () {
 	$('.toggle-stuff').click(function () {
 		$('.stuff-hoi-dap').toggleClass('active')
 	})
-
 	$('.hoi-dap .item-title').click(function () {
 		$(this).parent().toggleClass('active');
 		$(this).siblings('.item-content').slideToggle();
 	})
-
 	// tuyen-dung-popup
 	$('.tuyen-dung .btn-so-yeu-li-lich').click(function () {
 		$('.tuyen-dung-popup').addClass('active')

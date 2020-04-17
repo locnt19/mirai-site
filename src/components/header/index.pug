@@ -49,63 +49,75 @@
 						a(href="hoi-dap.html") DU HỌC SINH
 						a(href="hoi-dap.html") ĐÀO TẠO
 header.header
-	.header-mobile
+	.header-desktop.d-none.d-lg-block.container.p-0
+		.d-flex.align-items-center.bg-white.py-1
+			div(style="font-size: .9rem")
+				span.mdi.mdi-email Email: contact@miraihuman.com
+				span.ml-2.mdi.mdi-phone Hotline: 0902 538 164
+			.d-flex.align-items-center.ml-auto
+				form.header-search.mr-3(role="search")
+					input.header-search__input(type="search" name="search" placeholder="Tìm kiếm..." autocomplete="off")
+				a(href="#")
+					img.header-lang__flag.jp(src="img/language/jp.svg" alt="jp.svg" style="height: 25px")
+				a(href="#")
+					img.header-lang__flag(src="img/language/vn.svg" alt="vn.svg" style="height: 25px")
+	.header-mobile.d-lg-none
 		a(href="#")
 			img.header-logo__mobile(src="img/logo.png" alt="logo.png")
 		div(role="button").header-mobile__button__open.mdi.mdi-menu
-	#header-mobile__nav.offcanvas.offcanvas-overlay
-		.offcanvas-bar
-			.offcanvas-header
-				a(href="#")
-					img.lazy.header-logo__mobile(src="img/logo.png" alt="logo.png")
-			ul.offcanvas-nav
-				li.uk-active
+		.offcanvas.offcanvas-overlay
+			.offcanvas-bar
+				.offcanvas-header
 					a(href="#")
-						span.offcanvas-icons.mdi.mdi-home-outline
-						|  Trang chủ
-				li
-					a(href="#")
-						span.offcanvas-icons.mdi.mdi-information-outline
-						span(uk-icon="info").uk-margin-small-right
-						| Giới thiệu
-				li
-					a(href="#")
-						span.offcanvas-icons.mdi.mdi-email-outline
-						| Liên hệ
-				li
-					a(href="#")
-						span.offcanvas-icons.mdi.mdi-briefcase-outline
-						|  Việc làm
-					ul.offcanvas-nav__sub
-						li
-							a(href="#") Đặc định
-						li
-							a(href="#") Điều dưỡng
-						li
-							a(href="#") Kỹ sư
-						li
-							a(href="#") Thực tập sinh
-				li
-					a(href="#")
-						span.offcanvas-icons.mdi.mdi-share-variant
-						| Tin tức
-				li
-					a(href="#")
-						span.offcanvas-icons.mdi.mdi-message-processing-outline
-						| Hỏi đáp
-				li
-					span.offcanvas-icons.mdi.mdi-tools
-					|  Ngôn ngữ
-					ul.offcanvas-nav__sub
-						li
-							a(href="#jp").d-flex.align-items-center
-								img.header-lang__flag(src="img/language/jp.svg" alt="jp.svg")
-								|  Tiếng Nhật
-						li
-							a(href="#vn").d-flex.align-items-center
-								img.header-lang__flag(src="img/language/vn.svg" alt="vn.svg")
-								|  Tiếng Việt
-				li
-					a(href="#" role="button").header-mobile__button__close.mt-4
-						span.offcanvas-icons.mdi.mdi-close
-						| Đóng
+						img.lazy.header-logo__mobile(src="img/logo.png" alt="logo.png")
+				ul.offcanvas-nav
+					li.uk-active
+						a(href="#")
+							span.offcanvas-icons.mdi.mdi-home-outline
+							|  Trang chủ
+					li
+						a(href="#")
+							span.offcanvas-icons.mdi.mdi-information-outline
+							span(uk-icon="info").uk-margin-small-right
+							| Giới thiệu
+					li
+						a(href="#")
+							span.offcanvas-icons.mdi.mdi-email-outline
+							| Liên hệ
+					li
+						a(href="#")
+							span.offcanvas-icons.mdi.mdi-briefcase-outline
+							|  Việc làm
+						ul.offcanvas-nav__sub
+							li
+								a(href="#") Đặc định
+							li
+								a(href="#") Điều dưỡng
+							li
+								a(href="#") Kỹ sư
+							li
+								a(href="#") Thực tập sinh
+					li
+						a(href="#")
+							span.offcanvas-icons.mdi.mdi-share-variant
+							| Tin tức
+					li
+						a(href="#")
+							span.offcanvas-icons.mdi.mdi-message-processing-outline
+							| Hỏi đáp
+					li
+						span.offcanvas-icons.mdi.mdi-tools
+						|  Ngôn ngữ
+						ul.offcanvas-nav__sub
+							li
+								a(href="#jp").d-flex.align-items-center
+									img.header-lang__flag(src="img/language/jp.svg" alt="jp.svg")
+									|  Tiếng Nhật
+							li
+								a(href="#vn").d-flex.align-items-center
+									img.header-lang__flag(src="img/language/vn.svg" alt="vn.svg")
+									|  Tiếng Việt
+					li
+						a(href="#" role="button").header-mobile__button__close.mt-4
+							span.offcanvas-icons.mdi.mdi-close
+							| Đóng
