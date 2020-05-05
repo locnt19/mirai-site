@@ -4,7 +4,7 @@
 	display: flex
 	justify-content: space-between
 	align-items: flex-end
-	box-shadow: 0 1px 0 0 $second-color
+	box-shadow: 0 1px 0 0 $title-color
 .viec-lam-tabs
 	margin-right: -15px
 	li
@@ -28,7 +28,7 @@
 		&.active,
 		&:hover
 			color: #fff
-			background: $second-color
+			background: $title-color
 			&:before
 				content: ''
 .content-header
@@ -36,39 +36,58 @@
 	line-height: 40px
 	font-weight: 700
 	text-align: center
-	background: $third-color
-	color: $title-color
+	background: $title-color
+	color: #fff
+	border-bottom: 1px solid #ccc
 	div:first-child
 		text-align: left
 .tabs-content-wrap
 	&:not(.active)
 		display: none
 .content-item
+	word-wrap: break-word
 	text-transform: uppercase
 	padding: 12px 0
 	color: $title-color
 	align-items: center
-	text-align: center
-	div:first-child
+	border: 1px solid #ccc
+	border-top: none
+	.congviec
 		text-align: left
+		font-weight: 600
+	.luong
+		text-align: center
+		color: #ff9f1a
+		font-weight: 900
+	.diadiem
+		text-align: center
+		color: #6c5ce7
+		font-weight: 600
 	a
-		color: $title-color
-	.col-6
-		text-align: left
+		color: inherit
 	&:nth-child(even)
 		background: $fourth-color
+	&:nth-child(odd)
+		background: #fff
 	&:hover
-		z-index: 1
-		box-shadow: 0 0 5px 1px rgba(0,0,0,.3)
+		border-left: none
+		border-right: none
+		background: #007DC6
+		transition: all .1s ease-in
+		*
+			color: #fff
+
 .content-bottom
 	margin-top: 10px
-	box-shadow: 0 -1px 0 0 $second-color
+	box-shadow: 0 -1px 0 0 $title-color
 	.bottom-left
 		color: #fff
-		line-height: 30px
-		background: $second-color
+		font-size: 15px
+		height: 30px
+		background: $title-color
 		display: flex
 		justify-content: space-between
+		align-items: center
 		position: relative
 		&:after
 			content: ''
@@ -83,7 +102,7 @@
 			align-items: center
 			position: relative
 			p:nth-child(2)
-					margin-left: 10px
+				margin-left: 10px
 			span
 				&.mdi
 					position: absolute
@@ -93,9 +112,9 @@
 		padding-right: 0
 @media (max-width: 991.97px)
 	.content-bottom
-			.bottom-left
-				&:after
-					content: none
+		.bottom-left
+			&:after
+				content: none
 			.bottom-right
 				padding-right: 15px
 @media (max-width: 767.97px)
@@ -112,6 +131,12 @@
 		div:first-child
 			text-align: center
 			margin-bottom: 10px
+	.content-bottom
+		.bottom-left
+			font-size: 14px
+			height: auto
+			padding-top: 10px
+			padding-bottom: 10px
 @media (max-width: 575.97px)
 	.viec-lam-tabs
 		margin: 0
@@ -121,18 +146,12 @@
 		margin-bottom: 10px
 		padding-left: 15px
 		padding-bottom: 5px
-		&::-webkit-scrollbar
-				height: 5px
-		&::-webkit-scrollbar-track
-				background: #E5E5E5
-		&::-webkit-scrollbar-thumb
-				border-radius: 99px
-				background: rgb(0, 72, 146,.3)
 		li
 			white-space: nowrap
 	.content-bottom
 		.bottom-left
 			display: block
+			line-height: 1.5
 			.info
 				display: block
 				p

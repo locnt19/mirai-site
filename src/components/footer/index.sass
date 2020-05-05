@@ -1,65 +1,55 @@
-footer
-	padding-top: 30px
-	background: $seventh-color
-	color: #888
-	a
-		color: #888
-	.logo
-		width: 150px
-		margin-bottom: 15px
-	.item
-			margin-bottom: 20px
-	.footer-title
-		font-weight: 900
-		font-size: 18px
-		color: $text-color
+.footer
+	z-index: 2
+	padding-top: 60px
+	background: #38A8D9
+	color: #fff
+	line-height: 1.25
+	&-header
+		padding: 5px 0
+		font-weight: 700
+		margin-bottom: 5px
 		text-transform: uppercase
-		margin-bottom: 10px
-	.footer-content
-		line-height: 1.5
-		p
+		text-shadow: rgba(#000, .4) 0px 0 4px
+	a
+		color: inherit
+		padding: 5px 0
+	ul
+		margin: 0 0 30px
+		word-wrap: break-word
+		li
+			color: rgba(#fff, .85)
+			font-size: .9375rem /* 15/16 */
 			position: relative
-			padding-left: 20px
-			&:before
+			padding-left: 15px
+			&::before
 				position: absolute
-				top: 1px
 				left: 0
-		img
-			margin-top: 15px
-			height: 40px
-	.copyright
-		box-shadow: 0 -1px 0 0 #E1E1E1
-	.copyright-inner
-		display: flex
-		align-items: center
-		justify-content: space-between
-	.social
-		height: 40px
-		a
-			display: inline-block
-			width: 40px
-			height: 40px
-			position: relative
-			transition: all .15s ease-in-out
-			border-right: 1px solid #E1E1E1
-			&:hover
-				color: $title-color
-			&:first-child
-				border-left: 1px solid #E1E1E1
-			&:before
-				position: absolute
-				top: 50%
-				left: 50%
-				font-size: 24px
-				transform: translate(-50%, -50%)
-@media (max-width: 575.97px)
-	footer
-		.footer-title
-				font-size: 16px
-		.copyright-inner
-			flex-direction: column
-			justify-content: center
-		.social
-			margin-top: 10px
+				top: 2px
+				content: '\F0142'
+				display: inline-block
+				font-family: 'Material Design Icons'
+				font-size: inherit
+				text-rendering: auto
+				line-height: 1
+				-webkit-font-smoothing: antialiased
+				-moz-osx-font-smoothing: grayscale
+			&:not(:last-child)
+				margin-bottom: 7px
+		li > a
+			display: inline
+	p
+		margin-bottom: 15px
+	.giay-phep
+		width: 30px
+	hr
+		margin: 30px 0
+		border: 0
+		border-top: 1px solid #fff
+	&-bottom
+		border-top: 1px solid #fff
+		font-size: 0.9rem
+		.icon-social
 			a
-				border: none !important
+				font-size: 24px
+				display: inline-block
+				padding: 4px 8px

@@ -1,50 +1,84 @@
 .stuff-hoi-dap
-	width: 110px
-	z-index: 100
+	width: 80px
+	z-index: 2200
 	text-align: center
-	border: 1px solid #707070
 	position: fixed
-	right: 100%
-	top: 200px
-	&.active
-		left: 0
-	.toggle-stuff
-		position: absolute
-		right: -40px
-		top: 20%
-		width: 40px
-		height: 40px
-		color: #fff
-		cursor: pointer
-		&:before
-			position: absolute
-			font-size: 30px
-			top: 50%
-			left: 50%
-			transform: translate(-50%, -50%)
-	div
-		background: $title-color
-		a
-			text-transform: uppercase
-			font-weight: 700
-			line-height: 30px
-			color: #fff
-		&:last-child
-			padding: 15px
-			a
-				line-height: 1.5
+	left: 0
+	top: 50%
+	transform: translateY(-50%)
+	font-size: 13px
+	line-height: 1.1
+	.logo
+		background: none
+		margin-bottom: 2px
+		img
+			width: 100%
+.sidebar-wrap, .dang-ky-ngay
+	margin-bottom: 2px
+.sidebar-wrap
+	border: 2px solid $title-color
+.sidebar-title
+	background: $title-color
+	padding: 5px
+	text-transform: uppercase
+	font-weight: 900
+	line-height: 1.5
+	color: #fff
+.sidebar-inner
 	li
 		background: #fff
 		list-style: none
-		padding: 7px 0
-		border-bottom: 1px solid #707070
+		padding: 5px
 		a
 			color: $text-color
-			transition: all .3s ease-in-out
-			&:hover
-				color: $title-color
+			font-weight: 700
+		&:not(:last-child)
+			border-bottom: 1px solid $title-color
+		&:hover
+			transition: all .25s ease-in-out
+			a
+				transition: all .25s ease-in-out
+				color: #fff
+			&:nth-child(1)
+				background: #81ecec
+			&:nth-child(2)
+				background: #d63031
+			&:nth-child(3)
+				background: #273c75
+.dang-ky-ngay, .lien-he-ngay
+	border: 2px solid
+	&:hover
+		transition: all .25s ease-in-out
+	a
+		color: #fff
 	img
 		width: 30px
 		height: 30px
 		display: block
 		margin: 0 auto 5px
+.sidebar-hoi-dap
+	border-color: #ff9f1a
+	.sidebar-title
+		background: #ff9f1a
+	.sidebar-inner
+		li
+			border-color: #ff9f1a
+.sidebar-ho-tro
+	border-color: #c56cf0
+	.sidebar-title
+		background: #c56cf0
+	.sidebar-inner
+		li
+			border-color: #c56cf0
+			&:hover
+				background: #DBEAFB
+				a
+					color: #4781AE
+.dang-ky-ngay
+	background: #FFC289
+	border-color: #008652
+	&:hover
+		background: #008652
+@media (max-width: 991.98px)
+	.stuff-hoi-dap
+		display: none

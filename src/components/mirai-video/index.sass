@@ -1,0 +1,51 @@
+.home-video
+  padding: 60px 0
+  margin-bottom: 30px
+  background: url(../img/bg-lichsu.jpg) center center fixed
+  background-size: cover
+  line-height: 1.25
+  color: #fff
+  .title
+    color: #fff
+  .left,
+  iframe
+    height: 200px
+    @media screen and ( min-width: 576px )
+      height: 400px
+  .left
+    margin: 15px 0
+  .right
+    margin: 15px 0
+    user-select: none
+    padding-left: 10px
+    max-height: 250px
+    overflow-y: auto
+    @media screen and ( min-width: 992px )
+      max-height: 400px
+    .swiper-wrapper
+      flex-direction: column
+    .swiper-slide
+      height: auto
+    .item
+      color: #fff
+      padding-left: 30px
+      padding-bottom: 15px
+      font-size: 1.125rem /* 18/16 */
+      position: relative
+      border-left: 2px solid #fff
+      &::before
+        content: ''
+        display: block
+        width: 10px
+        height: 10px
+        background: #fff
+        position: absolute
+        top: 5px
+        left: -6px
+    .swiper-slide-thumb-active
+      .item
+        color: #00A650
+        font-weight: 700
+        &::before
+          background: #00A650
+          box-shadow: 0 0 0 4px rgba(245, 130, 31, 0.3)

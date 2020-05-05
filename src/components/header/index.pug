@@ -1,4 +1,4 @@
-header
+//- header
 	.header-top
 		.container
 			.row
@@ -12,17 +12,17 @@ header
 							span Hotline: 0902 538 164
 					.header-logo
 						a(href="/")
-							img(src="img/logo-header.png", alt="logo-desktop")
-							img(src="img/logo.png", alt="logo-mobile")
+							img.lazy(data-src="img/logo-header.png" alt="logo-desktop")
+							img.lazy(data-src="img/logo/logo.png" alt="logo-mobile")
 					.header-right
-						form.search-box(action="", method="get")
+						form.search-box(action="" method="get")
 							input(type="text" placeholder="Tìm kiếm...")
 							button(type="submit").mdi.mdi-magnify
 						.language-bar
 							a(href="/")
-								img(src="img/flag-jp.png", alt="jp")
+								img.lazy(data-src="img/flag-jp.png" alt="jp")
 							a(href="/")
-								img(src="img/flag-vn.png", alt="vn")
+								img.lazy(data-src="img/flag-vn.png" alt="vn")
 	.header-bottom
 		.container
 			.row
@@ -39,12 +39,111 @@ header
 						a(href="/").active
 							span.mdi.mdi-home
 							span TRANG CHỦ
-						a(href="/") GIỚI THIỆU
-						a(href="/") LIÊN HỆ
-						a(href="/") TIN TỨC
-						a(href="/") HỎI ĐÁP
+						a(href="about.html") GIỚI THIỆU
+						a(href="contact.html") LIÊN HỆ
+						a(href="news.html") TIN TỨC
+						a(href="hoi-dap.html") HỎI ĐÁP
 					nav.navbar-right
-						a(href="/") THỰC TẬP SINH
-						a(href="/") KỸ SƯ VIỆT - NHẬT
-						a(href="/") DU HỌC SINH
-						a(href="/") ĐÀO TẠO
+						a(href="hoi-dap.html") THỰC TẬP SINH
+						a(href="hoi-dap.html") KỸ SƯ VIỆT - NHẬT
+						a(href="hoi-dap.html") DU HỌC SINH
+						a(href="hoi-dap.html") ĐÀO TẠO
+header.header
+	.header-desktop.d-none.d-lg-block.bg-white
+		.header-desktop__top.container.p-0.d-flex.align-items-center
+			.d-flex.flex-column.flex-xl-row(style="font-size: .9rem;")
+				span.mdi.mdi-email.mr-2 Email: contact@miraihuman.com
+				span.mdi.mdi-phone Hotline: 0902 538 164
+			.d-flex.align-items-center.ml-auto
+				form.header-search.mr-3(role="search")
+					input.header-search__input(type="search" name="search" placeholder="Tìm kiếm..." autocomplete="off")
+				a(href="#")
+					img.header-lang__flag.jp(src="img/language/jp.svg" alt="jp.svg")
+				a(href="#")
+					img.header-lang__flag(src="img/language/vn.svg" alt="vn.svg")
+		.header-desktop__navbar
+			.container.p-0.d-flex.align-items-center.justify-content-between
+				nav.header-desktop__navbar__nav
+					li.active
+						a(href="index.html") Trang chủ
+					li
+						a(href="about.html") Giới thiệu
+					li
+						a(href="#") Liên hệ
+				.header-logo__desktop
+					a(href="index.html")
+						img.logo(src="img/logo/logo.png" alt="logo-desktop")
+					img.bg(src="img/logo/Artboard 2 - nosologan.png" alt="logo-desktop-bg")
+				nav.header-desktop__navbar__nav
+					li
+						a(href="#") Đặc định
+					li
+						a(href="#") Đơn hàng
+						ul.header-desktop__navbar__subnav
+							li
+								a(href="#") Điều dưỡng
+							li
+								a(href="#") Kỹ sư
+							li
+								a(href="#") Thực tập sinh
+					li
+						a(href="news.html") Tin tức
+	.header-mobile.d-lg-none
+		a(href="index.html")
+			img.header-logo__mobile(src="img/logo/logo.png" alt="logo.png")
+		div(role="button").header-mobile__button__open.mdi.mdi-menu
+		.offcanvas.offcanvas-overlay
+			.offcanvas-bar
+				.offcanvas-header
+					a(href="index.html")
+						img.lazy.header-logo__mobile(src="img/logo/logo.png" alt="logo.png")
+				ul.offcanvas-nav
+					li
+						a(href="index.html")
+							span.offcanvas-icons.mdi.mdi-home-outline
+							|  Trang chủ
+					li
+						a(href="about.html")
+							span.offcanvas-icons.mdi.mdi-information-outline
+							| Giới thiệu
+					li
+						a(href="#")
+							span.offcanvas-icons.mdi.mdi-email-outline
+							| Liên hệ
+					li
+						a(href="#")
+							span.offcanvas-icons.mdi.mdi-briefcase-outline
+							|  Đơn hàng
+						ul.offcanvas-nav__sub
+							li
+								a(href="#") Đặc định
+							li
+								a(href="#") Điều dưỡng
+							li
+								a(href="#") Kỹ sư
+							li
+								a(href="#") Thực tập sinh
+					li
+						a(href="news.html")
+							span.offcanvas-icons.mdi.mdi-share-variant
+							| Tin tức
+					li
+						a(href="#")
+							span.offcanvas-icons.mdi.mdi-message-processing-outline
+							| Hỏi đáp
+					li
+						span.offcanvas-icons.mdi.mdi-tools
+						|  Ngôn ngữ
+						ul.offcanvas-nav__sub
+							li
+								a(href="#jp").d-flex.align-items-center
+									img.header-lang__flag(src="img/language/jp.svg" alt="jp.svg")
+									|  Tiếng Nhật
+							li
+								a(href="#vn").d-flex.align-items-center
+									img.header-lang__flag(src="img/language/vn.svg" alt="vn.svg")
+									|  Tiếng Việt
+					li
+						a(href="#" role="button").header-mobile__button__close.mt-4
+							span.offcanvas-icons.mdi.mdi-close
+							| Đóng

@@ -1,12 +1,94 @@
+function LazyLoadFunction() {
+	var lazyLoad = new LazyLoad({
+		elements_selector: ".lazy"
+	});
+	lazyLoad.update();
+}
+
+function OpenOffCanvas() {
+	document.querySelector('.offcanvas').classList.add('open');
+	document.querySelector('body').classList.add('offcanvas-container');
+}
+
+function CloseOffCanvas() {
+	document.querySelector('.offcanvas').classList.remove('open');
+	document.querySelector('body').classList.remove('offcanvas-container');
+}
+
 $(document).ready(function () {
-	// all script write here
+	const currentDate = new Date();
+	document.getElementById('year').innerHTML = currentDate.getFullYear();
+
+	document.querySelector('.header-mobile__button__open').addEventListener('click', function () {
+		OpenOffCanvas();
+	})
+	document.querySelector('.header-mobile__button__close').addEventListener('click', function (e) {
+		e.preventDefault();
+		CloseOffCanvas();
+	})
+
+	// When the user clicks anywhere outside of the offcanvas, close it
+	window.onclick = function (e) {
+		// console.log(e.target);
+		if (e.target === document.querySelector('.offcanvas.open')) {
+			CloseOffCanvas();
+		}
+	}
+
+	var previousScroll = document.documentElement.scrollTop;
+
+	window.onscroll = function () {
+		// console.log(document.documentElement.scrollTop, 'scrolltop position');
+		// console.log(previousScroll, 'previousScroll before');
+		// console.log(window.pageYOffset, 'pageYOffset');
+
+		// back-2-top
+		if (document.documentElement.scrollTop > 100) {
+			document.querySelector('.btn-back-2-top').style.visibility = 'visible';
+			document.querySelector('.btn-back-2-top').style.opacity = '1';
+		} else {
+			document.querySelector('.btn-back-2-top').style.visibility = 'hidden';
+			document.querySelector('.btn-back-2-top').style.opacity = '0';
+		}
+
+		// scroll header
+		if (document.documentElement.scrollTop >= previousScroll) {
+			// console.log('down');
+			document.querySelector('.header-desktop').classList.add('scroll-down');
+			previousScroll = document.documentElement.scrollTop;
+		} else if (document.documentElement.scrollTop < previousScroll) {
+			// console.log('up');
+			document.querySelector('.header-desktop').classList.remove('scroll-down');
+			previousScroll = document.documentElement.scrollTop;
+		}
+	}
+
 
 	// back-2-top
 	$(window).scroll(function () {
-		if ($(this).scrollTop() > 100) {
-			$('.btn-back-2-top').fadeIn()
-		} else $('.btn-back-2-top').fadeOut()
+		// // count number
+		// if ($(this).scrollTop() > 1100) {
+		// 	$('.sum span').each(function () {
+		// 		var $this = $(this),
+		// 			countTo = $this.attr('data-count');
+		// 		$({
+		// 			countNum: $this.text()
+		// 		}).animate({
+		// 			countNum: countTo
+		// 		}, {
+		// 			duration: 2500,
+		// 			easing: 'linear',
+		// 			step: function () {
+		// 				$this.text(Math.floor(this.countNum));
+		// 			},
+		// 			complete: function () {
+		// 				$this.text(this.countNum);
+		// 			}
+		// 		});
+		// 	});
+		// }
 	})
+
 	$('.btn-back-2-top').click(function () {
 		$('html, body').animate({
 			scrollTop: 0
@@ -14,10 +96,10 @@ $(document).ready(function () {
 	})
 
 	// Slider
-	var homeBanner = new Swiper('.home-banner .swiper-container', {
-		// loop: true,
+	new Swiper('.home-banner .swiper-container', {
+		loop: true,
 		effect: 'coverflow',
-		speed: 1500,
+		speed: 3000,
 		lazy: true,
 		coverflowEffect: {
 			rotate: 50,
@@ -26,64 +108,68 @@ $(document).ready(function () {
 			modifier: 1,
 			slideShadows: true,
 		},
+		autoplay: {
+			delay: 10000,
+			disableOnInteraction: false,
+		},
 		pagination: {
 			el: '.home-banner .pagination',
 			clickable: true
 		},
 	});
-	var hoatDongMirai = new Swiper('.hoat-dong-mirai .swiper-container', {
-		slidesPerView: 2,
+	new Swiper('.hoat-dong-mirai .swiper-container', {
 		spaceBetween: 30,
 		loop: true,
 		centeredSlides: true,
 		autoplay: {
-			delay: 2000,
+			delay: 5000,
 			disableOnInteraction: false,
 		},
-		lazy: true,
 		speed: 1500,
 		breakpoints: {
-			576: {
-				slidesPerView: 1
+			slidesPerView: 1,
+			768: {
+				slidesPerView: 3
 			}
 		},
 		pagination: {
-			el: '.hoat-dong-mirai .pagination',
+			el: '.hoat-dong-mirai .swiper-pagination',
 			clickable: true
 		},
 	});
-	var camNhanHocVien = new Swiper('.cam-nhan-hoc-vien .swiper-container', {
-		slidesPerView: 2,
+	new Swiper('.cam-nhan-hoc-vien .swiper-container', {
+		slidesPerView: 1,
 		spaceBetween: 30,
 		loop: true,
 		autoplay: {
-			delay: 3000,
+			delay: 8000,
 			disableOnInteraction: false,
 		},
-		speed: 3000,
+		speed: 2000,
 		breakpoints: {
-			767.97: {
-				slidesPerView: 1
+			768: {
+				slidesPerView: 2
 			}
 		},
 		pagination: {
-			el: '.cam-nhan-hoc-vien .pagination',
-			clickable: true,
+			el: '.cam-nhan-hoc-vien .swiper-pagination',
+			clickable: true
 		},
 	});
 
-	// Resposive
-	const windowSize = $(window).width();
-	if (windowSize <= 768) {
-		$('.header-bottom .row .col-12').prepend($('.header-right'))
-		$('.header-bottom-inner').append($('.search-box'))
-		$('.header-bottom-inner').append($('.header-left'))
-	}
-	$('.toggle-menu').on('click', function () {
-		$(this).toggleClass('open')
-		$('.header-bottom-inner').slideToggle()
+	let homeVideoRight = new Swiper('.home-video .right', {
+		allowSlidePrev: false,
+		allowSlideNext: false
 	});
-
+	new Swiper('.home-video .left', {
+		slidesPerView: 1,
+		spaceBetween: 15,
+		slideToClickedSlide: true,
+		speed: 2000,
+		thumbs: {
+			swiper: homeVideoRight
+		}
+	});
 
 	// Tabs viec lam
 	$('.viec-lam-title li').on('click', function () {
@@ -103,12 +189,10 @@ $(document).ready(function () {
 	$('.toggle-stuff').click(function () {
 		$('.stuff-hoi-dap').toggleClass('active')
 	})
-
 	$('.hoi-dap .item-title').click(function () {
 		$(this).parent().toggleClass('active');
 		$(this).siblings('.item-content').slideToggle();
 	})
-
 	// tuyen-dung-popup
 	$('.tuyen-dung .btn-so-yeu-li-lich').click(function () {
 		$('.tuyen-dung-popup').addClass('active')
@@ -119,4 +203,6 @@ $(document).ready(function () {
 		$('.tuyen-dung-popup').removeClass('active')
 		$('.tuyen-dung-popup-background').removeClass('active')
 	})
+
+	LazyLoadFunction();
 });

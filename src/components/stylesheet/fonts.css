@@ -1,54 +1,42 @@
-/* darker-grotesque-regular - vietnamese */
+
 @font-face {
-  font-family: 'Darker Grotesque';
+  font-family: 'MiraiHuman-font';
+  src: url('../fonts/SourceSansPro-ExtraLight.eot?#iefix') format('embedded-opentype'), url('../fonts/SourceSansPro-ExtraLight.woff') format('woff'), url('../fonts/SourceSansPro-ExtraLight.ttf') format('truetype'), url('../fonts/SourceSansPro-ExtraLight.svg#SourceSansPro-ExtraLight') format('svg');
+  font-weight: 200;
   font-style: normal;
+}
+
+@font-face {
+  font-family: 'MiraiHuman-font';
+  src: url('../fonts/SourceSansPro-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/SourceSansPro-Light.woff') format('woff'), url('../fonts/SourceSansPro-Light.ttf') format('truetype'), url('../fonts/SourceSansPro-Light.svg#SourceSansPro-Light') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MiraiHuman-font';
+  src: url('../fonts/SourceSansPro-Regular.eot?#iefix') format('embedded-opentype'),  url('../fonts/SourceSansPro-Regular.woff') format('woff'), url('../fonts/SourceSansPro-Regular.ttf')  format('truetype'), url('../fonts/SourceSansPro-Regular.svg#SourceSansPro-Regular') format('svg');
   font-weight: 400;
-  src: local('Darker Grotesque Regular'), local('DarkerGrotesque-Regular'),
-       url('../fonts/darker-grotesque-v1-vietnamese-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/darker-grotesque-v1-vietnamese-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-/* darker-grotesque-500 - vietnamese */
-@font-face {
-  font-family: 'Darker Grotesque';
   font-style: normal;
-  font-weight: 500;
-  src: local('Darker Grotesque Medium'), local('DarkerGrotesque-Medium'),
-       url('../fonts/darker-grotesque-v1-vietnamese-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/darker-grotesque-v1-vietnamese-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-/* darker-grotesque-600 - vietnamese */
+
 @font-face {
-  font-family: 'Darker Grotesque';
-  font-style: normal;
+  font-family: 'MiraiHuman-font';
+  src: url('../fonts/SourceSansPro-SemiBold.eot?#iefix') format('embedded-opentype'),  url('../fonts/SourceSansPro-SemiBold.woff') format('woff'), url('../fonts/SourceSansPro-SemiBold.ttf')  format('truetype'), url('../fonts/SourceSansPro-SemiBold.svg#SourceSansPro-SemiBold') format('svg');
   font-weight: 600;
-  src: local('Darker Grotesque SemiBold'), local('DarkerGrotesque-SemiBold'),
-       url('../fonts/darker-grotesque-v1-vietnamese-600.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/darker-grotesque-v1-vietnamese-600.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-/* darker-grotesque-700 - vietnamese */
-@font-face {
-  font-family: 'Darker Grotesque';
   font-style: normal;
+}
+
+@font-face {
+  font-family: 'MiraiHuman-font';
+  src: url('../fonts/SourceSansPro-Bold.eot?#iefix') format('embedded-opentype'),  url('../fonts/SourceSansPro-Bold.woff') format('woff'), url('../fonts/SourceSansPro-Bold.ttf')  format('truetype'), url('../fonts/SourceSansPro-Bold.svg#SourceSansPro-Bold') format('svg');
   font-weight: 700;
-  src: local('Darker Grotesque Bold'), local('DarkerGrotesque-Bold'),
-       url('../fonts/darker-grotesque-v1-vietnamese-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/darker-grotesque-v1-vietnamese-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-/* darker-grotesque-800 - vietnamese */
-@font-face {
-  font-family: 'Darker Grotesque';
   font-style: normal;
-  font-weight: 800;
-  src: local('Darker Grotesque ExtraBold'), local('DarkerGrotesque-ExtraBold'),
-       url('../fonts/darker-grotesque-v1-vietnamese-800.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/darker-grotesque-v1-vietnamese-800.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-/* darker-grotesque-900 - vietnamese */
+
 @font-face {
-  font-family: 'Darker Grotesque';
-  font-style: normal;
+  font-family: 'MiraiHuman-font';
+  src: url('../fonts/SourceSansPro-Black.eot?#iefix') format('embedded-opentype'),  url('../fonts/SourceSansPro-Black.woff') format('woff'), url('../fonts/SourceSansPro-Black.ttf')  format('truetype'), url('../fonts/SourceSansPro-Black.svg#SourceSansPro-Black') format('svg');
   font-weight: 900;
-  src: local('Darker Grotesque Black'), local('DarkerGrotesque-Black'),
-       url('../fonts/darker-grotesque-v1-vietnamese-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../fonts/darker-grotesque-v1-vietnamese-900.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  font-style: normal;
 }

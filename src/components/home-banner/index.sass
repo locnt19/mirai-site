@@ -1,32 +1,23 @@
 .home-banner
 	position: relative
-	.img-wrap
-		height: 350px
-		overflow: hidden
-		img
-				width: 100%
-				height: 100%
-				object-fit: cover
+	img
+		max-width: 100%
+		height: auto
 	.pagination
 		z-index: 1
 		position: absolute
-		bottom: 15px
+		bottom: 10px
 		left: 50%
 		transform: translateX(-50%)
 	.swiper-pagination-bullet
-		width: 10px
-		height: 10px
-		border-radius: 0
-		transform: rotate(45deg)
-		background: #ffffff
+		width: 8px
+		height: 8px
+		border-radius: 99px
+		background: #000
 		opacity: 0.5
 		outline: none
 		&:not(:first-child)
-			margin-left: 15px
+			margin-left: 10px
 		&-active
 			background: #38A8D9
 			opacity: 1
-@media (max-width: 767.97px)
-	.home-banner
-		.img-wrap
-			height: 250px

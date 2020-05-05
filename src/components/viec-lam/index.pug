@@ -5,57 +5,52 @@ section.viec-lam
 				h2.title việc làm mirai
 				nav.viec-lam-tabs
 					li(tabs="tai-nhat-ban") tại nhật bản
-					li(tabs="ky-su-thong-dich-vien") kỹ sư & thông dịch viên
-					li(tabs="dieu-duong-ho-ly").active hộ lý - điều dưỡng
+					li.active(tabs="ky-su-thong-dich-vien") kỹ sư & thông dịch viên
+					li(tabs="dieu-duong-ho-ly") hộ lý - điều dưỡng
 			.col-12.tabs-content
 				.row.content-header
 					.col-md-6 VỊ TRÍ
-					.col-4.col-md-2 NHẬT NGỮ
-					.col-4.col-md-2 MỨC LƯƠNG
-					.col-4.col-md-2 ĐỊA ĐIỂM
+					//- .col-6.col-md-3 NHẬT NGỮ
+					.col-6.col-md-3 MỨC LƯƠNG
+					.col-6.col-md-3 ĐỊA ĐIỂM
 				.tabs-content-wrap(tabs="tai-nhat-ban")
 					-for(i = 0; i < 8; i++)
 						.row.content-item
-							.col-md-6
-								a(href="/") [tabs tai nhat ban] 1 NAM - CHẾ TẠO KIM LOẠI TẤM DÙNG TRONG XÂY DỰNG
-							.col-4.col-md-2 không
-							.col-4.col-md-2 35~40tr
-							.col-4.col-md-2
-								a(href="/") hiroshima
-				.tabs-content-wrap(tabs="dieu-duong-ho-ly").active
+							.col-md-6.congviec
+								a(href="tuyen-dung.html") 1 NAM - CHẾ TẠO KIM LOẠI TẤM DÙNG TRONG XÂY DỰNG
+							//- .col-6.col-md-3 không
+							.col-6.col-md-3.luong 35~40tr
+							.col-6.col-md-3.diadiem hiroshima
+				.tabs-content-wrap(tabs="dieu-duong-ho-ly")
 					-for(i = 0; i < 8; i++)
 						.row.content-item
-							.col-md-6
-								a(href="/") [tabs dieu duong ho ly] 1 NAM - CHẾ TẠO KIM LOẠI TẤM DÙNG TRONG XÂY DỰNG
-							.col-4.col-md-2 không
-							.col-4.col-md-2 35~40tr
-							.col-4.col-md-2
-								a(href="/") hiroshima
-				.tabs-content-wrap(tabs="ky-su-thong-dich-vien")
+							.col-md-6.congviec
+								a(href="tuyen-dung.html") 1 NAM - CHẾ TẠO KIM LOẠI TẤM DÙNG TRONG XÂY DỰNG
+							//- .col-6.col-md-3 không
+							.col-6.col-md-3.luong 35~40tr
+							.col-6.col-md-3.diadiem hiroshima
+				.tabs-content-wrap.active(tabs="ky-su-thong-dich-vien")
 					.row.content-item
-						.col-md-6
-							a(href="/") [tabs ky-su-thong-dich-vien] [ THỰC TẬP SINH NHẬT BẢN ] 1 NAM - CHẾ TẠO KIM LOẠI TẤM DÙNG TRONG XÂY DỰNG
-						.col-4.col-md-2 không
-						.col-4.col-md-2 35~40tr
-						.col-4.col-md-2
-							a(href="/") hiroshima
+						.col-md-6.congviec
+							a(href="tuyen-dung.html") 1 NAM - CHẾ TẠO KIM LOẠI TẤM DÙNG TRONG XÂY DỰNG
+						//- .col-6.col-md-3 không
+						.col-6.col-md-3.luong 230,000 YÊN TRỞ LÊN
+						.col-6.col-md-3.diadiem Tokyo
 					-for(i = 0; i < 6; i++)
 						.row.content-item
-							.col-md-6
-								a(href="/") [tabs ky-su-thong-dich-vien] TUYỂN 12 NỮ ĐIỀU DƯỠNG
-							.col-4.col-md-2 không
-							.col-4.col-md-2 35~40tr
-							.col-4.col-md-2
-								a(href="/") hiroshima
+							.col-md-6.congviec
+								a(href="tuyen-dung.html") TUYỂN 12 NỮ ĐIỀU DƯỠNG
+							//- .col-6.col-md-3 không
+							.col-6.col-md-3.luong 230,000 YÊN TRỞ LÊN
+							.col-6.col-md-3.diadiem hiroshima
 					.row.content-item
-						.col-md-6
-							a(href="/") [tabs ky-su-thong-dich-vien] 12 ~ 13 NAM - CHẾ TẠO KIM LOẠI TẤM DÙNG TRONG XÂY DỰNG
-						.col-4.col-md-2 không
-						.col-4.col-md-2 35~40tr
-						.col-4.col-md-2
-							a(href="/") hiroshima
+						.col-md-6.congviec
+							a(href="tuyen-dung.html") 12 ~ 13 NAM - CHẾ TẠO KIM LOẠI TẤM DÙNG TRONG XÂY DỰNG
+						//- .col-6.col-md-3 không
+						.col-6.col-md-3.luong 35~40tr
+						.col-6.col-md-3.diadiem hiroshima
 				.row.content-bottom
-					.col-lg-7.col-xl-6.bottom-left
+					.col-lg-7.bottom-left
 						p THÔNG TIN LIÊN LẠC:
 						.info
 							p
@@ -64,17 +59,6 @@ section.viec-lam
 							p
 								span.mdi.mdi-phone
 								span Hotline: 0902 538 164
-					.col-lg-5.col-xl-6.bottom-right
+					.col-lg-5.bottom-right
 						.tabs-pagination
-							a(href="/").first-page.isDisabled
-								span.mdi.mdi-chevron-double-left
-							a(href="/").back-page.isDisabled
-								span.mdi.mdi-chevron-left
-							a(href="/").current-page 1
-							a(href="/") 2
-							a(href="/") 3
-							a(href="/").next-page
-								span.mdi.mdi-chevron-right
-							a(href="/").last-page
-								span.mdi.mdi-chevron-double-right
-							a(href="/").see-all Xem tất cả
+							a(href="tuyen-dung-list.html").see-all Xem tất cả

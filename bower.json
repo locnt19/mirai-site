@@ -16,13 +16,15 @@
     "tests"
   ],
   "dependencies": {
-    "animate.css": "^3.7.2",
-    "fancybox": "^3.5.7",
-    "swiper": "^4.5.0",
-    "jquery": "^3.4.1",
-    "font-awesome": "^5.9.0",
-    "mdi": "^3.7.95",
-    "linearicons": "^1.0.1",
-    "bootstrap": "^4.3.1"
+    "animate.css": "latest",
+    "fancybox": "latest",
+    "swiper": "latest",
+    "jquery": "latest",
+    "font-awesome": "latest",
+    "mdi": "latest",
+    "linearicons": "latest",
+    "bootstrap": "latest",
+    "aos": "latest",
+    "vanilla-lazyload": "latest"
   }
 }

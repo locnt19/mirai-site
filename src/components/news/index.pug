@@ -1,56 +1,30 @@
-section.news
+section.news.tintuc.py-3.py-md-5
 	.container
-		.text-center
-			h2.title tin tức mirai
 		.row
-			.col-12
-				nav.navbar-center
-					li.active
-						a(href="/") tin mới nhất
-					li
-						a(href="/") tin tuyển dụng
-					li
-						a(href="/") tin nhật bản
-					li
-						a(href="/") tin việt nam
-			.col-md-6
-				.main-news
-					.img-wrap
-						img(src="img/co-khi.jpg", alt="co-khi")
-					a(href="/").sub-title Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis repellendus nihil eligendi! Officiis accusamus, amet unde ut iste expedita eaque.
-					.posted 19/09/2019
-					.news-content
-						p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore beatae quos reprehenderit tempore. Blanditiis omnis quia error nihil ipsum, reprehenderit unde natus magnam harum pariatur labore culpa cupiditate suscipit, optio, et magni ad illum cum eius sequi. Perferendis, expedita quis sapiente accusantium cumque, provident, beatae dolores error consectetur consequuntur minima. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat architecto quam debitis maiores reprehenderit porro vitae dolorem eveniet exercitationem odit quas, ea eum ipsum! Minima pariatur architecto est officiis, cumque ipsam maxime optio? Similique illo provident blanditiis praesentium quisquam voluptate in voluptas alias laborum at officiis fugiat, optio doloremque suscipit facere asperiores commodi autem aut magni dolorum ullam impedit. Accusamus optio voluptatem sequi, quos eaque consequatur exercitationem delectus eum deserunt quo provident enim nihil tempora. Ullam, culpa officia earum iure dolorem dolorum nemo labore, tempora molestias maxime iusto recusandae ex distinctio? Optio quaerat veritatis accusantium dignissimos nostrum laborum cupiditate quos.
-			.col-md-6
-				.row
-					-for(var i = 0; i < 4; i++)
-						.col-md-6
-							.sub-news
-								.img-wrap
-									img(src="img/co-khi.jpg", alt="co-khi")
-								a(href="/").sub-title Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis repellendus nihil eligendi! Officiis accusamus
-								.posted 19/09/2019
-								.news-content
-									p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore beatae quos reprehenderit tempore. Blanditiis omnis quia error nihil ipsum, reprehenderit unde natus magnam harum pariatur labore culpa cupiditate suscipit, optio, et magni ad illum cum eius sequi. Perferendis, expedita quis sapiente accusantium cumque, provident, beatae dolores error consectetur consequuntur minima.
-			-for(var i = 0; i < 4; i++)
-				.col-md-3
-					.sub-news
-						.img-wrap
-							img(src="img/co-khi.jpg", alt="co-khi")
-						a(href="/").sub-title Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis repellendus nihil eligendi! Officiis accusamus
-						.posted 19/09/2019
-						.news-content
-							p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore beatae quos reprehenderit tempore. Blanditiis omnis quia error nihil ipsum, reprehenderit unde natus magnam harum pariatur labore culpa cupiditate suscipit, optio, et magni ad illum cum eius sequi. Perferendis, expedita quis sapiente accusantium cumque, provident, beatae dolores error consectetur consequuntur minima.
+			.col-12.p-md-0
+				.border-bottom.d-flex.align-items-center
+					.title Tin tức
+					//- .view-mode.ml-auto
+						a(href="javascript:" role="button").mdi.mdi-view-sequential
+						a(href="javascript:" role="button").mdi.mdi-view-grid.ml-1
+			.col-12.p-md-0.tintuc-list
+				-for(var i = 0; i < 5; i++)
+					figure.tintuc-item
+						a.tintuc-title.d-block.d-md-none(href="#" title="Cùng nhau trải nghiệm những nét đẹp và lễ hội đặc sắc ở Nhật Bản vào tháng 5") Cùng nhau trải nghiệm những nét đẹp và lễ hội đặc sắc ở Nhật Bản vào tháng 5
+						a(href="#")
+							img.tintuc-image.lazy(data-src="http://noibo.miraihuman.com/miraiuploads/%E1%BA%A3nh1/unnamed%20-%202020-05-04T145913.283%20(1).jpg" alt="Image" title="Cùng nhau trải nghiệm những nét đẹp và lễ hội đặc sắc ở Nhật Bản vào tháng 5")
+						figcaption
+							a.tintuc-title.d-none.d-md-block(href="#" title="Cùng nhau trải nghiệm những nét đẹp và lễ hội đặc sắc ở Nhật Bản vào tháng 5") Cùng nhau trải nghiệm những nét đẹp và lễ hội đặc sắc ở Nhật Bản vào tháng 5
+							.tintuc-time
+								span.mdi.mdi-clock-outline
+								span.ml-1 2020-05-04 15:15:15
+							.tintuc-desc Tháng 5 là thời điểm giao mùa giữa mùa xuân và mùa hạ ở Nhật Bản, thời tiết khá là dễ chịu và cũng là thời điểm tuyệt vời để mọi người cùng nhau chiêm ngưỡng những vẻ đẹp và lễ hội đặc sắc ở Nhật. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam distinctio obcaecati expedita cum ea cumque quidem deleniti natus odio sapiente fugiat in unde sequi quos voluptate error, temporibus dignissimos culpa quis qui minus ullam ad itaque id! Pariatur, porro eos saepe magni, sit commodi qui atque nostrum omnis animi quae dolor quasi at iure ducimus, consectetur soluta quisquam nulla eum vero amet. Voluptatem est deleniti sint praesentium officia officiis alias aut amet, illum quidem minima facere a id vitae dolor maxime autem saepe enim nam quod excepturi sapiente placeat harum! Numquam quasi illum aut, soluta quos delectus architecto molestias distinctio!
 			.col-12
 				.tabs-pagination
-					a(href="/").first-page.isDisabled
-						span.mdi.mdi-chevron-double-left
-					a(href="/").back-page.isDisabled
+					a(href="#").back-page.isDisabled
 						span.mdi.mdi-chevron-left
-					a(href="/").current-page 1
-					a(href="/") 2
-					a(href="/") 3
-					a(href="/").next-page
+					a(href="#").current-page 1
+					a(href="#") 2
+					a(href="#") 3
+					a(href="#").next-page
 						span.mdi.mdi-chevron-right
-					a(href="/").last-page
-						span.mdi.mdi-chevron-double-right

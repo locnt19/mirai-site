@@ -1,26 +1,30 @@
 .breadcrumb
 	margin: 10px 0
+	font-size: 14px
 	a
 		color: $text-color
 	li
 		list-style: none
 		display: inline-block
 		&:not(:first-child)
-			padding-left: 15px
+			padding-left: 30px
 			position: relative
 			&:before
 				position: absolute
-				left: 0
-				top: 1px
+				top: 0
+				left: 8px
 				color: $text-color
-				content: '\F142'
+				content: '\F0142'
 				display: inline-block
-				font-family: 'Material Design Icons'
+				font: normal normal normal 24px/1 Material Design Icons
 				font-size: inherit
+				line-height: inherit
 				text-rendering: auto
-				line-height: 1
 				-webkit-font-smoothing: antialiased
 				-moz-osx-font-smoothing: grayscale
 		&.active
 			a
 				color: $title-color
+@media (max-width: 575.97px)
+	.breadcrumb
+		font-size: 12px

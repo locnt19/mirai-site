@@ -1,24 +1,22 @@
-const del = require('del')
-gulp = require('gulp')
-pug = require('gulp-pug')
-// Fiber = require('fibers')
-sass = require('gulp-sass')
-cssnano = require('cssnano')
-babel = require('gulp-babel')
-uglify = require('gulp-terser')
-concat = require('gulp-concat')
-rename = require('gulp-rename')
-replace = require('gulp-replace')
-plumber = require('gulp-plumber')
-postcss = require('gulp-postcss')
-prefixer = require('autoprefixer')
-srcmap = require('gulp-sourcemaps')
-cssImport = require('gulp-cssimport')
-sassUnicode = require('gulp-sass-unicode')
-cssDeclarationSorter = require('css-declaration-sorter')
-browserSync = require('browser-sync').create()
-readFileSync = require('graceful-fs').readFileSync
-// sass.compiler = require('dart-sass');
+const del = require('del'),
+	gulp = require('gulp'),
+	pug = require('gulp-pug'),
+	sass = require('gulp-sass'),
+	cssnano = require('cssnano'),
+	babel = require('gulp-babel'),
+	uglify = require('gulp-terser'),
+	concat = require('gulp-concat'),
+	rename = require('gulp-rename'),
+	replace = require('gulp-replace'),
+	plumber = require('gulp-plumber'),
+	postcss = require('gulp-postcss'),
+	prefixer = require('autoprefixer'),
+	srcmap = require('gulp-sourcemaps'),
+	cssImport = require('gulp-cssimport'),
+	sassUnicode = require('gulp-sass-unicode'),
+	cssDeclarationSorter = require('css-declaration-sorter'),
+	browserSync = require('browser-sync').create(),
+	readFileSync = require('graceful-fs').readFileSync
 
 
 // Task clean
@@ -54,8 +52,8 @@ gulp.task('copyImages', function () {
 gulp.task('globalJs', function () {
 	let glob = JSON.parse(readFileSync("./config.json"))
 	return gulp.src(glob.globalJs, {
-			allowEmpty: true
-		})
+		allowEmpty: true
+	})
 		.pipe(concat('global.min.js'))
 		.pipe(uglify())
 		.pipe(gulp.dest('dist/js'))
@@ -67,13 +65,13 @@ gulp.task('globalJs', function () {
 // Task custom JS in website
 gulp.task('js', function () {
 	return gulp.src('./src/components/main.js', {
-			allowEmpty: true
-		})
+		allowEmpty: true
+	})
 		.pipe(srcmap.init())
 		.pipe(babel({
 			presets: ['@babel/preset-env']
 		}))
-		.pipe(uglify())
+		// .pipe(uglify())
 		.pipe(srcmap.write('.'))
 		.pipe(rename({
 			suffix: '.min'
@@ -88,8 +86,8 @@ gulp.task('js', function () {
 gulp.task('globalCss', function () {
 	let glob = JSON.parse(readFileSync("./config.json"))
 	return gulp.src(glob.globalCss, {
-			allowEmpty: true,
-		})
+		allowEmpty: true,
+	})
 		.pipe(concat('global.min.css'))
 		.pipe(postcss([
 			prefixer({
@@ -109,10 +107,10 @@ gulp.task('globalCss', function () {
 // Task custom CSS in website
 gulp.task('css', function () {
 	return gulp.src([
-			'./src/components/main.sass',
-		], {
-			allowEmpty: true
-		})
+		'./src/components/main.sass',
+	], {
+		allowEmpty: true
+	})
 		.pipe(srcmap.init())
 		.pipe(sass.sync({
 			// fiber: Fiber
@@ -122,7 +120,7 @@ gulp.task('css', function () {
 			prefixer({
 				cascade: false,
 			}),
-			cssnano(),
+			// cssnano(),
 			cssDeclarationSorter({
 				order: 'smacss'
 			})
@@ -140,9 +138,9 @@ gulp.task('css', function () {
 // Task compile HTML
 gulp.task('html', function () {
 	return gulp.src([
-			'./src/views/*.pug',
-			'!./src/views/\_*.pug'
-		])
+		'./src/views/*.pug',
+		'!./src/views/\_*.pug'
+	])
 		.pipe(pug({
 			pretty: '\t',
 		}))
@@ -156,35 +154,35 @@ gulp.task('html', function () {
 // Task watch
 gulp.task('serve', function () {
 	browserSync.init({
-			notify: false,
-			server: {
-				baseDir: './dist',
-			},
-			port: 8000
-		}),
+		notify: false,
+		server: {
+			baseDir: './dist',
+		},
+		port: 8000
+	}),
 		gulp.watch([
-				'./config.json'
-			],
+			'./config.json'
+		],
 			gulp.parallel('globalJs', 'globalCss')
 		),
 		gulp.watch([
-				'./src/assets/**/**.{svg,gif,png,jpg,jpeg}'
-			],
+			'./src/assets/**/**.{svg,gif,png,jpg,jpeg}'
+		],
 			gulp.series('cleanImages', 'copyImages')
 		),
 		gulp.watch([
-				'./src/**/**.pug',
-			],
+			'./src/**/**.pug',
+		],
 			gulp.series('html')
 		),
 		gulp.watch([
-				'./src/components/**/**.sass',
-			],
+			'./src/components/**/**.sass',
+		],
 			gulp.series('css')
 		),
 		gulp.watch([
-				'./src/components/main.js',
-			],
+			'./src/components/main.js',
+		],
 			gulp.series('js')
 		),
 		gulp.watch('./dist/*').on('change', browserSync.reload)
