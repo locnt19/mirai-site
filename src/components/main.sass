@@ -31,13 +31,13 @@ a
 	font-size: 28px
 	line-height: 1.5
 	text-transform: uppercase
-	color: $title-color
+	color: #007DC6
 .sub-title
 	font-weight: 700
 	font-size: 24px
 	text-transform: uppercase
 .color-title
-	color: $title-color
+	color: #007DC6
 .fw-700
 	font-weight: 700
 .text-center
@@ -45,30 +45,18 @@ a
 .see-more
 	display: inline-block
 	margin-top: 5px
-	color: $title-color
-	&:after
-		content: '\F0054'
-		display: inline-block
-		font-family: 'Material Design Icons'
-		font-size: inherit
-		text-rendering: auto
-		line-height: 1
-		-webkit-font-smoothing: antialiased
-		-moz-osx-font-smoothing: grayscale
-		transform: translate(25%,25%)
+	color: #007DC6
 .tabs-pagination
 	display: flex
 	align-items: center
-	justify-content: flex-end
+	justify-content: center
 	a
 		line-height: 30px
 		display: block
 		margin: 0 10px
 		color: $text-color
-		&:last-child
-			margin-right: 0
 		&.isDisabled
-			color: $fifth-color
+			color: #DDD
 			pointer-events: none
 		&.current-page
 			position: relative
@@ -85,21 +73,9 @@ a
 				transform: translate(-50%, -50%)
 .posted
 	margin-top: 7px
-	padding-left: 15px
 	font-size: 12px
 	position: relative
-	&:before
-		content: '\F0150'
-		display: inline-block
-		font-family: 'Material Design Icons'
-		font-size: inherit
-		text-rendering: auto
-		line-height: 1
-		-webkit-font-smoothing: antialiased
-		-moz-osx-font-smoothing: grayscale
-		position: absolute
-		top: 0
-		left: 0
+	white-space: nowrap
 .line
 	margin: 30px 0 10px
 	width: 100%
@@ -129,7 +105,7 @@ a
 	width: 100%
 	margin-bottom: 15px
 	label
-		color: $title-color
+		color: #007DC6
 	input, textarea
 		margin-top: 7px
 		width: 100%
@@ -139,7 +115,7 @@ a
 		border-radius: 4px
 		font-family: 'MiraiHuman-font', sans-serif
 		font-weight: 700
-		color: $title-color
+		color: #007DC6
 		&::placeholder
 			color: $eighth-color
 			font-weight: 400
@@ -154,18 +130,22 @@ a
 	top: 50%
 	transform: translateY(-50%)
 	z-index: 1
+.view-mode
+	a
+		color: #0d151c !important
+		font-size: 24px
+.border-bottom
+	border-bottom: 1px solid silver
 @media (max-width: 991.97px)
-	body
-		font-size: 15px
+	// body
+	// 	font-size: 15px
 	.title
 		font-size: 24px
 	.sub-title
 		font-size: 18px
-	.tabs-pagination
-		justify-content: center
 @media (max-width: 767.97px)
-	body
-		font-size: 14px
+	// body
+	// 	font-size: 14px
 	.title
 		font-size: 18px
 	.sub-title

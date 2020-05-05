@@ -94,8 +94,11 @@ footer.footer
 					li contact@miraihuman.com
 					li www.miraihuman.com
 	.footer-bottom
-		.container
+		.container.d-flex.justify-content-between.align-items-center.flex-column.flex-md-row
 			.icon-social
 				a.mdi.mdi-facebook(href="https://www.facebook.com/fanpage.mirai" target="_blank")
 				a.mdi.mdi-youtube(href="https://www.youtube.com/channel/UC_aPd7LFRhF27FXPqYrILoA" target="_blank")
-			div.text-center COPYRIGHT © 2020 MIRAIHUMAN. ALL RIGHT RESERVED.
+			div.text-center
+				| COPYRIGHT © 
+				span#year
+				|  MIRAIHUMAN. ALL RIGHT RESERVED.

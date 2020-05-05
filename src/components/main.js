@@ -16,6 +16,9 @@ function CloseOffCanvas() {
 }
 
 $(document).ready(function () {
+	const currentDate = new Date();
+	document.getElementById('year').innerHTML = currentDate.getFullYear();
+
 	document.querySelector('.header-mobile__button__open').addEventListener('click', function () {
 		OpenOffCanvas();
 	})
@@ -32,13 +35,37 @@ $(document).ready(function () {
 		}
 	}
 
+	var previousScroll = document.documentElement.scrollTop;
+
+	window.onscroll = function () {
+		// console.log(document.documentElement.scrollTop, 'scrolltop position');
+		// console.log(previousScroll, 'previousScroll before');
+		// console.log(window.pageYOffset, 'pageYOffset');
+
+		// back-2-top
+		if (document.documentElement.scrollTop > 100) {
+			document.querySelector('.btn-back-2-top').style.visibility = 'visible';
+			document.querySelector('.btn-back-2-top').style.opacity = '1';
+		} else {
+			document.querySelector('.btn-back-2-top').style.visibility = 'hidden';
+			document.querySelector('.btn-back-2-top').style.opacity = '0';
+		}
+
+		// scroll header
+		if (document.documentElement.scrollTop >= previousScroll) {
+			// console.log('down');
+			document.querySelector('.header-desktop').classList.add('scroll-down');
+			previousScroll = document.documentElement.scrollTop;
+		} else if (document.documentElement.scrollTop < previousScroll) {
+			// console.log('up');
+			document.querySelector('.header-desktop').classList.remove('scroll-down');
+			previousScroll = document.documentElement.scrollTop;
+		}
+	}
+
 
 	// back-2-top
 	$(window).scroll(function () {
-		if ($(this).scrollTop() > 100) {
-			$('.btn-back-2-top').fadeIn()
-		} else $('.btn-back-2-top').fadeOut()
-
 		// // count number
 		// if ($(this).scrollTop() > 1100) {
 		// 	$('.sum span').each(function () {

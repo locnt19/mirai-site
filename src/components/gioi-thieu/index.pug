@@ -1,67 +1,52 @@
-section.gioi-thieu
-	.container
+section.about-page
+	.container.py-4.py-md-5
 		.row
-			.col-12.text-center
-				h2.title giới thiệu về miraihuman
-			.col-md-9
-				p
-					span.color-title.fw-700 Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, distinctio.
-					span Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe officia sint repellendus numquam consequuntur? Repellat mollitia vero labore. Ex ipsum sed eaque aut ullam cupiditate alias illo doloribus commodi harum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur corporis fugiat exercitationem magnam assumenda esse non? Magni illum dicta, consequuntur in consequatur laboriosam incidunt quis esse voluptate commodi modi iusto? Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ducimus perferendis, voluptatem itaque pariatur totam repellendus delectus aspernatur nam nemo autem veniam, illum accusamus laboriosam sequi rem quam? Doloremque, mollitia!
-			.col-md-3.order-first.order-md-0
-				.logo
-					img.lazy(data-src="img/logo-footer.png", alt="logo-footer")
-			.col-12
-				.img-wrap
-					img.lazy(data-src="img/gioi-thieu.png", alt="gioi-thieu")
-			.col-12.col-md-9
-				h2.title giá trị cốt lõi
-				p
-					span.color-title.fw-700 Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, distinctio.
-					span Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe officia sint repellendus numquam consequuntur? Repellat mollitia vero labore. Ex ipsum sed eaque aut ullam cupiditate alias illo doloribus commodi harum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur corporis fugiat exercitationem magnam assumenda esse non? Magni illum dicta, consequuntur in consequatur laboriosam incidunt quis esse voluptate commodi modi iusto? Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ducimus perferendis, voluptatem itaque pariatur totam repellendus delectus aspernatur nam nemo autem veniam, illum accusamus laboriosam sequi rem quam? Doloremque, mollitia!
-				.gioi-thieu-content
-					.item
-						.hexagon
-							span.mdi.mdi-account-group
-						.item-content
-							h4 con người
-							p Lấy học viên là trung tâm. Đội ngũ giảng viên giàu kinh nghiệm, truyền tải các kiến thức kỹ thuật mới nhất trong ngành, những kỹ năng làm việc thực tế.
-					.item
-						.hexagon
-							span.mdi.mdi-shield-check
-						.item-content
-							h4 trách nhiệm
-							p Chúng tôi cam kết cung cấp môi đào tạo chất lượng, đem lại giá trị thực tiễn cho học viên, sẵn sàng là cầu nối với doanh nghiệp.
-					.item
-						.hexagon
-							span.mdi.mdi-medal
-						.item-content
-							h4 Cộng đồng
-							p Lấy học viên là trung tâm. Đội ngũ giảng viên giàu kinh nghiệm, truyền tải các kiến thức kỹ thuật mới nhất trong ngành, những kỹ năng làm việc thực tế.
-					.item
-						.hexagon
-							span.mdi.mdi-comment-multiple
-						.item-content
-							h4 lắng nghe
-							p Luôn lắng những nghe chia sẻ của học viên, đồng thời góp ý và khơi gợi tính sáng tạo, đánh giá cao khả năng tư duy và của học viên.
-				.sck
-					img.lazy(data-src="img/5s.png", alt="5s")
-					img.lazy(data-src="img/5c.png", alt="5c")
-					img.lazy(data-src="img/5k.png", alt="5k")
-			.col-12.col-md-3
-				.sidebar-right
-					nav.sidebar
-						li.active
-							a(href="/") Giới thiệu
-						li
-							a(href="/") Mục tiêu đào tạo
-						li
-							a(href="/") Quy trình tuyển dụng
-						li
-							a(href="/") Nhà sáng lập
-					.contact-us
-						h3 MURAI HUMAN
-						p Liên hệ với chúng tôi tại văn phòng Tư vấn gần nhất hoặc gửi yêu cầu trực tuyến.
-						a(href="/").btn-contact LIÊN HỆ NGAY
-			.col-md-9
-				.line
-				include ../viec-lam-mirai/index
+			.col-md-6
+				img.about-hinhanhmirai.lazy(style="width: 400px; height: 600px" data-src="https://via.placeholder.com/400x600?text=max-width: 400px; height: auto;" alt="Hình ảnh trụ sở công ty max-width: 400px; height: auto;")
+				img.about-hinhanhmirai.lazy(style="width: 400px; height: 250px" data-src="https://via.placeholder.com/400x250?text=max-width: 400px; height: 250px;" alt="Hình ảnh trụ sở công ty max-width: 400px; height: auto;")
+			.col-md-6
+				img.about-logo__mirai.lazy(data-src="img/logo/logo-1.png" alt="logo-1.png")
+				.about-table
+					.about-table__row
+						.about-table__header Tên công ty
+						.about-table__description Công ty TNHH Nhân lực Mirai
+					.about-table__row
+						.about-table__header Ngày thành lập
+						.about-table__description Ngày 12 tháng 5 năm 2015
+					.about-table__row
+						.about-table__header
+							| Giấy phép
+							br
+							| kinh doanh
+						.about-table__description Số 0313246837 do Sở Kế Hoạch và Đầu tư Thành phố Hồ Chí Minh
+				.about-thongtincongty
+					.about-thongtincongty__header Nội dung hoạt động
+					.about-thongtincongty__description
+						p + Đào tạo, phái cử thực tập sinh, kỹ sư sang Nhật làm việc
+						p + Du học Nhật Bản
+						p + Giới thiệu việc làm trong nước
+						p + Tư vấn cho doanh nghiệp Nhật Bản đầu tư vào Việt Nam
+					.about-thongtincongty__header TRỤ SỞ CHÍNH
+					.about-thongtincongty__description
+						p 26/4 - 26/5 Lê Thánh Tôn, P. Bến Nghé, Quận 1, HCM, Việt Nam 
+					//- .about-thongtincongty__header CƠ SỞ
+					.about-thongtincongty__header TRUNG TÂM ĐÀO TẠO
+					.about-thongtincongty__description
+						//- .about-thongtincongty__subheader TRUNG TÂM ĐÀO TẠO
+						p 155 Trần Trọng Cung, P. Tân Thuận Đông, Quận 7, TP Hồ Chí Minh
+						.about-thongtincongty__subheader cơ sở 2
+						p 27/3 Đường số 10 - KP 3, P. Bình Thuận, Quận 7, TP Hồ Chí Minh
+						.about-thongtincongty__subheader cơ sở 3
+						p 11/2 Đường số 10 - KP 3, P. Bình Thuận, Quận 7, TP Hồ Chí Minh
+					.about-thongtincongty__header  VĂN PHÒNG Ở NHẬT BẢN
+					.about-thongtincongty__description
+						.about-thongtincongty__subheader TẠI TOKYO
+						p 〒141-0021 Tokyouto Shinagawaku Kamioosaki 2 Choume 13 Ban 32 Gou Tomita Biru 401
+						.about-thongtincongty__subheader TẠI KANAGAWA
+						p 〒 211-0002 2-1341-10 kamimaruko sannocho, nakahara ku, kawasaki shi, kanagawa ken
+			.col-12.mt-5
+				.about-title Tầm nhìn & Sứ mệnh
+				.about-content
+					img.about-hinhanhchutich.lazy.d-block.ml-auto(data-src="https://via.placeholder.com/350x350?text=max-width: 350px; height: auto;" alt="Hình ảnh chủ tịch")
+					.text
+						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, earum ipsa nihil temporibus iusto dolorum? Ipsam atque necessitatibus nulla labore facilis ut debitis fugiat temporibus magni modi eum ratione, eius, optio itaque nesciunt quis dolor aperiam. Eum illo accusamus corporis, voluptatibus ipsam omnis nam numquam ut magnam ad nobis facere praesentium sequi odit, dolores natus quam aut optio esse hic et doloribus. Dolore molestias nesciunt, omnis aliquid id ipsum perferendis! Officia saepe ea magnam totam corrupti iusto doloribus aut praesentium amet delectus, vero cumque nobis quo unde, illo quos tempora ab eos cum hic ducimus eum explicabo. Molestias, non consequuntur!

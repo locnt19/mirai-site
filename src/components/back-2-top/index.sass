@@ -9,7 +9,13 @@
 		bottom: 15px
 		right: 15px
 		cursor: pointer
-		display: none
+		transition: .2s
+		visibility: hidden
+		opacity: 0
+		box-shadow: 0 0 4px 0 #fff
+		&.show
+			visibility: visible
+			opacity: 1
 		&:before
 			color: #fff
 			position: absolute

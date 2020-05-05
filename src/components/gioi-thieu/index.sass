@@ -1,120 +1,105 @@
-.gioi-thieu
-	padding: 0 0 30px
-	line-height: 1.5
-	.text-center
-		margin-bottom: 30px
-		order: -1
-	.logo
-		img
-			width: 100%
-	.img-wrap
-		margin-top: 20px
-		margin-bottom: 30px
-		img
-			width: 100%
-	.gioi-thieu-content
-		display: flex
-		flex-wrap: wrap
-		margin-top: 30px
-		justify-content: space-between
-	.item
-		display: flex
-		flex: 0 0 45%
-		max-width: 45%
-		margin-bottom: 30px
-	.item-content
-		margin-left: 15px
-		h4
-			line-height: 1
-			font-weight: 600
-			color: $title-color
-			text-transform: uppercase
-	.hexagon
-		flex: 0 0 55px
-		max-width: 55px
-		height: 50px
-		position: relative
-		span
-			z-index: 1
-			font-size: 28px
-			color: $title-color
-			position: absolute
-			top: 50%
-			left: 50%
-			transform: translate(-50%, -50%)
-		&:before
-			content: ''
+// @media screen and ( min-width: 576px )
+// @media screen and ( min-width: 768px )
+.about
+	&-page
+		background: #f5f7fa
+		min-height: 100vh
+		// color: #0d151c
+		.container
+			max-width: 1000px
+	&-logo
+		&__mirai
+			display: block
+			height: 100px
+			margin: 1rem auto
+			@media screen and ( min-width: 768px )
+				margin-left: 0
+				margin-top: 0
+	&-hinhanh
+		&mirai
+			max-width: 100%
+			display: block
+			margin-left: auto
+			margin-right: auto
+			margin-top: 16px
+			&:first-of-type
+				margin-top: 0
+			@media screen and ( min-width: 768px )
+				margin-left: 0
+		&chutich
+			width: 250px
 			position: absolute
 			top: 0
-			left: 0
-			width: 55px
-			height: 50px
+			right: 0
 			z-index: -1
-			background: url('../img/hexagon.png') no-repeat
-	.sck
-		margin-top: 30px
-		display: flex
-		align-items: center
-		justify-content: space-around
-		img
-			width: 200px
-	.sidebar-right
-		a
-			color: $text-color
-		li
-			line-height: 1
-			list-style: none
-			padding: 17px 15px
-			background: #FAFAFA
-			&:not(:first-child)
-				border-top: 1px solid #fff
-			&.active, &:hover
-				border-left: 4px solid $third-color
-				a
-					font-weight: 900
-	.contact-us
-		padding: 15px
-		background: rgba($third-color, .3)
-		h3
-			color: $title-color
+			@media screen and ( min-width: 768px )
+				width: 350px
+	&-thongtincongty
+		line-height: 1.25
+		&__header
+			text-transform: uppercase
+			color: #007DC6
 			font-weight: 900
-			font-size: 18px
-		.btn-contact
-			display: inline-block
-			background: $title-color
-			padding: 8px 15px
-			color: #fff
-			border-radius: 4px
-			font-weight: 700
-			margin: 15px 0
-@media (max-width: 991.97px)
-	.gioi-thieu
-		.sck
-			img
-				width: 150px
-@media (max-width: 767.97px)
-	.gioi-thieu
-		.text-center
-			margin-bottom: 15px
-		.logo
-			width: 150px
-			margin: 0 auto 15px
-		.img-wrap
-			margin: 15px 0
-		.gioi-thieu-content
-			margin-top: 15px
-		.item
-			flex: 0 0 100%
-			max-width: 100%
-			margin-bottom: 15px
-		.sck
-			margin-top: 0
-			img
-				width: 100px
-		.sidebar-right
-			margin-top: 30px
-@media (max-width: 575.97px)
-	.gioi-thieu
-		.sck
-			img
-				width: 50px
+			padding-bottom: 5px
+			margin-top: 1rem
+			margin-bottom: .75rem
+			box-shadow: 0 2px 0 0 silver
+		&__description
+			> *
+				margin-bottom: .5rem
+		&__subheader
+			margin-bottom: 0
+			text-transform: uppercase
+			color: #007DC6
+			font-weight: 600
+			margin-top: 0.75rem
+	&-table
+		border: 8px solid #007DC6
+		padding: 2rem 1rem
+		margin-left: auto
+		margin-bottom: 1rem
+		word-break: break-word
+		&__row
+			display: flex
+			line-height: 1.25
+			&:not(:last-of-type)
+				margin-bottom: .75rem
+		&__header
+			flex: 0 0 105px
+			max-width: 105px
+			margin-right: .75rem
+			font-style: italic
+	&-title
+		color: #007DC6
+		font-weight: 900
+		font-size: 3rem
+		@media screen and ( min-width: 768px )
+			font-size: 4rem
+	&-content
+		position: relative
+		margin-top: 1rem
+		z-index: 1
+		padding-top: calc(250px - 60px)
+		@media screen and ( min-width: 576px )
+			padding-top: 60px
+		@media screen and ( min-width: 768px )
+			margin-top: 2rem
+		.text
+			border: 8px solid #007DC6
+			padding: 1.5rem
+			padding: 3rem 1.5rem
+			line-height: 1.5
+			width: calc(100% - 60px)
+			@media screen and ( min-width: 576px )
+				width: 70%
+			@media screen and ( min-width: 768px )
+				padding: 3rem
+			p:first-child::first-letter
+				float: left
+				font-size: 4rem
+				padding-right: 16px
+				color: #0d151c
+				font-weight: 900
+				font-family: Georgia
+				@media screen and ( min-width: 768px )
+					font-size: 6rem
