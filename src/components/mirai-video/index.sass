@@ -20,6 +20,16 @@
     padding-left: 10px
     max-height: 250px
     overflow-y: auto
+    &::-webkit-scrollbar
+      width: 6px
+    &::-webkit-scrollbar-track
+      border-radius: 99px
+      background: #E5E5E5
+    &::-webkit-scrollbar-thumb
+      border-radius: 99px
+      background: rgba(#007DC6,.3)
+    &::-webkit-scrollbar-thumb:hover
+      background: #007DC6
     @media screen and ( min-width: 992px )
       max-height: 400px
     .swiper-wrapper

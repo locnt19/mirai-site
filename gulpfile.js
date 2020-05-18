@@ -72,10 +72,10 @@ gulp.task('js', function () {
 			presets: ['@babel/preset-env']
 		}))
 		// .pipe(uglify())
-		.pipe(srcmap.write('.'))
 		.pipe(rename({
 			suffix: '.min'
 		}))
+		.pipe(srcmap.write('.'))
 		.pipe(gulp.dest('dist/js'))
 		.pipe(browserSync.reload({
 			stream: true

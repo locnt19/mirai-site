@@ -1,0 +1,61 @@
+extends _layout.pug
+
+block var
+	- var title = 'Trung tâm ngoại ngữ'
+
+block main
+	section.tuyensinh-container
+		.tuyensinh-banner.container.py-4
+			.row.align-items-center
+				.col-md-6.order-md-2
+					.swiper-container.right
+						.swiper-wrapper
+							.swiper-slide
+								img.lazy(data-src="http://noibo.miraihuman.com/miraiuploads/hinhanh/86957561342%20(1).jpg" alt="http://noibo.miraihuman.com/miraiuploads/hinhanh/86957561342%20(1).jpg")
+							.swiper-slide
+								img.lazy(data-src="http://noibo.miraihuman.com/miraiuploads/%E1%BA%A3nh%20b%C3%A0i%20vi%E1%BA%BFt%202/IMG_0857-min.jpg" alt="http://noibo.miraihuman.com/miraiuploads/%E1%BA%A3nh%20b%C3%A0i%20vi%E1%BA%BFt%202/IMG_0857-min.jpg")
+							.swiper-slide
+								img.lazy(data-src="http://noibo.miraihuman.com/public/miraiuploads/%E1%BA%A3nh%20b%C3%A0i%20vi%E1%BA%BFt%202/IMG_6569-min.jpg" alt="http://noibo.miraihuman.com/public/miraiuploads/%E1%BA%A3nh%20b%C3%A0i%20vi%E1%BA%BFt%202/IMG_6569-min.jpg")
+				.col-md-6.order-md-1
+					.tuyensinh-banner__header TRUNG TÂM ĐÀO TẠO NGOẠI NGỮ TƯƠNG LAI VIỆT NHẬT
+					.swiper-container.left
+						.swiper-wrapper
+							.swiper-slide
+								.tuyensinh-banner__content
+									p Giúp học sinh, sinh viên và người lao động chuẩn bị kiến thức tiếng Nhật cần thiết ĐÁP ỨNG YÊU CẦU của doanh nghiệp Nhật Bản, trước khi đi thực tập và làm việc tại các doanh nghiệp Nhật Bản tại Việt Nam và tại Nhật Bản.
+							.swiper-slide
+								.tuyensinh-banner__content
+									p Giảng viên của Trung tâm là người bản địa (Nhật Bản), đã từng tốt nghiệp và du học tại Nhật Bản – để đảm bảo yêu cầu từ doanh nghiệp Nhật khi đi thực tập và làm việc.
+							.swiper-slide
+								.tuyensinh-banner__content
+									p Được TƯ VẤN và HỖ TRỢ trong việc tìm kiếm việc làm tại các doanh nghiệp Nhật Bản.
+					.swiper-pagination.mt-3
+		.container.pt-4.pb-5
+			.about-title THAM GIA KHÓA HỌC
+			.about-content.tuyensinh-description
+				img.about-hinhanhchutich.lazy.d-block.ml-auto(data-src="https://via.placeholder.com/350x350?text=max-width: 350px; height: auto;" alt="Hình ảnh chủ tịch")
+				.text
+					p Giúp học sinh, sinh viên và người lao động chuẩn bị kiến thức tiếng Nhật cần thiết ĐÁP ỨNG YÊU CẦU của doanh nghiệp Nhật Bản, trước khi đi thực tập và làm việc tại các doanh nghiệp Nhật Bản tại Việt Nam và tại Nhật Bản
+					p.mt-3 Được TƯ VẤN và HỖ TRỢ trong việc tìm kiếm việc làm tại các doanh nghiệp Nhật Bản
+					a(href="chitiet-tuyensinh.html").tuyensinh-link.mt-2
+						span.mr-1 Xem chi tiết
+						span.mdi.mdi-arrow-right
+			.mt-5
+				a(href="chitiet-tuyensinh.html").tuyensinh-title.mr-3 Phù hợp với
+				span.tuyensinh-description học sinh, sinh viên và người lao động có mong muốn được thực tập và làm việc tại doanh nghiệp Nhật Bản tại Việt Nam và tại Nhật Bản. Muốn thi lấy chứng chỉ N4, N5 tiếng Nhật
+			.tuyensinh-block-1.mt-5.p-5
+				p Giảng viên của Trung tâm là người bản địa (Nhật Bản), đã từng tốt nghiệp và du học tại Nhật Bản – để đảm bảo yêu cầu từ doanh nghiệp Nhật khi đi thực tập và làm việc.
+				p Giờ học sôi động, vừa học vừa chơi, tạo môi trường cho học viên tự tin với tiếng Nhật.
+				p Giảng bài sử dụng giáo cụ trực quan và ví dụ gần gũi để học viên nhớ được bài ngay trên lớp.
+				a(href="chitiet-tuyensinh.html").tuyensinh-link.mt-2
+					span.mr-1 Xem chi tiết
+					span.mdi.mdi-arrow-right
+			.tuyensinh-text.mt-5
+				p Chú trọng về cách phát âm chuẩn và giao tiếp thuần thục, linh hoạt.
+				p Đồng thời kết hợp cho học viên làm bài tập trên lớp và giao bài về nhà ở mức độ vừa đủ để học viên nhanh chóng nắm chắc kiến thức căn bản.
+				p Thường xuyên kiểm tra sau mỗi chuyên đề học (từ vựng, ngữ pháp tiếng Nhật).
+				p Kiểm tra cuối khoá học (kiểm tra vấn đáp) với nhiều hình thức triển khai, kiểm tra kaiwa theo nhóm hoặc cá nhân.
+			.mt-5.text-center
+				a(href="chitiet-tuyensinh.html").tuyensinh-button
+					span.mr-2 Đăng ký ngay
+					span.icon.mdi.mdi-chevron-right

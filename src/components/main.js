@@ -38,10 +38,6 @@ $(document).ready(function () {
 	var previousScroll = document.documentElement.scrollTop;
 
 	window.onscroll = function () {
-		// console.log(document.documentElement.scrollTop, 'scrolltop position');
-		// console.log(previousScroll, 'previousScroll before');
-		// console.log(window.pageYOffset, 'pageYOffset');
-
 		// back-2-top
 		if (document.documentElement.scrollTop > 100) {
 			document.querySelector('.btn-back-2-top').style.visibility = 'visible';
@@ -63,32 +59,6 @@ $(document).ready(function () {
 		}
 	}
 
-
-	// back-2-top
-	$(window).scroll(function () {
-		// // count number
-		// if ($(this).scrollTop() > 1100) {
-		// 	$('.sum span').each(function () {
-		// 		var $this = $(this),
-		// 			countTo = $this.attr('data-count');
-		// 		$({
-		// 			countNum: $this.text()
-		// 		}).animate({
-		// 			countNum: countTo
-		// 		}, {
-		// 			duration: 2500,
-		// 			easing: 'linear',
-		// 			step: function () {
-		// 				$this.text(Math.floor(this.countNum));
-		// 			},
-		// 			complete: function () {
-		// 				$this.text(this.countNum);
-		// 			}
-		// 		});
-		// 	});
-		// }
-	})
-
 	$('.btn-back-2-top').click(function () {
 		$('html, body').animate({
 			scrollTop: 0
@@ -100,7 +70,6 @@ $(document).ready(function () {
 		loop: true,
 		effect: 'coverflow',
 		speed: 3000,
-		lazy: true,
 		coverflowEffect: {
 			rotate: 50,
 			stretch: 0,
@@ -156,7 +125,6 @@ $(document).ready(function () {
 			clickable: true
 		},
 	});
-
 	let homeVideoRight = new Swiper('.home-video .right', {
 		allowSlidePrev: false,
 		allowSlideNext: false
@@ -168,6 +136,33 @@ $(document).ready(function () {
 		speed: 2000,
 		thumbs: {
 			swiper: homeVideoRight
+		}
+	});
+	let tuyenSinhBanerRight = new Swiper('.tuyensinh-banner .swiper-container.right', {
+		effect: 'coverflow',
+		speed: 2500,
+		coverflowEffect: {
+			rotate: 50,
+			stretch: 0,
+			depth: 100,
+			modifier: 1,
+			slideShadows: true,
+		},
+	});
+	new Swiper('.tuyensinh-banner .swiper-container.left', {
+		loop: true,
+		speed: 2500,
+		spaceBetween: 30,
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: false,
+		},
+		pagination: {
+			el: '.tuyensinh-banner .swiper-pagination',
+			clickable: true
+		},
+		thumbs: {
+			swiper: tuyenSinhBanerRight
 		}
 	});
 
