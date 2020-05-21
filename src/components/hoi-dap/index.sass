@@ -7,17 +7,24 @@
 			padding: 15px
 			line-height: 1
 			cursor: pointer
+			user-select: none
 			&:not(:first-child)
 				border-top: 1px solid #fff
 			&.active, &:hover
-				border-left: 4px solid $third-color
+				border-left: 4px solid #007DC6
 				font-weight: 700
 	.hoi-dap-content
 		counter-reset: item
 	.sub-title
 		margin-bottom: 15px
 		text-transform: none
-		color: $title-color
+		color: #007DC6
+		font-family: 'MiraiHumanFont2', cursive
+		letter-spacing: 2px
+	.tabs
+		display: none
+	.tabs.active
+		display: block
 	.item
 		&.active
 			.item-title
@@ -37,7 +44,7 @@
 		border-top: 1px solid $seventh-color
 		user-select: none
 		&:before
-			font-family: 'Lobster', cursive
+			font-family: 'MiraiHumanFont2', cursive
 			color: #C9C9C9
 			font-size: 30px
 			counter-increment: item
@@ -48,7 +55,7 @@
 			transform: translateY(-50%)
 		&:after
 			font-size: initial
-			content: '\F140'
+			content: '\F0140'
 			display: inline-block
 			font-family: 'Material Design Icons'
 			text-rendering: auto
@@ -68,4 +75,6 @@
 	.hoi-dap
 		padding-top: 0
 		.hoi-dap-content
-			margin-top: 15px
+			margin-top: 30px
+		.sub-title
+			margin-bottom: 30px

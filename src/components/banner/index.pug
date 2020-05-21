@@ -1,2 +1,5 @@
 section.page-banner
-	img.lazy(data-src="img/slide-2.png", alt="slide-2")
+	picture
+		source(media="(min-width: 960px)" srcset="img/banner/banner-hoidap-1920x500.png")
+		source(media="(min-width: 640px)" srcset="img/banner/banner-hoidap-960x500.png")
+		img.lazy(data-src="img/banner/banner-hoidap-960x500.png" alt="img/banner/banner-hoidap-960x500.png")

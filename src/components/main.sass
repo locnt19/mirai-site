@@ -19,7 +19,7 @@ $eighth-color: #B9B9B9
 	box-sizing: border-box
 
 body
-	font-family: 'MiraiHuman-font', sans-serif
+	font-family: 'MiraiHumanFont1', sans-serif
 	color: $text-color
 	font-weight: 400
 	font-size: 16px
@@ -54,6 +54,8 @@ a
 	display: flex
 	align-items: center
 	justify-content: center
+	@media screen and ( min-width: 992px )
+		justify-content: flex-end
 	a
 		line-height: 30px
 		display: block
@@ -117,7 +119,7 @@ a
 		background: $seventh-color
 		border: 1px solid $eighth-color
 		border-radius: 4px
-		font-family: 'MiraiHuman-font', sans-serif
+		font-family: 'MiraiHumanFont1', sans-serif
 		font-weight: 700
 		color: #007DC6
 		&::placeholder
@@ -182,7 +184,8 @@ a
 @import "back-2-top/index.sass"
 @import "contact-now/index.sass"
 @import "stuff-hoi-dap/index.sass"
-@import mirai-video/index.sass
+@import "mirai-video/index.sass"
+@import "home-lienket/index.sass"
 
 // about page
 @import "banner/index.sass"
