@@ -1,30 +1,66 @@
 .breadcrumb
-	margin: 10px 0
-	font-size: 14px
-	a
-		color: $text-color
-	li
-		list-style: none
-		display: inline-block
-		&:not(:first-child)
-			padding-left: 30px
-			position: relative
-			&:before
-				position: absolute
-				top: 0
-				left: 8px
-				color: $text-color
-				content: '\F0142'
-				display: inline-block
-				font: normal normal normal 24px/1 Material Design Icons
-				font-size: inherit
-				line-height: inherit
-				text-rendering: auto
-				-webkit-font-smoothing: antialiased
-				-moz-osx-font-smoothing: grayscale
-		&.active
-			a
-				color: $title-color
-@media (max-width: 575.97px)
-	.breadcrumb
-		font-size: 12px
+  &-container
+    margin: 1rem 0
+  &-nav
+    display: flex
+    flex-wrap: wrap
+    list-style: none
+    counter-reset: item
+  &-item
+    display: flex
+    align-items: center
+    &:first-of-type
+      .page
+        padding-left: 16px
+    &:nth-of-type(2)
+      .page
+        background: lighten(#38A8D9, 10)
+        &::before
+          border-left-color: lighten(#38A8D9, 10)
+    &:nth-of-type(3)
+      .page
+        background: lighten(#38A8D9, 20)
+        &::before
+          border-left-color: lighten(#38A8D9, 20)
+    &:last-of-type
+      .page
+        color: inherit
+        background: #fff
+        &::before
+          border-left-color: #fff
+    .page
+      color: inherit
+      display: flex
+      position: relative
+      align-items: center
+      color: #fff
+      background: #38A8D9
+      padding: 8px 2px 8px 24px
+      max-width: 100%
+      text-overflow: ellipsis
+      -webkit-line-clamp: 1
+      display: -webkit-box
+      -webkit-box-orient: vertical
+      &:hover
+        color: inherit
+        background: #fff
+        &::before
+          border-left-color: #fff
+      &::before,
+      &::after
+        content: ''
+        width: 0
+        height: 0
+        display: block
+        border-top: 16px solid transparent
+        border-bottom: 16px solid transparent
+        border-left: 16px solid #38A8D9
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        left: 100%
+        z-index: 2
+      &::after
+        z-index: 1
+        border-left-color: #fff
+        margin-left: 1px

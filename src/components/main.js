@@ -86,6 +86,37 @@ $(document).ready(function () {
 			clickable: true
 		},
 	});
+	new Swiper('.home-news__main .swiper-container', {
+		slideToClickedSlide: true,
+		spaceBetween: 16,
+		loop: true,
+		speed: 2000,
+		// autoHeight: true,
+		navigation: {
+			nextEl: '.home-news__main__nav-next',
+			prevEl: '.home-news__main__nav-prev'
+		},
+		// autoplay: {
+		// 	delay: 5000,
+		// 	disableOnInteraction: false
+		// },
+		breakpoints: {
+			768: {
+				speed: 3000
+			}
+		}
+	});
+	new Swiper('.home-news__sub .swiper-container', {
+		direction: 'vertical',
+		slidesPerView: 'auto',
+		autoHeight: true,
+		loop: true,
+		navigation: {
+			nextEl: '.home-news__sub__nav-next',
+			prevEl: '.home-news__sub__nav-prev'
+		},
+	});
+
 	new Swiper('.home-lienket .swiper-container', {
 		loop: true,
 		speed: 3000,
