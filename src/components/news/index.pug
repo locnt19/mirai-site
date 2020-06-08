@@ -1,17 +1,28 @@
-section.news.tintuc.py-3.py-md-5
+section.page-banner
+	picture
+		source(media="(min-width: 960px)" srcset="img/banner/banner-tintuc-1920x500.png")
+		source(media="(min-width: 640px)" srcset="img/banner/banner-tintuc-960x500.png")
+		img.lazy(data-src="img/banner/banner-tintuc-960x500.png" alt="img/banner/banner-tintuc-960x500.png")
+section.tintuc.py-4.py-md-5
 	.container
 		.row
-			.col-12.p-md-0
-				.border-bottom.d-flex.align-items-center
-					.title Tin tức
+			.col-12.viec-lam-title
+				.title Tin tức
+				nav.viec-lam-tabs
+					li.active
+						a(href="news.html") nổi bật
+					li
+						a(href="news.html") điều dưỡng
+					li
+						a(href="news.html") kỹ sư
 			.col-12.p-md-0.tintuc-list
-				-for(var i = 0; i < 4; i++)
+				-for(var i = 0; i < 5; i++)
 					figure.tintuc-item
-						a.tintuc-title.d-block.d-md-none(href="#" title="Cùng nhau trải nghiệm những nét đẹp và lễ hội đặc sắc ở Nhật Bản vào tháng 5") Cùng nhau trải nghiệm những nét đẹp và lễ hội đặc sắc ở Nhật Bản vào tháng 5
-						a(href="#")
-							img.tintuc-image.lazy(data-src="http://noibo.miraihuman.com/miraiuploads/%E1%BA%A3nh1/unnamed%20-%202020-05-04T145913.283%20(1).jpg" alt="Image" title="Cùng nhau trải nghiệm những nét đẹp và lễ hội đặc sắc ở Nhật Bản vào tháng 5")
+						a.tintuc-title.d-block.d-md-none(href="news-detail.html" title="Cùng nhau trải nghiệm những nét đẹp và lễ hội đặc sắc ở Nhật Bản vào tháng 5") Cùng nhau trải nghiệm những nét đẹp và lễ hội đặc sắc ở Nhật Bản vào tháng 5
+						a.tintuc-image(href="news-detail.html")
+							img.lazy(data-src="http://noibo.miraihuman.com/miraiuploads/%E1%BA%A3nh1/unnamed%20-%202020-05-04T145913.283%20(1).jpg" alt="Image" title="Cùng nhau trải nghiệm những nét đẹp và lễ hội đặc sắc ở Nhật Bản vào tháng 5")
 						figcaption
-							a.tintuc-title.d-none.d-md-block(href="#" title="Cùng nhau trải nghiệm những nét đẹp và lễ hội đặc sắc ở Nhật Bản vào tháng 5") Cùng nhau trải nghiệm những nét đẹp và lễ hội đặc sắc ở Nhật Bản vào tháng 5
+							a.tintuc-title.d-none.d-md-block(href="news-detail.html" title="Cùng nhau trải nghiệm những nét đẹp và lễ hội đặc sắc ở Nhật Bản vào tháng 5") Cùng nhau trải nghiệm những nét đẹp và lễ hội đặc sắc ở Nhật Bản vào tháng 5
 							.tintuc-time
 								span.mdi.mdi-clock-outline
 								span.ml-1 2020-05-04

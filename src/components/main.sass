@@ -26,6 +26,14 @@ body
 	overflow-x: hidden
 a
 	text-decoration: none
+strong
+	font-weight: bold
+i
+	font-style: italic
+img
+	max-width: 100%
+	height: auto
+
 .title
 	font-weight: 900
 	font-size: 28px
@@ -40,6 +48,8 @@ a
 	color: #007DC6
 .fw-700
 	font-weight: 700
+.fw-900
+	font-weight: 900
 .w-75
 	width: 75%
 .text-center
@@ -167,57 +177,6 @@ a
 @import "header/index.sass"
 @import "footer/index.sass"
 
-
-// home page
-@import "home-banner/index.sass"
-@import "don-hang-noi-bat/index.sass"
-@import "viec-lam/index.sass"
-@import "thong-ke/index.sass"
-@import "home-gioi-thieu/index.sass"
-@import "chuong-trinh-dich-vu/index.sass"
-@import "down-chevron/index.sass"
-@import "hoat-dong-mirai/index.sass"
-@import "dao-tao-giao-duc/index.sass"
-@import "ho-so-chuan-bi/index.sass"
-@import "cam-nhan-hoc-vien/index.sass"
-@import "home-news/index.sass"
-@import "back-2-top/index.sass"
-@import "contact-now/index.sass"
-@import "stuff-hoi-dap/index.sass"
-@import "mirai-video/index.sass"
-@import "home-lienket/index.sass"
-
-// about page
-@import "banner/index.sass"
-@import "breadcrumb/index.sass"
-@import "gioi-thieu/index.sass"
-@import "viec-lam-mirai/index.sass"
-
-
-// hoi-dap page
-@import "hoi-dap/index.sass"
-
-
-// news page
-@import "news/index.sass"
-
-
-// news-detail
-@import "news-detail/index.sass"
-
-
-// hinh-anh, video page
-@import "media/index.sass"
-
-
-// contact page
-@import "contact/index.sass"
-
-
-// tuyen-dung page
-@import "tuyen-dung/index.sass"
-
-
 .tuyensinh
 	a
 		color: inherit
@@ -303,8 +262,9 @@ a
 	&__container
 		background: #fff
 		box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.3)
-		padding-top: 15px
-		padding-bottom: 15px
+		padding: 2rem
+		@media screen and ( min-width: 576px )
+			padding: 3rem
 		@media screen and ( min-width: 992px )
 			padding: 3rem 6rem
 	&__banner
@@ -341,3 +301,117 @@ a
 			list-style: disc
 		.numbers
 			list-style: decimal
+.ds-donhang
+	&__content
+		.content-item
+			display: flex
+			flex-wrap: wrap
+			&:first-of-type
+				border-top: 1px solid #ccc
+	&__headline
+		@media screen and ( min-width: 576px )
+			display: flex
+			align-items: flex-end
+			justify-content: space-between
+	&__count
+		white-space: nowrap
+		text-align: center
+		line-height: 1.25
+		@media screen and ( min-width: 576px )
+			text-align: left
+		.counter
+			font-size: 32px
+			font-weight: 900
+			color: #007DC6
+	&__search
+		margin-left: 15px
+		display: flex
+		font-weight: 600
+		padding: 0 10px
+		position: relative
+		color: #fff
+		justify-content: center
+		background: $title-color
+		text-transform: uppercase
+		&:before
+			content: ''
+			background: url('../img/icon/Path 30.png')
+			width: 15px
+			height: 30px
+			position: absolute
+			left: -15px
+			top: 0
+		input, button
+			font-size: 17px
+			font-family: inherit
+			border: none
+			background: none
+			color: #fff
+			height: 30px
+			outline: none
+		button
+			width: 30px
+		input
+			font-weight: 700
+			&::placeholder
+				font-weight: 400
+				color: #fff
+	&__list
+		&::before
+			content: '\F0142'
+			display: inline-block
+			font: normal normal normal 24px/1 'Material Design Icons'
+			font-size: inherit
+			text-rendering: auto
+			line-height: inherit
+			-webkit-font-smoothing: antialiased
+			-moz-osx-font-smoothing: grayscale
+
+// home page
+@import "home-banner/index.sass"
+@import "don-hang-noi-bat/index.sass"
+@import "viec-lam/index.sass"
+@import "thong-ke/index.sass"
+@import "home-gioi-thieu/index.sass"
+@import "chuong-trinh-dich-vu/index.sass"
+@import "down-chevron/index.sass"
+@import "hoat-dong-mirai/index.sass"
+@import "dao-tao-giao-duc/index.sass"
+@import "ho-so-chuan-bi/index.sass"
+@import "cam-nhan-hoc-vien/index.sass"
+@import "home-news/index.sass"
+@import "back-2-top/index.sass"
+@import "contact-now/index.sass"
+@import "stuff-hoi-dap/index.sass"
+@import "mirai-video/index.sass"
+@import "home-lienket/index.sass"
+
+// about page
+@import "banner/index.sass"
+@import "breadcrumb/index.sass"
+@import "gioi-thieu/index.sass"
+@import "viec-lam-mirai/index.sass"
+
+
+// hoi-dap page
+@import "hoi-dap/index.sass"
+
+
+// news page
+@import "news/index.sass"
+
+
+// news-detail
+@import "news-detail/index.sass"
+
+
+// hinh-anh, video page
+@import "media/index.sass"
+
+
+// contact page
+@import "contact/index.sass"
+
+
+// tuyen-dung page
+@import "tuyen-dung/index.sass"

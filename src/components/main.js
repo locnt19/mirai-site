@@ -27,15 +27,37 @@ $(document).ready(function () {
 		CloseOffCanvas();
 	})
 
-	// When the user clicks anywhere outside of the offcanvas, close it
-	window.onclick = function (e) {
-		// console.log(e.target);
-		if (e.target === document.querySelector('.offcanvas.open')) {
+	// // When the user clicks anywhere outside of the offcanvas, close it
+	window.addEventListener('click', function (event) {
+		if (event.target === document.querySelector('.offcanvas.open')) {
 			CloseOffCanvas();
 		}
-	}
+	});
 
 	var previousScroll = document.documentElement.scrollTop;
+
+
+	// Modal chi tiet don hang
+	const modal = document.querySelector('.modal-container.ct-donhang__modal');
+	const btn_open_modal = document.querySelector('.modal-btn__open.ct-donhang__btn__ungtuyen');
+	const btn_close_modal = document.querySelector('.modal-btn__close.ct-donhang__btn__close');
+	if (btn_open_modal !== null) {
+		btn_open_modal.addEventListener('click', function () {
+			modal.style.display = 'block';
+		})
+	};
+	if (btn_close_modal !== null) {
+		btn_close_modal.addEventListener('click', function () {
+			modal.style.display = 'none';
+		})
+	};
+
+	window.addEventListener('click', function (event) {
+		if (event.target === modal) {
+			modal.style.display = 'none';
+		}
+	});
+
 
 	window.onscroll = function () {
 		// back-2-top
@@ -96,10 +118,10 @@ $(document).ready(function () {
 			nextEl: '.home-news__main__nav-next',
 			prevEl: '.home-news__main__nav-prev'
 		},
-		// autoplay: {
-		// 	delay: 5000,
-		// 	disableOnInteraction: false
-		// },
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: false
+		},
 		breakpoints: {
 			768: {
 				speed: 3000
@@ -251,18 +273,6 @@ $(document).ready(function () {
 			document.querySelector(`.hoi-dap-content [tab= ` + this.getAttribute('tab') + `]`).classList.add('active');
 		})
 	});
-
-
-	// tuyen-dung-popup
-	$('.tuyen-dung .btn-so-yeu-li-lich').click(function () {
-		$('.tuyen-dung-popup').addClass('active')
-		$('.tuyen-dung-popup-background').addClass('active')
-	})
-	// close popup
-	$('.tuyen-dung-popup .mdi-close').click(function () {
-		$('.tuyen-dung-popup').removeClass('active')
-		$('.tuyen-dung-popup-background').removeClass('active')
-	})
 
 	LazyLoadFunction();
 });

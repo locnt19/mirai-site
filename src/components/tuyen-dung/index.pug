@@ -1,75 +1,68 @@
-section.tuyen-dung
-	.container
-		.row
-			.col-md-9
-				h2.sub-title.color-title [ THỰC TẬP SINH NHẬT BẢN ] 16 NAM - CHẾ TẠO KIM LOẠI TẤM DÙNG TRONG XÂY DỰNG 12 NAM VÀ SƠN 14 NAM
-				.line
-				table.table-tuyen-dung
-					tr
-						td.fw-700 Địa chỉ làm việc
-						td OSAKA
-					tr
-						td.fw-700 Công việc
-						td CHẾ TẠO KIM LOẠI TẤM DÙNG TRONG XÂY DỰNG VÀ SƠN
-					tr
-						td.fw-700 Thời gian làm việc
-						td 8H00~17H00
-					tr
-						td.fw-700 Lương cơ bản
-						td 140.000 YÊN
-					tr
-						td.fw-700 Phí phải trừ
-						td THUẾ + BẢO HIỂM
-					tr
-						td.fw-700 Lương thực nhận
-						td TỪ 100,000 YÊN TRỞ LÊN (TĂNG CA NHIỀU)
-					tr
-						td.fw-700 Ngày tuyển
-						td 03/04/2018
-					tr
-						td.fw-700 Số lượng cần tuyển
-						td 12 NAM CHẾ TẠO KIM LOẠI TẤM DÙNG TRONG XÂY DỰNG 4 NAM THỢ SƠN
-					tr
-						td.fw-700 Dự kiến xuất cảnh
-						td 01/10/2018
-					tr
-						td.fw-700 Trình độ
-						td THPT TRỞ LÊN
-					tr
-						td.fw-700 Yêu cầu khác
-						td SIÊNG NĂNG, THÍCH CÁC CÔNG VIỆC CHẾ TẠO SẢN XUẤT CÓ 4 SEMPAI ĐANG LÀM CHẾ TẠO KIM LOẠI TẤM.
-					tr
-						td.fw-700 Độ tuổi
-						td TỪ 20~28
-				.line
-				.button-wrap
-					button.btn-ung-tuyen-ngay ứng tuyển ngay
-					button.btn-so-yeu-li-lich tải sơ yếu lí lịch
-			.col-md-3
-				include ../viec-lam-mirai/index
-section.tuyen-dung-popup
-	h3.sub-title.color-title upload cv
-		.mdi.mdi-close
-	form(method="post").tuyen-dung-form
-		.form-item
-			label(for="name") Họ và tên
-			input(type="text" id="name" placeholder="Nhập họ và tên")
-		.form-item
-			label(for="email") Email
-			input(type="text" id="email" placeholder="exemple@email.com")
-		.form-item
-			label(for="title") Tiêu đề
-			input(type="text" id="title" placeholder="Nhập tiêu đề")
-		.form-item
-			label(for="phone") Số điện thoại
-			input(type="text" id="phone" placeholder="Nhập Số điện thoại")
-		.form-item
-			label(for="content") Nội dung
-			textarea(id="content" placeholder="Nhập nội dung...")
-		.custom-input-file
-			input(type="file" id="file-cv")
-			label(for="file-cv") Chọn file cv
-		.form-item
-			button.btn-ung-tuyen-ngay ứng tuyển ngay
-			button.btn-so-yeu-li-lich Làm lại
-.tuyen-dung-popup-background
+section.tuyensinh-container.ct-donhang.pt-4.pb-5
+	.container.p-0
+		include ../breadcrumb/index
+	.container.ct-tuyensinh__container
+		img.ct-tuyensinh__banner.lazy(data-src="img/donhang/0-donhang-dieuduong.jpg" alt="donhang/0-donhang-dieuduong.jpg")
+		.ct-tuyensinh__title.text-center.my-4.mx-md-4
+			p [XKLD] TUYỂN GẤP 50 NAM NỮ CHĂM SÓC NGƯỜI CAO TUỔI
+		.ct-tuyensinh__divider
+		.ct-tuyensinh__shortDescription.fw-700.text-center.py-3.py-md-5.px-md-4
+			p Bạn là sinh viên tốt nghiệp chuyên ngành điều dưỡng, hộ lý, gặp khó khăn trong việc tìm kiếm việc làm với mức lương phù hợp. Nhưng gần đây, tại Nhật Bản ngành kaigo – hộ lý lại là công việc thu hút nhiều lao động nước ngoài. Vậy thì các bạn hãy cho bản thân cơ hội nhận làm việc tại đất nước phát triển bậc nhất thế giới cùng với mức lương 34 triệu/tháng và những lợi ích tuyệt vời khác.
+		.ct-tuyensinh__divider
+		.py-3.d-flex.justify-content-between.mx-auto
+			p
+				span Hạn nộp hồ sơ: &nbsp;
+				strong(style="color: red") 27 - 05 - 2020
+			button.modal-btn__open.ct-donhang__btn__ungtuyen ỨNG TUYỂN
+		.ct-tuyensinh__chitiet.mt-4
+			.ct-donhang__title.mb-2 ĐIỀU KIỆN TUYỂN DỤNG
+			ul.bullets.mb-4
+				li Thời gian làm việc : &nbsp;
+					strong 3 năm
+				li Số lượng: 50 Nam + Nữ
+				li Độ tuổi: 19 - 40 tuổi.
+				li Điều kiện khác: Yêu người già, thích các hoạt động xã hội, yêu thích công việc hộ lý
+			.ct-donhang__title.mb-2 ĐIỀU KIỆN TUYỂN DỤNG
+			ul.bullets.mb-4
+				li Lương cơ bản : &nbsp;
+					strong 28~36 triệu/tháng &nbsp;
+					span (chưa tính tăng ca)
+				li Tích lũy : Khoảng 500 triệu/3năm (chưa tính tăng ca)
+				li Bảo hiểm : Y tế, hưu trí, lao động theo Pháp luật Nhật Bản
+				li Giờ làm việc : 8h/ngày, 40h/tuần (chưa kể tăng ca)
+			.ct-donhang__title.mb-2 LỊCH TRÌNH THAM GIA
+			ul.bullets.mb-4
+				li Hạn chót đăng ký: &nbsp;
+					strong 25/03/2020
+				li Phỏng vấn: &nbsp;
+					strong 05/2020
+				li Xuất cảnh dự kiến: &nbsp;
+					strong 05/2021
+			.ct-donhang__title.mb-2 NƠI LÀM VIỆC
+			ul.bullets.mb-4
+				li Hyogo
+			.ct-donhang__title.mb-2 THÔNG TIN LIÊN HỆ
+			strong TRUNG TÂM ĐÀO TẠO:
+			ul.bullets.mb-4
+				li
+					span 155 Trần Trọng Cung, P. Tân Thuận Đông, Quận 7, HCM, Việt Nam &nbsp;
+					strong (Hotline: 028 6686 3208)
+	.ct-donhang__modal.modal-container
+		.modal-content.p-4.px-sm-5
+			span.modal-btn__close.ct-donhang__btn__close.mdi.mdi-close
+			.col-12.mb-4.ct-tuyensinh__title.text-center [XKLD] TUYỂN GẤP 50 NAM NỮ CHĂM SÓC NGƯỜI CAO TUỔI
+			form.form__container.row.m-0
+				.col-md-6
+					.form__group
+						input.form__field#ho_ten(type="text" name="ho_ten" required placeholder="Họ và tên của bạn")
+						label.form__label(for="ho_ten") Họ và tên của bạn
+				.col-md-6
+					.form__group
+						input.form__field#dien_thoai(type="text" name="dien_thoai" required placeholder="Điện thoại của bạn")
+						label.form__label(for="dien_thoai") Điện thoại của bạn
+				.col-12
+					.form__group
+						input.form__field#noi_dung(type="text" name="noi_dung" required placeholder="Nội dung nhắn gửi")
+						label.form__label(for="noi_dung") Nội dung nhắn gửi
+				.col-12.mt-4.text-center
+					button(type="submit").ct-donhang__btn__submit ứng tuyển
