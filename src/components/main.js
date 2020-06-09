@@ -81,6 +81,41 @@ $(document).ready(function () {
 		}
 	}
 
+	// ds-donhang.html
+	const ds_donhang__dropdown = document.getElementById('ds_donhang__dropdown');
+	const ds_donhang__list = document.getElementById('ds_donhang__list');
+
+	if (ds_donhang__dropdown) {
+		ds_donhang__dropdown.addEventListener('click', function () {
+			console.info(ds_donhang__list.style);
+			if (ds_donhang__list.classList.contains('show')) {
+				ds_donhang__list.classList.remove('show');
+				ds_donhang__list.style.removeProperty('display');
+			} else {
+				ds_donhang__list.classList.add('show');
+				ds_donhang__list.style.display = 'block';
+			}
+		});
+	}
+
+	// contact.html
+	const lien_he__dropdown = document.getElementById('lien_he__dropdown');
+	const lien_he__list = document.getElementById('lien_he__list');
+
+	if (lien_he__dropdown) {
+		lien_he__dropdown.addEventListener('click', function () {
+			console.info(lien_he__list.style);
+			if (lien_he__list.classList.contains('show')) {
+				lien_he__list.classList.remove('show');
+				lien_he__list.style.removeProperty('display');
+			} else {
+				lien_he__list.classList.add('show');
+				lien_he__list.style.display = 'block';
+			}
+		});
+	}
+
+
 	$('.btn-back-2-top').click(function () {
 		$('html, body').animate({
 			scrollTop: 0

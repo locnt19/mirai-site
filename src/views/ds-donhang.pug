@@ -5,36 +5,45 @@ block var
 
 block main
 	.pt-4.pb-5
-		.container.p-0
+		.container.p-md-0
 			section.breadcrumb-container
 				nav.breadcrumb-nav
 					li.breadcrumb-item
 						a(href="index.html").page Trang chủ
 					li.breadcrumb-item
-						a(href="ds-donhang.html").page Danh sách đơn hàng
+						a(href="ds-donhang.html").page Đơn hàng
+					li.breadcrumb-item
+						a(href="ds-donhang.html").page Đặc định
 			section.ds-donhang.container
-				.text-center
-					.title Đơn hàng
+				.text-center.d-none.d-md-block
+					.title Đặc định
 				.row
-					.col-md-3
-						ul.ds-donhang__list
+					.col-md-3.col-lg-2.p-md-0
+						.title.d-inline#ds_donhang__dropdown
+							span Đơn hàng
+							span.mdi.mdi-chevron-down.d-md-none.ml-2
+						.d-md-none(style="float: right")
+							.title Đặc định
+						ul.ds-donhang__list#ds_donhang__list
 							li
-								a(href="#") cơ khí
+								a(href="ds-donhang.html") cơ khí
 							li
-								a(href="#") nông nghiệp
+								a(href="ds-donhang.html") nông nghiệp
+							li.active
+								a(href="ds-donhang.html") đặc định
 							li
-								a(href="#") linh kiện điện tử
+								a(href="ds-donhang.html") linh kiện điện tử
 							li
-								a(href="#") sơ chế thực phẩm
+								a(href="ds-donhang.html") sơ chế thực phẩm
 							li
-								a(href="#") thủy sản
+								a(href="ds-donhang.html") thủy sản
 							li
-								a(href="#") ô tô
+								a(href="ds-donhang.html") ô tô
 							li
-								a(href="#") dàn giáo
+								a(href="ds-donhang.html") dàn giáo
 							li
-								a(href="#") điều dưỡng
-					.col-md-9
+								a(href="ds-donhang.html") điều dưỡng
+					.col-md-9.col-lg-10.pl-md-4.pl-lg-5.pr-md-0
 						.ds-donhang__content
 							.ds-donhang__headline
 								.ds-donhang__count
@@ -50,3 +59,11 @@ block main
 											a(href="ct-donhang.html") 1 NAM - CHẾ TẠO KIM LOẠI TẤM DÙNG TRONG XÂY DỰNG
 										.col-6.col-md-3.luong 35~40tr
 										.col-6.col-md-3.diadiem hiroshima
+						.tabs-pagination.justify-content-center.mt-2
+							a(href="#").back-page.isDisabled
+								span.mdi.mdi-chevron-left
+							a(href="#").current-page 1
+							a(href="#") 2
+							a(href="#") 3
+							a(href="#").next-page
+								span.mdi.mdi-chevron-right

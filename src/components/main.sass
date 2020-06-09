@@ -82,7 +82,7 @@ img
 				z-index: -1
 				width: 20px
 				height: 20px
-				background: url('../img/Polygon 1.png')
+				background: url('../img/icon/Polygon 1.png')
 				position: absolute
 				top: 50%
 				left: 50%
@@ -324,31 +324,36 @@ img
 			font-weight: 900
 			color: #007DC6
 	&__search
-		margin-left: 15px
 		display: flex
 		font-weight: 600
-		padding: 0 10px
 		position: relative
 		color: #fff
-		justify-content: center
+		padding: 0 15px
+		justify-content: space-between
 		background: $title-color
 		text-transform: uppercase
-		&:before
-			content: ''
-			background: url('../img/icon/Path 30.png')
-			width: 15px
-			height: 30px
-			position: absolute
-			left: -15px
-			top: 0
+		@media screen and ( min-width: 576px )
+			justify-content: center
+			margin-left: 15px
+			padding: 0 10px
+			&:before
+				background: url('../img/icon/Path 30.png')
+				width: 15px
+				height: 30px
+				position: absolute
+				left: -15px
+				top: 0
+				content: ''
 		input, button
 			font-size: 17px
 			font-family: inherit
 			border: none
 			background: none
 			color: #fff
-			height: 30px
 			outline: none
+			height: 40px
+			@media screen and ( min-width: 576px )
+				height: 30px
 		button
 			width: 30px
 		input
@@ -357,15 +362,33 @@ img
 				font-weight: 400
 				color: #fff
 	&__list
-		&::before
-			content: '\F0142'
-			display: inline-block
-			font: normal normal normal 24px/1 'Material Design Icons'
-			font-size: inherit
-			text-rendering: auto
-			line-height: inherit
-			-webkit-font-smoothing: antialiased
-			-moz-osx-font-smoothing: grayscale
+		display: none
+		@media screen and ( min-width: 768px )
+			display: block
+		a
+			padding: 4px 0
+			display: block
+			color: inherit
+			line-height: 1.5
+			text-transform: uppercase
+		li
+			&.active,
+			&:hover
+				a
+					margin-left: 4px
+					font-weight: 700
+					color: #007DC6
+					box-shadow: 0 1px 0 0 #007DC6
+					&::before
+						color: #007DC6
+						content: '\F0142'
+						display: inline-block
+						font: normal normal normal 24px/1 'Material Design Icons'
+						font-size: inherit
+						text-rendering: auto
+						line-height: inherit
+						-webkit-font-smoothing: antialiased
+						-moz-osx-font-smoothing: grayscale
 
 // home page
 @import "home-banner/index.sass"
