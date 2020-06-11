@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="stylesheet" href="./css/global.min.css">
+		<link rel="stylesheet" href="./css/main.min.css">
+		<title>Home</title>
+	</head>
+	<body>
+		<header class="header">
+			<div class="header-desktop d-none d-lg-block bg-white">
+				<div class="header-desktop__top container p-0 d-flex align-items-center">
+					<div class="d-flex flex-column flex-xl-row" style="font-size: .9rem;"><span class="mdi mdi-email mr-2">Email: contact@miraihuman.com</span><span class="mdi mdi-phone">Hotline: 0902 538 164</span></div>
+					<div class="d-flex align-items-center ml-auto">
+						<form class="header-search mr-3" role="search">
+							<input class="header-search__input" type="search" name="search" placeholder="Tìm kiếm..." autocomplete="off">
+						</form><a href="#"><img class="header-lang__flag jp" src="img/language/jp.svg" alt="jp.svg"></a><a href="#"><img class="header-lang__flag" src="img/language/vn.svg" alt="vn.svg"></a>
+					</div>
+				</div>
+				<div class="header-desktop__navbar">
+					<div class="container p-0 d-flex align-items-center justify-content-between">
+						<nav class="header-desktop__navbar__nav">
+							<li class="active"><a href="index.html">Trang chủ</a></li>
+							<li><a href="about.html">Giới thiệu</a></li>
+							<li><a href="trungtam-ngoaingu.html" style="white-space: nowrap">Trung tâm<br>ngoại ngữ</a></li>
+						</nav>
+						<div class="header-logo__desktop"><a href="index.html"><img class="logo" src="img/logo/logo.png" alt="logo-desktop"></a><img class="bg" src="img/logo/Artboard 2 - nosologan.png" alt="logo-desktop-bg"></div>
+						<nav class="header-desktop__navbar__nav">
+							<li><a href="ds-donhang.html">Đặc định</a></li>
+							<li><a href="ds-donhang.html">Đơn hàng</a>
+								<ul class="header-desktop__navbar__subnav">
+									<li><a href="ds-donhang.html">Điều dưỡng</a></li>
+									<li><a href="ds-donhang.html">Kỹ sư</a></li>
+									<li><a href="ds-donhang.html">Thực tập sinh</a></li>
+								</ul>
+							</li>
+							<li><a href="news.html">Tin tức</a></li>
+						</nav>
+					</div>
+				</div>
+			</div>
+			<div class="header-mobile d-lg-none"><a href="index.html"><img class="header-logo__mobile" src="img/logo/logo.png" alt="logo.png"></a>
+				<div class="header-mobile__button__open mdi mdi-menu" role="button"></div>
+				<div class="offcanvas offcanvas-overlay">
+					<div class="offcanvas-bar">
+						<div class="offcanvas-header"><a href="index.html"><img class="lazy header-logo__mobile" src="img/logo/logo.png" alt="logo.png"></a></div>
+						<ul class="offcanvas-nav">
+							<li><a href="index.html"><span class="offcanvas-icons mdi mdi-home-outline"></span> Trang chủ</a></li>
+							<li><a href="about.html"><span class="offcanvas-icons mdi mdi-information-outline"></span>Giới thiệu</a></li>
+							<li><a href="trungtam-ngoaingu.html"><span class="offcanvas-icons mdi mdi-email-outline"></span>Trung tâm ngoại ngữ</a></li>
+							<li><a href="ds-donhang.html"><span class="offcanvas-icons mdi mdi-briefcase-outline"></span> Đơn hàng</a>
+								<ul class="offcanvas-nav__sub">
+									<li><a href="ds-donhang.html">Đặc định</a></li>
+									<li><a href="ds-donhang.html">Điều dưỡng</a></li>
+									<li><a href="ds-donhang.html">Kỹ sư</a></li>
+									<li><a href="ds-donhang.html">Thực tập sinh</a></li>
+								</ul>
+							</li>
+							<li><a href="news.html"><span class="offcanvas-icons mdi mdi-share-variant"></span>Tin tức</a></li>
+							<li><a href="hoi-dap.html"><span class="offcanvas-icons mdi mdi-message-processing-outline"></span>Hỏi đáp</a></li>
+							<li><a href="contact.html"><span class="offcanvas-icons mdi mdi-phone"></span>Liên hệ</a></li>
+							<li><span class="offcanvas-icons mdi mdi-tools"></span> Ngôn ngữ
+								<ul class="offcanvas-nav__sub">
+									<li><a class="d-flex align-items-center" href="#jp"><img class="header-lang__flag" src="img/language/jp.svg" alt="jp.svg"> Tiếng Nhật</a></li>
+									<li><a class="d-flex align-items-center" href="#vn"><img class="header-lang__flag" src="img/language/vn.svg" alt="vn.svg"> Tiếng Việt</a></li>
+								</ul>
+							</li>
+							<li><a class="header-mobile__button__close mt-4" href="#" role="button"><span class="offcanvas-icons mdi mdi-close"></span>Đóng</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main>
+			<section class="home-banner">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><a href="chitiet-tuyensinh.html">
+								<picture>
+									<source media="(min-width: 960px)" srcset="img/banner/tuyensinh-1920.png">
+									<source media="(min-width: 640px)" srcset="img/banner/tuyensinh-960.png"><img class="lazy" data-src="img/banner/tuyensinh-960.png" alt="img/banner/tuyensinh-960.png">
+								</picture></a></div>
+						<div class="swiper-slide">
+							<picture>
+								<source media="(min-width: 960px)" srcset="img/banner/dieuduong-1920-vn.png">
+								<source media="(min-width: 640px)" srcset="img/banner/dieuduong-960-vn.png"><img class="lazy" data-src="img/banner/dieuduong-960-vn.png" alt="img/banner/dieuduong-960-vn.png">
+							</picture>
+						</div>
+						<div class="swiper-slide">
+							<picture>
+								<source media="(min-width: 960px)" srcset="img/banner/gioithieucty_1-1920-vn.png">
+								<source media="(min-width: 640px)" srcset="img/banner/gioithieucty_1-960-vn.png"><img class="lazy" data-src="img/banner/gioithieucty_1-960-vn.png" alt="img/banner/gioithieucty_1-960-vn.png">
+							</picture>
+						</div>
+						<div class="swiper-slide">
+							<picture>
+								<source media="(min-width: 960px)" srcset="img/banner/gioithieucty_2-1920-vn.png">
+								<source media="(min-width: 640px)" srcset="img/banner/gioithieucty_2-960-vn.png"><img class="lazy" data-src="img/banner/gioithieucty_2-960-vn.png" alt="img/banner/gioithieucty_2-960-vn.png">
+							</picture>
+						</div>
+						<div class="swiper-slide">
+							<picture>
+								<source media="(min-width: 960px)" srcset="img/banner/dieuduong-1920-jp.png">
+								<source media="(min-width: 640px)" srcset="img/banner/dieuduong-960-jp.png"><img class="lazy" data-src="img/banner/dieuduong-960-jp.png" alt="img/banner/dieuduong-960-jp.png">
+							</picture>
+						</div>
+						<div class="swiper-slide">
+							<picture>
+								<source media="(min-width: 960px)" srcset="img/banner/gioithieucty_1-1920-jp.png">
+								<source media="(min-width: 640px)" srcset="img/banner/gioithieucty_1-960-jp.png"><img class="lazy" data-src="img/banner/gioithieucty_1-960-jp.png" alt="img/banner/gioithieucty_1-960-jp.png">
+							</picture>
+						</div>
+						<div class="swiper-slide">
+							<picture>
+								<source media="(min-width: 960px)" srcset="img/banner/gioithieucty_2-1920-jp.png">
+								<source media="(min-width: 640px)" srcset="img/banner/gioithieucty_2-960-jp.png"><img class="lazy" data-src="img/banner/gioithieucty_2-960-jp.png" alt="img/banner/gioithieucty_2-960-jp.png">
+							</picture>
+						</div>
+					</div>
+				</div>
+				<div class="pagination"></div>
+			</section>
+			<section class="donhangnoibat">
+				<div class="container">
+					<div class="text-center">
+						<div class="title">ĐƠN HÀNG NỔI BẬT</div>
+					</div>
+					<div class="donhangnoibat-wrapper">
+						<div class="donhangnoibat-item">
+							<div class="sub-title">CƠ KHÍ</div>
+							<div class="donhangnoibat-content">
+								<p>Địa chỉ làm việc: OSAKA</p>
+								<p>Công việc: CHẾ TẠO KIM LOẠI TẤM DÙNG TRONG XÂY DỰNG VÀ SƠN</p>
+								<p>Lương cơ bản: 140.000 YÊN</p>
+								<p>Ngày tuyển: 19/09/2019</p><a class="see-more" href="ct-donhang.html">Xem chi tiết</a>
+								<div class="parallelogram"><img class="lazy" data-src="img/donhang/0-donhang-hancokhi.jpg" alt="co-khi"></div>
+							</div>
+						</div>
+						<div class="donhangnoibat-item">
+							<div class="sub-title">ĐIỀU DƯỠNG</div>
+							<div class="donhangnoibat-content">
+								<p>Địa chỉ làm việc: OSAKA</p>
+								<p>Công việc: CHẾ TẠO KIM LOẠI TẤM DÙNG TRONG XÂY DỰNG VÀ SƠN</p>
+								<p>Lương cơ bản: 140.000 YÊN</p>
+								<p>Ngày tuyển: 19/09/2019</p><a class="see-more" href="ct-donhang.html">Xem chi tiết</a>
+								<div class="parallelogram"><img class="lazy" data-src="img/donhang/0-donhang-dieuduong.jpg" alt="dieu-duong"></div>
+							</div>
+						</div>
+						<div class="donhangnoibat-item">
+							<div class="sub-title">chế biến thực phẩm</div>
+							<div class="donhangnoibat-content">
+								<p>Địa chỉ làm việc: OSAKA</p>
+								<p>Công việc: CHẾ TẠO KIM LOẠI TẤM DÙNG TRONG XÂY DỰNG VÀ SƠN</p>
+								<p>Lương cơ bản: 140.000 YÊN</p>
+								<p>Ngày tuyển: 19/09/2019</p><a class="see-more" href="ct-donhang.html">Xem chi tiết</a>
+								<div class="parallelogram"><img class="lazy" data-src="img/donhang/0-donhang-thucpham.jpg" alt="che-bien-thuc-pham"></div>
+							</div>
+						</div>
+						<div class="donhangnoibat-item">
+							<div class="sub-title">XÂY DỰNG</div>
+							<div class="donhangnoibat-content">
+								<p>Địa chỉ làm việc: OSAKA</p>
+								<p>Công việc: CHẾ TẠO KIM LOẠI TẤM DÙNG TRONG XÂY DỰNG VÀ SƠN</p>
+								<p>Lương cơ bản: 140.000 YÊN</p>
+								<p>Ngày tuyển: 19/09/2019</p><a class="see-more" href="ct-donhang.html">Xem chi tiết</a>
+								<div class="parallelogram"><img class="lazy" data-src="img/donhang/0-donhang-xaydung.jpg" alt="xay-dung"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="viec-lam">
+				<div class="container">
+					<div class="row">
+						<div class="col-12 viec-lam-title">
+							<h2 class="title">đơn hàng</h2>
+							<nav class="viec-lam-tabs">
+								<li tabs="tai-nhat-ban">Đặc định</li>
+								<li class="active" tabs="ky-su-thong-dich-vien">thực tập sinh</li>
+								<li tabs="dieu-duong-ho-ly">điều dưỡng</li>
+							</nav>
+						</div>
+						<div class="col-12 tabs-content">
+							<div class="row content-header">
+								<div class="col-md-6">VỊ TRÍ</div>
+								<div class="col-6 col-md-3">MỨC LƯƠNG</div>
+								<div class="col-6 col-md-3">ĐỊA ĐIỂM</div>
+							</div>
+							<div class="tabs-content-wrap" tabs="tai-nhat-ban">
+								<div class="row content-item">
+									<div class="col-md-6 congviec"><a href="ct-donhang.html">1 NAM - CHẾ TẠO KIM LOẠI TẤM DÙNG TRONG XÂY DỰNG</a></div>
+									<div class="col-6 col-md-3 luong">35~40tr</div>
+									<div class="col-6 col-md-3 diadiem">hiroshima</div>
+								</div>
+								<div class="row content-item">
+									<div class="col-md-6 congviec"><a href="ct-donhang.html">1 NAM - CHẾ TẠO KIM LOẠI TẤM DÙNG TRONG XÂY DỰNG</a></div>
+									<div class="col-6 col-md-3 luong">35~40tr</div>
+									<div class="col-6 col-md-3 diadiem">hiroshima</div>
+								</div>
+								<div class="row content-item">
+									<div class="col-md-6 congviec"><a href="ct-donhang.html">1 NAM - CHẾ TẠO KIM LOẠI TẤM DÙNG TRONG XÂY DỰNG</a></div>
+									<div class="col-6 col-md-3 luong">35~40tr</div>
+									<div class="col-6 col-md-3 diadiem">hiroshima</div>
+								</div>
+								<div class="row content-item">
+									<div class="col-md-6 congviec"><a href="ct-donhang.html">1 NAM - CHẾ TẠO KIM LOẠI TẤM DÙNG TRONG XÂY DỰNG</a></div>
+									<div class="col-6 col-md-3 luong">35~40tr</div>
+									<div class="col-6 col-md-3 diadiem">hiroshima</div>
+								</div>
+								<div class="row content-item">
+									<div class="col-md-6 congviec"><a href="ct-donhang.html">1 NAM - CHẾ TẠO KIM LOẠI TẤM DÙNG TRONG XÂY DỰNG</a></div>
+									<div class="col-6 col-md-3 luong">35~40tr</div>
+									<div class="col-6 col-md-3 diadiem">hiroshima</div>
+								</div>
+								<div class="row content-item">
+									<div class="col-md-6 congviec"><a href="ct-donhang.html">1 NAM - CHẾ TẠO KIM LOẠI TẤM DÙNG TRONG XÂY DỰNG</a></div>
+									<div class="col-6 col-md-3 luong">35~40tr</div>
+									<div class="col-6 col-md-3 diadiem">hiroshima</div>
+								</div>
+								<div class="row content-item">
+									<div class="col-md-6 congviec"><a href="ct-donhang.html">1 NAM - CHẾ TẠO KIM LOẠI TẤM DÙNG TRONG XÂY DỰNG</a></div>
+									<div class="col-6 col-md-3 luong">35~40tr</div>
+									<div class="col-6 col-md-3 diadiem">hiroshima</div>
+								</div>
+								<div class="row content-item">
+									<div class="col-md-6 congviec"><a href="ct-donhang.html">1 NAM - CHẾ TẠO KIM LOẠI TẤM DÙNG TRONG XÂY DỰNG</a></div>
+									<div class="col-6 col-md-3 luong">35~40tr</div>
+									<div class="col-6 col-md-3 diadiem">hiroshima</div>
+								</div>
+								<div class="row content-item">
+									<div class="col-md-6 congviec"><a href="ct-donhang.html">1 NAM - CHẾ TẠO KIM LOẠI TẤM DÙNG TRONG XÂY DỰNG</a></div>
+									<div class="col-6 col-md-3 luong">35~40tr</div>
+									<div class="col-6 col-md-3 diadiem">hiroshima</div>
+								</div>
+								<div class="row content-item">
+									<div class="col-md-6 congviec"><a href="ct-donhang.html">1 NAM - CHẾ TẠO KIM LOẠI TẤM DÙNG TRONG XÂY DỰNG</a></div>
+									<div class="col-6 col-md-3 luong">35~40tr</div>
+									<div class="col-6 col-md-3 diadiem">hiroshima</div>
+								</div>
+							</div>
+							<div class="tabs-content-wrap" tabs="dieu-duong-ho-ly">
+								<div class="row content-item">
+									<div class="col-md-6 congviec"><a href="ct-donhang.html">1 NAM - CHẾ TẠO KIM LOẠI TẤM DÙNG TRONG XÂY DỰNG</a></div>
+									<div class="col-6 col-md-3 luong">35~40tr</div>
+									<div class="col-6 col-md-3 diadiem">hiroshima</div>
+								</div>
+								<div class="row content-item">
+									<div class="col-md-6 congviec"><a href="ct-donhang.html">1 NAM - CHẾ TẠO KIM LOẠI TẤM DÙNG TRONG XÂY DỰNG</a></div>
+									<div class="col-6 col-md-3 luong">35~40tr</div>
+									<div class="col-6 col-md-3 diadiem">hiroshima</div>
+								</div>
+								<div class="row content-item">
+									<div class="col-md-6 congviec"><a href="ct-donhang.html">1 NAM - CHẾ TẠO KIM LOẠI TẤM DÙNG TRONG XÂY DỰNG</a></div>
+									<div class="col-6 col-md-3 luong">35~40tr</div>
+									<div class="col-6 col-md-3 diadiem">hiroshima</div>
+								</div>
+								<div class="row content-item">
+									<div class="col-md-6 congviec"><a href="ct-donhang.html">1 NAM - CHẾ TẠO KIM LOẠI TẤM DÙNG TRONG XÂY DỰNG</a></div>
+									<div class="col-6 col-md-3 luong">35~40tr</div>
+									<div class="col-6 col-md-3 diadiem">hiroshima</div>
+								</div>
+								<div class="row content-item">
+									<div class="col-md-6 congviec"><a href="ct-donhang.html">1 NAM - CHẾ TẠO KIM LOẠI TẤM DÙNG TRONG XÂY DỰNG</a></div>
+									<div class="col-6 col-md-3 luong">35~40tr</div>
+									<div class="col-6 col-md-3 diadiem">hiroshima</div>
+								</div>
+								<div class="row content-item">
+									<div class="col-md-6 congviec"><a href="ct-donhang.html">1 NAM - CHẾ TẠO KIM LOẠI TẤM DÙNG TRONG XÂY DỰNG</a></div>
+									<div class="col-6 col-md-3 luong">35~40tr</div>
+									<div class="col-6 col-md-3 diadiem">hiroshima</div>
+								</div>
+								<div class="row content-item">
+									<div class="col-md-6 congviec"><a href="ct-donhang.html">1 NAM - CHẾ TẠO KIM LOẠI TẤM DÙNG TRONG XÂY DỰNG</a></div>
+									<div class="col-6 col-md-3 luong">35~40tr</div>
+									<div class="col-6 col-md-3 diadiem">hiroshima</div>
+								</div>
+								<div class="row content-item">
+									<div class="col-md-6 congviec"><a href="ct-donhang.html">1 NAM - CHẾ TẠO KIM LOẠI TẤM DÙNG TRONG XÂY DỰNG</a></div>
+									<div class="col-6 col-md-3 luong">35~40tr</div>
+									<div class="col-6 col-md-3 diadiem">hiroshima</div>
+								</div>
+							</div>
+							<div class="tabs-content-wrap active" tabs="ky-su-thong-dich-vien">
+								<div class="row content-item">
+									<div class="col-md-6 congviec"><a href="ct-donhang.html">1 NAM - CHẾ TẠO KIM LOẠI TẤM DÙNG TRONG XÂY DỰNG</a></div>
+									<div class="col-6 col-md-3 luong">230,000 YÊN TRỞ LÊN</div>
+									<div class="col-6 col-md-3 diadiem">Tokyo</div>
+								</div>
+								<div class="row content-item">
+									<div class="col-md-6 congviec"><a href="ct-donhang.html">TUYỂN 12 NỮ ĐIỀU DƯỠNG</a></div>
+									<div class="col-6 col-md-3 luong">230,000 YÊN TRỞ LÊN</div>
+									<div class="col-6 col-md-3 diadiem">hiroshima</div>
+								</div>
+								<div class="row content-item">
+									<div class="col-md-6 congviec"><a href="ct-donhang.html">TUYỂN 12 NỮ ĐIỀU DƯỠNG</a></div>
+									<div class="col-6 col-md-3 luong">230,000 YÊN TRỞ LÊN</div>
+									<div class="col-6 col-md-3 diadiem">hiroshima</div>
+								</div>
+								<div class="row content-item">
+									<div class="col-md-6 congviec"><a href="ct-donhang.html">TUYỂN 12 NỮ ĐIỀU DƯỠNG</a></div>
+									<div class="col-6 col-md-3 luong">230,000 YÊN TRỞ LÊN</div>
+									<div class="col-6 col-md-3 diadiem">hiroshima</div>
+								</div>
+								<div class="row content-item">
+									<div class="col-md-6 congviec"><a href="ct-donhang.html">TUYỂN 12 NỮ ĐIỀU DƯỠNG</a></div>
+									<div class="col-6 col-md-3 luong">230,000 YÊN TRỞ LÊN</div>
+									<div class="col-6 col-md-3 diadiem">hiroshima</div>
+								</div>
+								<div class="row content-item">
+									<div class="col-md-6 congviec"><a href="ct-donhang.html">TUYỂN 12 NỮ ĐIỀU DƯỠNG</a></div>
+									<div class="col-6 col-md-3 luong">230,000 YÊN TRỞ LÊN</div>
+									<div class="col-6 col-md-3 diadiem">hiroshima</div>
+								</div>
+								<div class="row content-item">
+									<div class="col-md-6 congviec"><a href="ct-donhang.html">TUYỂN 12 NỮ ĐIỀU DƯỠNG</a></div>
+									<div class="col-6 col-md-3 luong">230,000 YÊN TRỞ LÊN</div>
+									<div class="col-6 col-md-3 diadiem">hiroshima</div>
+								</div>
+								<div class="row content-item">
+									<div class="col-md-6 congviec"><a href="ct-donhang.html">12 ~ 13 NAM - CHẾ TẠO KIM LOẠI TẤM DÙNG TRONG XÂY DỰNG</a></div>
+									<div class="col-6 col-md-3 luong">35~40tr</div>
+									<div class="col-6 col-md-3 diadiem">hiroshima</div>
+								</div>
+							</div>
+							<div class="row content-bottom">
+								<div class="col-lg-7 bottom-left">
+									<p>THÔNG TIN LIÊN LẠC:</p>
+									<div class="info">
+										<p><span class="mdi mdi-email"></span><span>Email: contact@miraihuman.com</span></p>
+										<p><span class="mdi mdi-phone"></span><span>Hotline: 0902 538 164</span></p>
+									</div>
+								</div>
+								<div class="col-lg-5 bottom-right">
+									<div class="tabs-pagination"><a class="see-all m-0" href="ds-donhang.html">Xem tất cả</a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="home-gioi-thieu">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<h2 class="title">giới thiệu</h2>
+							<p>Miraihuman là một trong những công ty dẫn đầu Việt nam trong lĩnh vực xuất khẩu lao động Nhật.</p>
+							<p>Công ty chuyên cung ứng nguồn nhân lực cho thị trường Nhật Bản.</p>
+						</div>
+						<div class="col-6 col-md-3 item"><img class="lazy" data-src="img/icon/icon-rating.png" alt="icon-rating">
+							<h3 class="sub-title">thế mạnh Mirai</h3>
+							<p>Mirai có Ban lãnh đạo và đội ngũ nhân viên nhiều kinh nghiệm đã và đang từng bước khẳng định vị thế của mình. Tự hào là một trong những doanh nghiệp uy tín và chất lượng hàng đầu trong lĩnh vực xuất khẩu lao động.</p>
+							<p>Đội ngũ giảng viên thân thiện, nhiệt tình, luôn cập nhật và truyền tải những kiến thức mới nhất cho các học viên. Tạo dựng một môi trường làm việc năng động và sáng tạo góp phần bồi dưỡng và phát triển nhân tài.</p>
+						</div>
+						<div class="col-6 col-md-3 item"><img class="lazy" data-src="img/icon/icon-order.png" alt="icon-order">
+							<h3 class="sub-title">đào tạo chất lượng</h3>
+							<p>Mục tiêu đào tạo và giáo dục của chúng tôi là chuyển biến nhân sự của doanh nghiệp trở thành nguồn tài nguyên quan trọng nhất bằng cách thay đổi ý thức và tư duy sao cho bản thân nhân viên tự mình suy nghĩ, tự đặt ra mục tiêu, tự hành động để tạo ra được sự tin tưởng lớn nhất. Lấy chất lượng làm cam kết cho doanh nghiệp và người lao động.</p>
+						</div>
+						<div class="col-6 col-md-3 item"><img class="lazy" data-src="img/icon/icon-professor.png" alt="icon-professor">
+							<h3 class="sub-title">LÀM VIỆC DÀI HẠN TẠI NHẬT BẢN </h3>
+							<p>Trước mục tiêu trở thành nước công nghiệp năm 2020, Việt Nam đang có lợi thế sở hữu một thế hệ kỹ sư trẻ đầy tài năng và tham vọng, trong số các kỹ sư điện, điện tử, cơ khí, điều khiển tự động, công nghệ thông tin mới tốt nghiệp từ các trường đại học khối kỹ thuật danh tiếng.</p>
+						</div>
+						<div class="col-6 col-md-3 item"><img class="lazy" data-src="img/icon/icon-question.png" alt="icon-question">
+							<h3 class="sub-title">TẬN DỤNG CƠ HỘI ĐẦU TƯ TẠI VIỆT NAM</h3>
+							<p>Mirai luôn liên tục tuyển chọn nguồn lao động mới, đào tạo ngoại ngữ, tay nghề và chuyên môn cũng như các kiến thức văn hoá cần thiết để phù hợp với yêu cầu của các nhà tuyển dụng. Bên cạnh đó, chúng tôi còn đưa ra giải pháp đầu tư hiệu quả nhất không chỉ là tận dụng lợi thế về sự cần cù của dân tộc Việt Nam, sự gần gũi với Nhật Bản, nguồn nhân lực dồi dào với chi phí lao động thấp mà với kinh nghiệm và mối quan hệ mật thiết với các loại hình doanh nghiệp tại Việt Nam...</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="chuong-trinh-dich-vu">
+				<div class="container">
+					<div class="row">
+						<div class="col-12 text-center">
+							<h2 class="title">chương trình & dịch vụ</h2><img class="lazy" data-src="img/icon/line.png" alt="line">
+						</div>
+						<div class="col-md-6">
+							<div class="item"><img class="lazy" data-src="img/icon/icon-student.png" alt="icon-student">
+								<div class="item-content">
+									<h3 class="sub-title">du học sinh</h3>
+									<p>Với mục tiêu tiếp nhận 300.000 du học sinh quốc tế vào năm 2020, Nhật Bản đang là lựa chọn ưu tiên của nhiều bạn trẻ các nước nói chung và Việt Nam nói riêng. Có thể nói tại Châu Á Nhật Bản là quốc gia có nền giáo dục và đào tạo có chất lượng hàng đầu – yếu tố then chốt tạo nên nguồn nhân lực chất lượng hàng đầu góp phần làm nên một Nhật Bản thần kỳ.</p><a class="see-more" href="/"><span>Xem chi tiết</span><span class="mdi mdi-arrow-right ml-1"></span></a>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="item"><img class="lazy" data-src="img/icon/icon-engineer.png" alt="icon-engineer">
+								<div class="item-content">
+									<h3 class="sub-title">kỹ sư việt - nhật</h3>
+									<p>Chương trình kỹ sư là chương trình tiếp nhận chuyên gia, nhân lực có trình độ cao của Chính phủ Nhật Bản nhằm bù đắp cho sự thiếu hụt lực lượng lao động có trình độ kéo dài trong những năm qua.</p><a class="see-more" href="/"><span>Xem chi tiết</span><span class="mdi mdi-arrow-right ml-1"></span></a>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="item"><img class="lazy" data-src="img/icon/icon-internship.png" alt="icon-internship">
+								<div class="item-content">
+									<h3 class="sub-title">thực tập sinh</h3>
+									<p>Chương trình Thực tập sinh kỹ năng là chương trình do Chính phủ Nhật Bản khởi xướng với mục đích chuyển giao công nghệ, kỹ thuật, kỹ năng cho Việt Nam thông qua hình thức tiếp nhận nhân lực trẻ của Việt Nam sang Nhật Bản thực tập nâng cao trình độ tay nghề (trong thời gian 03 năm) sau đó trở về Việt Nam tiếp tục làm việc trong các công ty có ngành nghề tương tự để áp dụng những kiến thức, kỹ năng đã được thực tập thực tế tại Nhật Bản.</p><a class="see-more" href="/"><span>Xem chi tiết</span><span class="mdi mdi-arrow-right ml-1"></span></a>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="item"><img class="lazy" data-src="img/icon/icon-doctor.png" alt="icon-doctor">
+								<div class="item-content">
+									<h3 class="sub-title">hộ lý - điều dưỡng</h3>
+									<p>Bước đầu, Nhật Bản dự kiến tiếp nhận 3.000 điều dưỡng viên trong vòng 1 năm, với sự hỗ trợ tài chính từ phía Tokyo cho hoạt động đào tạo ngôn ngữ, và sau đó mở rộng quy mô lên 10.000 điều dưỡng viên trong 2 năm.</p><a class="see-more" href="/"><span>Xem chi tiết</span><span class="mdi mdi-arrow-right ml-1"></span></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="down-chevron text-center"><img class="lazy" data-src="img/icon/icon-down-chevron.png" alt="icon-down-chevron"></section>
+			<section class="hoat-dong-mirai">
+				<div class="container">
+					<div class="row">
+						<div class="col-12 text-center">
+							<h2 class="title">hoạt động mirai</h2><img class="lazy" data-src="img/icon/line.png" alt="line">
+						</div>
+						<div class="col-12 slide-hoat-dong">
+							<div class="swiper-container">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide"><img class="lazy" data-src="http://noibo.miraihuman.com/miraiuploads/hinhanh/86957561342%20(1).jpg" alt="hoat-dong (1)"></div>
+									<div class="swiper-slide"><img class="lazy" data-src="http://noibo.miraihuman.com/miraiuploads/hinhanh/Webp.net-resizeimage%20(1).jpg" alt="hoat-dong (2)"></div>
+									<div class="swiper-slide"><img class="lazy" data-src="http://noibo.miraihuman.com/miraiuploads/hinhanh/57031784980.jpg" alt="hoat-dong (4)"></div>
+									<div class="swiper-slide"><img class="lazy" data-src="http://noibo.miraihuman.com/miraiuploads/92982476892.jpg" alt="hoat-dong (5)"></div>
+									<div class="swiper-slide"><img class="lazy" data-src="http://noibo.miraihuman.com/miraiuploads/DANG%20THI%20YEN%20NHI%2004.05.2001.jpg" alt="hoat-dong (6)"></div>
+									<div class="swiper-slide"><img class="lazy" data-src="http://noibo.miraihuman.com/miraiuploads/DANG%20THI%20THU%20NGAN.jpg" alt="hoat-dong (7)"></div>
+									<div class="swiper-slide"><img class="lazy" data-src="http://noibo.miraihuman.com/miraiuploads/%E1%BA%A3nh1/29aa3676565e5b755b80069374796007.jpg" alt="hoat-dong (8)"></div>
+								</div>
+								<div class="swiper-pagination"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="dao-tao-giao-duc">
+				<div class="container">
+					<div class="row">
+						<div class="col-12 text-center">
+							<h2 class="title">đào tạo & giáo dục</h2><img class="lazy" data-src="img/icon/line.png" alt="line">
+							<div class="content">
+								<p>Mục tiêu đào tạo và giáo dục của chúng tôi là chuyển biến nhân sự của doanh nghiệp trở thành nguồn tài nguyên quan trọng nhất bằng cách thay đổi ý thức và tư duy sao cho bản thân nhân viên tự mình suy nghĩ, tự đặt ra mục tiêu, tự hành động để tạo ra được sự tin tưởng lớn nhất. Lấy chất lượng làm cam kết cho doanh nghiệp và người lao động.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="ho-so-chuan-bi">
+				<div class="container">
+					<div class="row">
+						<div class="col-12 text-center">
+							<h2 class="title">Hồ sơ chuẩn bị</h2><img class="lazy" data-src="img/icon/line.png" alt="line">
+						</div>
+						<div class="col-12" style="padding: 0">
+							<div class="img-wrap"><img class="lazy" data-src="img/backdrop/banner-ho-so.jpg" alt="banner-ho-so"></div>
+						</div>
+						<div class="col-12 ticket-wrap">
+							<div class="ticket-inner">
+								<div class="ticket">
+									<div class="right-inner">
+										<div class="inner-1">
+											<div class="item mdi mdi-card-account-details-star"><span>Chứng minh nhân dân</span></div>
+											<div class="item mdi mdi-medical-bag"><span>Khám sức khỏe</span>
+												<p>Nam: 1.000.000đ</p>
+												<p>Nữ: 900.000đ</p>
+											</div>
+										</div>
+										<div class="inner-2">
+											<div class="item mdi mdi-airplane-takeoff"><span>Hộ chiếu</span></div>
+											<div class="item mdi mdi-account-box"><span>2 ảnh 4x6</span>
+												<p style="padding: 0">( chuẩn quốc tế )</p>
+											</div>
+										</div>
+										<div class="inner-3">
+											<div class="item mdi mdi-shield-check"><span>Đơn xác nhận hạnh kiểm / Đơn xác nhận tiền án tiền sự</span></div>
+											<div class="item mdi mdi-account-check"><span>Đơn xác nhận tình trạng hôn nhân (đối với trường hợp chưa kết hôn)</span></div>
+										</div>
+									</div>
+									<div class="col-12" style="padding: 0">
+										<div class="item mdi mdi-clipboard-check"><span>Đối với các ứng viên đã từng đăng ký / tham gia đi làm việc / du học / giao lưu văn hóa / du lịch /... tại nước ngoài, cần đem theo toàn bộ hồ sơ liên quan.</span></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="down-chevron text-center"><img class="lazy" data-src="img/icon/icon-down-chevron.png" alt="icon-down-chevron"></section>
+			<section class="cam-nhan-hoc-vien">
+				<div class="container">
+					<div class="row">
+						<div class="col-12 text-center">
+							<h2 class="title">cảm nhận của học viên</h2><img class="lazy" data-src="img/icon/line.png" alt="line">
+						</div>
+						<div class="col-12 swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="item">
+										<div class="box-content">
+											<div class="text">
+												<p>Tôi là một học viên cũ của Mirai,  trước khi đến với Mirai, tôi đã tham khảo khá nhiều công ty về xuất khẩu lao động, tuy nhiên tôi thấy Mirai vẫn là công ty có uy tín và trách nhiệm nhất. Đội ngũ nhân viên ở đây rất thân thiện và hoà đồng. Các anh chị ấy đã giúp đỡ tôi rất nhiều trong việc học tập cũng như tạo mọi điều kiện thuận lợi giúp tôi có thể tham gia xuất khẩu lao động. Thời gian lúc đầu tôi cảm thấy khá khó khăn khi phải tiếp xúc với một môi trường và ngôn ngữ xa lạ, nhưng nhờ có sự động viên của các giảng viên tại Mirai mà tôi đã có động lực để vượt qua chướng ngại của bản thân mình. Mặc dù hiện tại ngôn ngữ của tôi vẫn chưa được lưu loát lắm, tuy nhiên tôi vẫn sẽ cố gắn hết sức học tập để không phụ lòng tin của các giảng viên tại Mirai</p>
+												<p>Tôi là một học viên cũ của Mirai,  trước khi đến với Mirai, tôi đã tham khảo khá nhiều công ty về xuất khẩu lao động, tuy nhiên tôi thấy Mirai vẫn là công ty có uy tín và trách nhiệm nhất. Đội ngũ nhân viên ở đây rất thân thiện và hoà đồng. Các anh chị ấy đã giúp đỡ tôi rất nhiều trong việc học tập cũng như tạo mọi điều kiện thuận lợi giúp tôi có thể tham gia xuất khẩu lao động. Thời gian lúc đầu tôi cảm thấy khá khó khăn khi phải tiếp xúc với một môi trường và ngôn ngữ xa lạ, nhưng nhờ có sự động viên của các giảng viên tại Mirai mà tôi đã có động lực để vượt qua chướng ngại của bản thân mình. Mặc dù hiện tại ngôn ngữ của tôi vẫn chưa được lưu loát lắm, tuy nhiên tôi vẫn sẽ cố gắn hết sức học tập để không phụ lòng tin của các giảng viên tại Mirai</p>
+											</div>
+											<div class="user-detail">
+												<div class="img-wrap"><img class="lazy" data-src="http://noibo.miraihuman.com/miraiuploads/86957561340.jpg" alt="user"></div>
+												<div class="detail">
+													<h3>Đặng Thị Yến Nhi</h3>
+													<p>Điều dưỡng</p>
+												</div>
+											</div>
+										</div>
+										<div class="watermark"><img class="lazy" data-src="img/logo/logo.png" alt="logo"><img class="lazy" data-src="img/icon/quote-sign.png" alt="quote-sign"></div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="item">
+										<div class="box-content">
+											<div class="text">
+												<p>Thật khó khăn khi phải sống và làm việc trong một môi trường xa lạ, nhưng nếu có được  sự quan tâm và hổ trợ từ nơi khác thì đó sẽ là nguồn động lực quý giá cho bạn vững bước hơn.Từ những ngày đầu vừa bước chân vào Mirai, tôi cảm thấy thật xa lạ và có cảm giác lo sợ. Tuy nhiên, nhờ sự nhiệt tình của các anh chị tư vấn viên cũng như sự ân cần của đội ngũ giảng viên tôi đã cảm thấy tốt hơn.Đó là sự kiên nhẫn, ân cần dạy từng con chữ. Chia sẽ những lo lắng khi ngày đầu bước chân đến nơi xa lạ, chính những điều đó đã tạo nên sự ấm áp cho tôi.Giờ đây, tôi đã có công việc phù hợp, cuộc sống cũng không còn bỡ ngỡ như ban đầu chính là nhờ vào Mirai. Qua đây tôi xin gởi lời cảm ơn chân thành nhất đến với Mirai, nơi đã giúp tôi tự tin và trưởng thành như bây giờ.</p>
+											</div>
+											<div class="user-detail">
+												<div class="img-wrap"><img class="lazy" data-src="http://noibo.miraihuman.com/miraiuploads/66226466861.jpg" alt="user"></div>
+												<div class="detail">
+													<h3>Trần Thị Thu Thảo</h3>
+													<p>Thực tập sinh</p>
+												</div>
+											</div>
+										</div>
+										<div class="watermark"><img class="lazy" data-src="img/logo/logo.png" alt="logo"><img class="lazy" data-src="img/icon/quote-sign.png" alt="quote-sign"></div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="item">
+										<div class="box-content">
+											<div class="text">
+												<p>Tôi vẫn nhớ rõ những cảm xúc ngày ấy, cảm giác bồi hồi khi lần đầu tiên bước chân vào Mirai. Để tìm việc làm kiếm thêm thu nhập cho bản thân và gia đình tôi đã nghĩ đến việc đi xuất khẩu lao động. Tuy nhiên, tôi không có sự hiểu biết cũng như kiến thức gì về công việc này cả. Các anh chị ở Mirai đã tư vấn cho tôi rất nhiệt tình, nhờ đó mà tôi đã có sự định hướng cho công việc cũng như tương lai của mình.Hiện tại, tôi đang làm việc tại Nhật Bản, công việc rất phù hợp với tôi và lương cũng khá cao, tôi cảm thấy rất hài lòng với công việc hiện tại của mình.Nhờ có đội ngủ giảng viên nhiều kinh nghiệm và nhiệt tình ở Mirai, mà tôi từ một người không biết gì về tiếng Nhật, giờ đây đã có thể nghe, hiểu và trao đổi được với người Nhât. Điều này đã giúp ích rất nhiều cho công việc của tôi.Qua đây, tôi xin gửi lời cảm ơn chân thành nhất đến tất cả đội ngũ nhân viên đang làm việc tại Mirai, những người luôn làm việc có tâm và cống hiến hết mình cho công việc.</p>
+											</div>
+											<div class="user-detail">
+												<div class="img-wrap"><img class="lazy" data-src="http://noibo.miraihuman.com/miraiuploads/DANG%20THI%20THU%20NGAN.jpg" alt="user"></div>
+												<div class="detail">
+													<h3>Đặng Thị Thu Ngân</h3>
+													<p>Thực tập sinh</p>
+												</div>
+											</div>
+										</div>
+										<div class="watermark"><img class="lazy" data-src="img/logo/logo.png" alt="logo"><img class="lazy" data-src="img/icon/quote-sign.png" alt="quote-sign"></div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-pagination"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="home-video">
+				<div class="container">
+					<div class="row">
+						<div class="col-12 text-center">
+							<div class="title">video về mirai</div><img class="lazy" data-src="img/icon/line.png" alt="line">
+						</div>
+						<div class="col-12 col-lg-8">
+							<div class="left swiper-container">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<iframe class="lazy" width="100%" data-src="https://www.youtube.com/embed/IoeX4Qp4pic" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+									</div>
+									<div class="swiper-slide">
+										<iframe class="lazy" width="100%" data-src="https://www.youtube.com/embed/xe8P7Q55f-w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+									</div>
+									<div class="swiper-slide">
+										<iframe class="lazy" width="100%" data-src="https://www.youtube.com/embed/YQmHNeSTQDI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+									</div>
+									<div class="swiper-slide">
+										<iframe class="lazy" width="100%" data-src="https://www.youtube.com/embed/0t1jBcfDG0E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+									</div>
+									<div class="swiper-slide">
+										<iframe class="lazy" width="100%" data-src="https://www.youtube.com/embed/Rz4asF3H0Qs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+									</div>
+									<div class="swiper-slide">
+										<iframe class="lazy" width="100%" data-src="https://www.youtube.com/embed/xe8P7Q55f-w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-lg-4">
+							<div class="right swiper-container">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide pr-2">
+										<div class="item">
+											<p>MIRAI HUMAN RESOURCES COMPANY LIMITED</p>
+										</div>
+									</div>
+									<div class="swiper-slide pr-2">
+										<div class="item">
+											<p>Đài truyền hình Khánh Hòa đưa tin về đề án xuất khẩu lao động</p>
+										</div>
+									</div>
+									<div class="swiper-slide pr-2">
+										<div class="item">
+											<p>Đài truyền hình Khánh Hòa đưa tin về đề án xuất khẩu lao động Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, veniam?</p>
+										</div>
+									</div>
+									<div class="swiper-slide pr-2">
+										<div class="item">
+											<p>Học viên Mirai</p>
+										</div>
+									</div>
+									<div class="swiper-slide pr-2">
+										<div class="item">
+											<p>Mirai human ベトナム面接2</p>
+										</div>
+									</div>
+									<div class="swiper-slide pr-2">
+										<div class="item">
+											<p>ATV đến với - MiraiHuman - quá trình tuyển dụng nhân lực xkld</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="home-news py-3">
+				<div class="container p-md-0">
+					<div class="text-center">
+						<h2 class="title">tin tức</h2>
+					</div>
+					<div class="row mt-4">
+						<div class="col-lg-8">
+							<div class="home-news__main p-3"><a class="hashtag d-none d-md-inline-block" href="#">Nổi bật</a>
+								<div class="swiper-container" style="height: 100%">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="home-news__main__wrapper">
+												<div class="home-news__main__desc px-md-3">
+													<div class="home-news__main__title mt-3 mt-md-5">
+														<div class="d-md-none"><a class="hashtag" href="#">Nổi bật</a></div><a href="news-detail.html" title="Mirai tổ chức Lễ cấp chứng chỉ Đào Tạo lớp sơ cấp Điều Dưỡng khóa 1 năm 2020">Mirai tổ chức Lễ cấp chứng chỉ Đào Tạo lớp sơ cấp Điều Dưỡng khóa 1 năm 2020</a>
+													</div>
+													<div class="home-news__main__time mt-2 mt-md-3">20-05-2020</div>
+												</div>
+												<div class="home-news__main__image"><img class="lazy" data-src="http://noibo.miraihuman.com/public/miraiuploads/%E1%BA%A3nh%20b%C3%A0i%20vi%E1%BA%BFt%202/IMG_4896-min.jpg" alt="Hình ảnh"></div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="home-news__main__wrapper">
+												<div class="home-news__main__desc px-md-3">
+													<div class="home-news__main__title mt-3 mt-md-5">
+														<div class="d-md-none"><a class="hashtag" href="#">Nổi bật</a></div><a href="news-detail.html" title="Diễn biến dịch bệnh covid 19 ở Nhật Bản đã có xu hướng giảm bớt, Chính Phủ Nhật quyết định gỡ bỏ lệnh khẩn cấp ở 39 trên 47 tỉnh thành">Diễn biến dịch bệnh covid 19 ở Nhật Bản đã có xu hướng giảm bớt, Chính Phủ Nhật quyết định gỡ bỏ lệnh khẩn cấp ở 39 trên 47 tỉnh thành</a>
+													</div>
+													<div class="home-news__main__time mt-2 mt-md-3">19-05-2020</div>
+												</div>
+												<div class="home-news__main__image"><img class="lazy" data-src="http://noibo.miraihuman.com/public/miraiuploads/%E1%BA%A3nh%20b%C3%A0i%20vi%E1%BA%BFt%202/nhcovid_plgh.jpg" alt="Hình ảnh"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="home-news__main__nav mt-3 mt-md-0"><span class="home-news__main__nav-prev mdi mdi-chevron-left" role="button"></span><span class="home-news__main__nav-next mdi mdi-chevron-right" role="button"></span></div>
+							</div>
+						</div>
+						<div class="col-lg-4 mt-4 mt-lg-0">
+							<div class="home-news__sub">
+								<div class="home-news__sub__header">
+									<div class="home-news__sub__header__title">MỚI NHẤT</div>
+									<div class="home-news__sub__nav">
+										<div class="home-news__sub__nav-prev mdi mdi-chevron-up" role="button"></div>
+										<div class="home-news__sub__nav-next mdi mdi-chevron-down" role="button"></div>
+									</div>
+								</div>
+								<div class="swiper-container">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="home-news__sub__desc">
+												<div class="home-news__sub__title"><a href="news-detail.html" title="Chia sẻ kinh nghiệm khi tham gia phỏng vấn xuất khẩu lao động bằng Skype">Chia sẻ kinh nghiệm khi tham gia phỏng vấn xuất khẩu lao động bằng Skype</a></div>
+												<div class="home-news__sub__time mt-2">20-05-2020</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="home-news__sub__desc">
+												<div class="home-news__sub__title"><a href="news-detail.html" title="Chính Phủ Nhật Bản lên kế hoạch dỡ bỏ tình trạng khẩn cấp ở 5 quận còn lại, kết thúc tình trạng khẩn cấp trên toàn quốc">Chính Phủ Nhật Bản lên kế hoạch dỡ bỏ tình trạng khẩn cấp ở 5 quận còn lại, kết thúc tình trạng khẩn cấp trên toàn quốc</a></div>
+												<div class="home-news__sub__time mt-2">25-05-2020</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="home-news__sub__desc">
+												<div class="home-news__sub__title"><a href="news-detail.html" title="Cơ hội nào cho các thực tập sinh cao tuổi đi xuất khẩu lao động Nhật Bản">Cơ hội nào cho các thực tập sinh cao tuổi đi xuất khẩu lao động Nhật Bản</a></div>
+												<div class="home-news__sub__time mt-2">20-05-2020</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="home-news__sub__desc">
+												<div class="home-news__sub__title"><a href="news-detail.html" title="Chương trình kỹ năng đặc định ngành vệ sinh tòa nhà">Chương trình kỹ năng đặc định ngành vệ sinh tòa nhà</a></div>
+												<div class="home-news__sub__time mt-2">20-05-2020</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="home-news__sub__desc">
+												<div class="home-news__sub__title"><a href="news-detail.html" title="Cùng tìm hiểu một vài tiêu chí giúp các thực tập sinh có thể lựa chọn được đơn hàng phù hợp">Cùng tìm hiểu một vài tiêu chí giúp các thực tập sinh có thể lựa chọn được đơn hàng phù hợp</a></div>
+												<div class="home-news__sub__time mt-2">25-05-2020</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="home-news__sub__desc">
+												<div class="home-news__sub__title"><a href="news-detail.html" title="MỘT SỐ KINH NGHIỆM CHỌN TRƯỜNG VÀ THI ĐẠI HỌC Ở NHẬT">MỘT SỐ KINH NGHIỆM CHỌN TRƯỜNG VÀ THI ĐẠI HỌC Ở NHẬT</a></div>
+												<div class="home-news__sub__time mt-2">20-05-2020</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="home-lienket mt-4">
+				<div class="container">
+					<div class="col-12 text-center">
+						<div class="title mx-auto mb-2">LIÊN KẾT VỚI TRƯỜNG ĐẠI HỌC, CAO ĐẲNG TẠO CƠ HỘI VIỆC LÀM TIẾNG NHẬT CHO SINH VIÊN</div><img src="img/icon/line.png" alt="line.png">
+					</div>
+					<div class="swiper-container my-4">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><a class="home-lienket__item" href="http://hcmute.edu.vn/"><img class="lazy" data-src="img/school/school-1.png" alt="school-1.png">
+									<div class="home-lienket__description">Trường ĐH Sư phạm Kỹ thuật TP. HCM </div></a></div>
+							<div class="swiper-slide"><a class="home-lienket__item" href="http://hufi.edu.vn/"><img class="lazy" data-src="img/school/school-2.png" alt="school-2.png">
+									<div class="home-lienket__description">Trường ĐH Công Nghiệp Thực Phẩm HCM</div></a></div>
+							<div class="swiper-slide"><a class="home-lienket__item" href="http://vlute.edu.vn/vi/"><img class="lazy" data-src="img/school/school-3.png" alt="school-3.png">
+									<div class="home-lienket__description">Trường ĐH Sư phạm Kỹ thuật Vĩnh Long</div></a></div>
+							<div class="swiper-slide"><a class="home-lienket__item" href="http://www.vlvc.edu.vn/"><img class="lazy" data-src="img/school/school-4.png" alt="school-4.png">
+									<div class="home-lienket__description">Trường Cao Đẳng Nghề Vĩnh Long</div></a></div>
+							<div class="swiper-slide"><a class="home-lienket__item" href="http://www.tgu.edu.vn/"><img class="lazy" data-src="img/school/school-5.png" alt="school-5.png">
+									<div class="home-lienket__description"> Trường ĐH Tiền Giang</div></a></div>
+							<div class="swiper-slide"><a class="home-lienket__item" href="http://danavtc.edu.vn/"><img class="lazy" data-src="img/school/school-6.png" alt="school-6.png">
+									<div class="home-lienket__description">Trường Cao Đẳng Nghề Đà Nẵng</div></a></div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<section class="back-2-top">
+			<div class="btn-back-2-top"></div>
+		</section>
+		<section class="stuff-hoi-dap"><a class="logo" href="index.html"><img class="lazy" data-src="img/logo/logo-none-sologan.png" alt="logo-none-sologan"></a>
+			<div class="sidebar-wrap sidebar-hoi-dap">
+				<nav class="sidebar-inner">
+					<li><a href="ds-donhang.html">Kỹ sư Việt Nhật</a></li>
+					<li><a href="ds-donhang.html">Du học sinh</a></li>
+					<li><a href="ds-donhang.html">Thực tập sinh</a></li>
+				</nav>
+			</div>
+			<div class="sidebar-wrap sidebar-ho-tro">
+				<div class="sidebar-title">hỗ trợ</div>
+				<nav class="sidebar-inner">
+					<li><a href="hoi-dap.html">Hỗ trợ Học viên & Thực tập sinh tại Nhật</a></li>
+				</nav>
+			</div>
+			<div class="dang-ky-ngay sidebar-title"><a href="contact.html"><img class="lazy" data-src="img/icon/icon-phone.png" alt="icon-phone.png"><span>liên hệ</span></a></div>
+		</section>
+		<footer class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-6 col-md-3">
+						<div class="footer-header">trang chủ</div>
+						<ul>
+							<li><a href="about.html">Giới thiệu</a></li>
+							<li><a href="contact.html">Liên hệ</a></li>
+							<li><a href="news.html">Tin tức</a></li>
+							<li><a href="hoi-dap.html">Hỏi đáp</a></li>
+							<li><a href="ds-donhang.html">Thực tập sinh</a></li>
+							<li><a href="ds-donhang.html">Kỹ sư</a></li>
+							<li><a href="ds-donhang.html">Điều dưỡng</a></li>
+							<li><a href="ds-donhang.html">Đặc định</a></li>
+						</ul>
+					</div>
+					<div class="col-6 col-md-3">
+						<div class="footer-header">Hỏi đáp</div>
+						<ul>
+							<li><a href="hoi-dap.html">Mới học xong lớp 10 có thể đi lao động tại Nhà...</a></li>
+							<li><a href="hoi-dap.html">Điều kiện thủ tục lao động tại Nhật Bản</a></li>
+							<li><a href="hoi-dap.html">Muốn sang Nhật làm điều dưỡng</a></li>
+							<li><a href="hoi-dap.html">Muốn đi Nhật làm trong ngành máy tàu</a></li>
+						</ul>
+					</div>
+					<div class="col-6 col-md-3">
+						<div class="footer-header">Tin tức & sự kiện</div>
+						<ul>
+							<li><a href="news.html">Tìm hiểu Tochigi, nơi khởi nguồn những...</a></li>
+							<li><a href="news.html">Đơn hàng kỹ sư may mặc đi Nhật</a></li>
+							<li><a href="news.html">Bạn đã biết gì về đơn hàng xây dựng tổ...</a></li>
+							<li><a href="news.html">Những điều bạn cần biết về đơn hàng đặt...</a></li>
+						</ul>
+					</div>
+					<div class="col-6 col-md-3">
+						<div class="footer-header">giấy phép</div>
+						<ul>
+							<li>
+								<p>789/lđtnxh-gp, giấy phép đưa người lao động đi làm việc ở nước ngoài</p><a href="giay-phep.html"><img class="lazy giay-phep" data-src="img/icon/icon-footer.png" alt="icon-footer.png"></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<hr class="my-4">
+				<div class="row">
+					<div class="col-12 d-flex"><img class="lazy mr-sm-3" data-src="img/icon/icon-facebook.png" width="69" height="69" alt="icon-facebook.png">
+						<div id="fb-root"></div>
+						<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&amp;version=v5.0"></script>
+						<div class="fb-page" data-href="https://www.facebook.com/fanpage.mirai" data-tabs="timeline" data-width="220" data-height="62" data-small-header="true" data-adapt-container-width="false" data-hide-cover="true" data-show-facepile="false">
+							<blockquote class="fb-xfbml-parse-ignore" cite="https://www.facebook.com/fanpage.mirai"><a href="https://www.facebook.com/fanpage.mirai"></a></blockquote>
+						</div>
+					</div>
+				</div>
+				<hr class="my-4">
+				<div class="row" style="justify-content: center">
+					<div class="col-6 col-md-3">
+						<div class="footer-header"> CÔNG TY TNHH NHÂN LỰC MIRAI </div>
+						<ul>
+							<li>26/4 - 26/5 Lê Thánh Tôn, P. Bến Nghé, Quận 1, HCM, Việt Nam </li>
+							<li>(+84) 28 6686 3208</li>
+							<li>(+84) 28 6686 3208</li>
+							<li>contact@miraihuman.com</li>
+							<li>www.miraihuman.com</li>
+						</ul>
+					</div>
+					<div class="col-6 col-md-3">
+						<div class="footer-header"> TRUNG TÂM ĐÀO TẠO </div>
+						<ul>
+							<li>155 Trần Trọng Cung, P. Tân Thuận Đông, Quận 7, HCM, Việt Nam </li>
+							<li>(+84) 28 6686 3208</li>
+							<li>(+84) 28 6686 3208</li>
+							<li>contact@miraihuman.com</li>
+							<li>www.miraihuman.com</li>
+						</ul>
+					</div>
+					<div class="col-6 col-md-3">
+						<div class="footer-header">CƠ SỞ 2</div>
+						<ul>
+							<li>27/3 Đường số 10 - KP 3, P. Bình Thuận, Quận 7, TP Hồ Chí Minh</li>
+							<li>(+84) 902 763 882</li>
+							<li>www.miraihuman.com</li>
+						</ul>
+					</div>
+					<div class="col-6 col-md-3">
+						<div class="footer-header">CƠ SỞ 3</div>
+						<ul>
+							<li>11/2 Đường số 10, P. Bình Thuận, Quận 7, TP Hồ Chí Minh</li>
+							<li>(+84) 938 212 028</li>
+							<li>(+84) 28 6272 0651</li>
+							<li>contact@miraihuman.com</li>
+							<li>www.miraihuman.com</li>
+						</ul>
+					</div>
+					<div class="col-6 col-md-3">
+						<div class="footer-header"> VĂN PHÒNG TẠI TOKYO</div>
+						<ul>
+							<li>〒141-0021 Tokyouto Shinagawaku Kamioosaki 2 Choume 13 Ban 32 Gou Tomita Biru 401</li>
+							<li>（+81）80 2274 5232</li>
+							<li>contact@miraihuman.com</li>
+							<li>www.miraihuman.com</li>
+						</ul>
+					</div>
+					<div class="col-6 col-md-3">
+						<div class="footer-header"> VĂN PHÒNG TẠI KANAGAWA </div>
+						<ul>
+							<li>〒 211-0002 2-1341-10 kamimaruko sannocho, nakahara ku, kawasaki shi, kanagawa ken</li>
+							<li>(+81) 44 - 863 - 8515</li>
+							<li>contact@miraihuman.com</li>
+							<li>www.miraihuman.com</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<div class="container d-flex justify-content-between align-items-center flex-column flex-md-row">
+					<div class="icon-social"><a class="mdi mdi-facebook" href="https://www.facebook.com/fanpage.mirai" target="_blank"></a><a class="mdi mdi-youtube" href="https://www.youtube.com/channel/UC_aPd7LFRhF27FXPqYrILoA" target="_blank"></a></div>
+					<div class="text-center">COPYRIGHT © <span id="year"></span> MIRAIHUMAN. ALL RIGHT RESERVED.</div>
+				</div>
+			</div>
+		</footer>
+		<script src="./js/global.min.js"></script>
+		<script src="./js/main.min.js"></script>
+	</body>
+</html>

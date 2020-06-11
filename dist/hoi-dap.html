@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="stylesheet" href="./css/global.min.css">
+		<link rel="stylesheet" href="./css/main.min.css">
+		<title>Hoi-dap</title>
+	</head>
+	<body>
+		<header class="header">
+			<div class="header-desktop d-none d-lg-block bg-white">
+				<div class="header-desktop__top container p-0 d-flex align-items-center">
+					<div class="d-flex flex-column flex-xl-row" style="font-size: .9rem;"><span class="mdi mdi-email mr-2">Email: contact@miraihuman.com</span><span class="mdi mdi-phone">Hotline: 0902 538 164</span></div>
+					<div class="d-flex align-items-center ml-auto">
+						<form class="header-search mr-3" role="search">
+							<input class="header-search__input" type="search" name="search" placeholder="Tìm kiếm..." autocomplete="off">
+						</form><a href="#"><img class="header-lang__flag jp" src="img/language/jp.svg" alt="jp.svg"></a><a href="#"><img class="header-lang__flag" src="img/language/vn.svg" alt="vn.svg"></a>
+					</div>
+				</div>
+				<div class="header-desktop__navbar">
+					<div class="container p-0 d-flex align-items-center justify-content-between">
+						<nav class="header-desktop__navbar__nav">
+							<li class="active"><a href="index.html">Trang chủ</a></li>
+							<li><a href="about.html">Giới thiệu</a></li>
+							<li><a href="trungtam-ngoaingu.html" style="white-space: nowrap">Trung tâm<br>ngoại ngữ</a></li>
+						</nav>
+						<div class="header-logo__desktop"><a href="index.html"><img class="logo" src="img/logo/logo.png" alt="logo-desktop"></a><img class="bg" src="img/logo/Artboard 2 - nosologan.png" alt="logo-desktop-bg"></div>
+						<nav class="header-desktop__navbar__nav">
+							<li><a href="ds-donhang.html">Đặc định</a></li>
+							<li><a href="ds-donhang.html">Đơn hàng</a>
+								<ul class="header-desktop__navbar__subnav">
+									<li><a href="ds-donhang.html">Điều dưỡng</a></li>
+									<li><a href="ds-donhang.html">Kỹ sư</a></li>
+									<li><a href="ds-donhang.html">Thực tập sinh</a></li>
+								</ul>
+							</li>
+							<li><a href="news.html">Tin tức</a></li>
+						</nav>
+					</div>
+				</div>
+			</div>
+			<div class="header-mobile d-lg-none"><a href="index.html"><img class="header-logo__mobile" src="img/logo/logo.png" alt="logo.png"></a>
+				<div class="header-mobile__button__open mdi mdi-menu" role="button"></div>
+				<div class="offcanvas offcanvas-overlay">
+					<div class="offcanvas-bar">
+						<div class="offcanvas-header"><a href="index.html"><img class="lazy header-logo__mobile" src="img/logo/logo.png" alt="logo.png"></a></div>
+						<ul class="offcanvas-nav">
+							<li><a href="index.html"><span class="offcanvas-icons mdi mdi-home-outline"></span> Trang chủ</a></li>
+							<li><a href="about.html"><span class="offcanvas-icons mdi mdi-information-outline"></span>Giới thiệu</a></li>
+							<li><a href="trungtam-ngoaingu.html"><span class="offcanvas-icons mdi mdi-email-outline"></span>Trung tâm ngoại ngữ</a></li>
+							<li><a href="ds-donhang.html"><span class="offcanvas-icons mdi mdi-briefcase-outline"></span> Đơn hàng</a>
+								<ul class="offcanvas-nav__sub">
+									<li><a href="ds-donhang.html">Đặc định</a></li>
+									<li><a href="ds-donhang.html">Điều dưỡng</a></li>
+									<li><a href="ds-donhang.html">Kỹ sư</a></li>
+									<li><a href="ds-donhang.html">Thực tập sinh</a></li>
+								</ul>
+							</li>
+							<li><a href="news.html"><span class="offcanvas-icons mdi mdi-share-variant"></span>Tin tức</a></li>
+							<li><a href="hoi-dap.html"><span class="offcanvas-icons mdi mdi-message-processing-outline"></span>Hỏi đáp</a></li>
+							<li><a href="contact.html"><span class="offcanvas-icons mdi mdi-phone"></span>Liên hệ</a></li>
+							<li><span class="offcanvas-icons mdi mdi-tools"></span> Ngôn ngữ
+								<ul class="offcanvas-nav__sub">
+									<li><a class="d-flex align-items-center" href="#jp"><img class="header-lang__flag" src="img/language/jp.svg" alt="jp.svg"> Tiếng Nhật</a></li>
+									<li><a class="d-flex align-items-center" href="#vn"><img class="header-lang__flag" src="img/language/vn.svg" alt="vn.svg"> Tiếng Việt</a></li>
+								</ul>
+							</li>
+							<li><a class="header-mobile__button__close mt-4" href="#" role="button"><span class="offcanvas-icons mdi mdi-close"></span>Đóng</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main>
+			<section class="page-banner">
+				<picture>
+					<source media="(min-width: 960px)" srcset="img/banner/banner-hoidap-1920x500.png">
+					<source media="(min-width: 640px)" srcset="img/banner/banner-hoidap-960x500.png"><img class="lazy" data-src="img/banner/banner-hoidap-960x500.png" alt="img/banner/banner-hoidap-960x500.png">
+				</picture>
+			</section>
+			<section class="hoi-dap">
+				<div class="container p-md-0">
+					<section class="breadcrumb-container">
+						<nav class="breadcrumb-nav">
+							<li class="breadcrumb-item"><a class="page" href="#">Root</a></li>
+							<li class="breadcrumb-item"><a class="page" href="#">Level 1</a></li>
+							<li class="breadcrumb-item"><a class="page" href="#">Level 2</a></li>
+							<li class="breadcrumb-item"><a class="page" href="#">Lorem ipsum dolor sit amet.</a></li>
+						</nav>
+					</section>
+					<div class="row">
+						<div class="col-md-4">
+							<nav class="sidebar">
+								<li class="active" tab="tabs0">Xuất khẩu lao động tại Nhật</li>
+								<li tab="tabs1">Mức lương XKLĐ tại Nhật</li>
+							</nav>
+						</div>
+						<div class="col-md-8">
+							<div class="hoi-dap-content">
+								<h3 class="sub-title">Xuất khẩu lao động tại Nhật</h3>
+								<div class="tabs active" tab="tabs0">
+									<div class="item">
+										<div class="item-title">Muốn sang Nhật làm điều dưỡng</div>
+										<div class="item-content">
+											<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At cum voluptates dolor saepe debitis est quo ratione illo corrupti architecto itaque, in quaerat porro quidem! Magni beatae facere quod! Reprehenderit amet dicta dolores dolorum tempora consequatur! Nobis quia, repudiandae beatae id odio repellendus sequi voluptates eius reiciendis. Molestias veniam quasi fugit enim impedit esse exercitationem aut beatae voluptatum, quae veritatis, consequuntur voluptate. Necessitatibus dolorem nostrum dignissimos quasi totam nesciunt rem accusamus? Quae repudiandae incidunt veritatis natus! Eveniet reiciendis in reprehenderit nesciunt atque fuga aspernatur eaque, laudantium debitis magnam voluptates inventore consequatur adipisci! Voluptatibus soluta sed amet ipsum incidunt accusantium dignissimos?</p>
+										</div>
+									</div>
+									<div class="item">
+										<div class="item-title">XKLD Nhật. Bao lâu mới có công việc ổn định</div>
+										<div class="item-content">
+											<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At cum voluptates dolor saepe debitis est quo ratione illo corrupti architecto itaque, in quaerat porro quidem! Magni beatae facere quod! Reprehenderit amet dicta dolores dolorum tempora consequatur! Nobis quia, repudiandae beatae id odio repellendus sequi voluptates eius reiciendis. Molestias veniam quasi fugit enim impedit esse exercitationem aut beatae voluptatum, quae veritatis, consequuntur voluptate. Necessitatibus dolorem nostrum dignissimos quasi totam nesciunt rem accusamus? Quae repudiandae incidunt veritatis natus! Eveniet reiciendis in reprehenderit nesciunt atque fuga aspernatur eaque, laudantium debitis magnam voluptates inventore consequatur adipisci! Voluptatibus soluta sed amet ipsum incidunt accusantium dignissimos?</p>
+										</div>
+									</div>
+								</div>
+								<div class="tabs" tab="tabs1">
+									<div class="item">
+										<div class="item-title">Mức lương Kỹ Sư làm tại Nhật Bản</div>
+										<div class="item-content">
+											<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At cum voluptates dolor saepe debitis est quo ratione illo corrupti architecto itaque, in quaerat porro quidem! Magni beatae facere quod! Reprehenderit amet dicta dolores dolorum tempora consequatur! Nobis quia, repudiandae beatae id odio repellendus sequi voluptates eius reiciendis. Molestias veniam quasi fugit enim impedit esse exercitationem aut beatae voluptatum, quae veritatis, consequuntur voluptate. Necessitatibus dolorem nostrum dignissimos quasi totam nesciunt rem accusamus? Quae repudiandae incidunt veritatis natus! Eveniet reiciendis in reprehenderit nesciunt atque fuga aspernatur eaque, laudantium debitis magnam voluptates inventore consequatur adipisci! Voluptatibus soluta sed amet ipsum incidunt accusantium dignissimos?</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<section class="back-2-top">
+			<div class="btn-back-2-top"></div>
+		</section>
+		<section class="stuff-hoi-dap"><a class="logo" href="index.html"><img class="lazy" data-src="img/logo/logo-none-sologan.png" alt="logo-none-sologan"></a>
+			<div class="sidebar-wrap sidebar-hoi-dap">
+				<nav class="sidebar-inner">
+					<li><a href="ds-donhang.html">Kỹ sư Việt Nhật</a></li>
+					<li><a href="ds-donhang.html">Du học sinh</a></li>
+					<li><a href="ds-donhang.html">Thực tập sinh</a></li>
+				</nav>
+			</div>
+			<div class="sidebar-wrap sidebar-ho-tro">
+				<div class="sidebar-title">hỗ trợ</div>
+				<nav class="sidebar-inner">
+					<li><a href="hoi-dap.html">Hỗ trợ Học viên & Thực tập sinh tại Nhật</a></li>
+				</nav>
+			</div>
+			<div class="dang-ky-ngay sidebar-title"><a href="contact.html"><img class="lazy" data-src="img/icon/icon-phone.png" alt="icon-phone.png"><span>liên hệ</span></a></div>
+		</section>
+		<footer class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-6 col-md-3">
+						<div class="footer-header">trang chủ</div>
+						<ul>
+							<li><a href="about.html">Giới thiệu</a></li>
+							<li><a href="contact.html">Liên hệ</a></li>
+							<li><a href="news.html">Tin tức</a></li>
+							<li><a href="hoi-dap.html">Hỏi đáp</a></li>
+							<li><a href="ds-donhang.html">Thực tập sinh</a></li>
+							<li><a href="ds-donhang.html">Kỹ sư</a></li>
+							<li><a href="ds-donhang.html">Điều dưỡng</a></li>
+							<li><a href="ds-donhang.html">Đặc định</a></li>
+						</ul>
+					</div>
+					<div class="col-6 col-md-3">
+						<div class="footer-header">Hỏi đáp</div>
+						<ul>
+							<li><a href="hoi-dap.html">Mới học xong lớp 10 có thể đi lao động tại Nhà...</a></li>
+							<li><a href="hoi-dap.html">Điều kiện thủ tục lao động tại Nhật Bản</a></li>
+							<li><a href="hoi-dap.html">Muốn sang Nhật làm điều dưỡng</a></li>
+							<li><a href="hoi-dap.html">Muốn đi Nhật làm trong ngành máy tàu</a></li>
+						</ul>
+					</div>
+					<div class="col-6 col-md-3">
+						<div class="footer-header">Tin tức & sự kiện</div>
+						<ul>
+							<li><a href="news.html">Tìm hiểu Tochigi, nơi khởi nguồn những...</a></li>
+							<li><a href="news.html">Đơn hàng kỹ sư may mặc đi Nhật</a></li>
+							<li><a href="news.html">Bạn đã biết gì về đơn hàng xây dựng tổ...</a></li>
+							<li><a href="news.html">Những điều bạn cần biết về đơn hàng đặt...</a></li>
+						</ul>
+					</div>
+					<div class="col-6 col-md-3">
+						<div class="footer-header">giấy phép</div>
+						<ul>
+							<li>
+								<p>789/lđtnxh-gp, giấy phép đưa người lao động đi làm việc ở nước ngoài</p><a href="giay-phep.html"><img class="lazy giay-phep" data-src="img/icon/icon-footer.png" alt="icon-footer.png"></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<hr class="my-4">
+				<div class="row">
+					<div class="col-12 d-flex"><img class="lazy mr-sm-3" data-src="img/icon/icon-facebook.png" width="69" height="69" alt="icon-facebook.png">
+						<div id="fb-root"></div>
+						<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&amp;version=v5.0"></script>
+						<div class="fb-page" data-href="https://www.facebook.com/fanpage.mirai" data-tabs="timeline" data-width="220" data-height="62" data-small-header="true" data-adapt-container-width="false" data-hide-cover="true" data-show-facepile="false">
+							<blockquote class="fb-xfbml-parse-ignore" cite="https://www.facebook.com/fanpage.mirai"><a href="https://www.facebook.com/fanpage.mirai"></a></blockquote>
+						</div>
+					</div>
+				</div>
+				<hr class="my-4">
+				<div class="row" style="justify-content: center">
+					<div class="col-6 col-md-3">
+						<div class="footer-header"> CÔNG TY TNHH NHÂN LỰC MIRAI </div>
+						<ul>
+							<li>26/4 - 26/5 Lê Thánh Tôn, P. Bến Nghé, Quận 1, HCM, Việt Nam </li>
+							<li>(+84) 28 6686 3208</li>
+							<li>(+84) 28 6686 3208</li>
+							<li>contact@miraihuman.com</li>
+							<li>www.miraihuman.com</li>
+						</ul>
+					</div>
+					<div class="col-6 col-md-3">
+						<div class="footer-header"> TRUNG TÂM ĐÀO TẠO </div>
+						<ul>
+							<li>155 Trần Trọng Cung, P. Tân Thuận Đông, Quận 7, HCM, Việt Nam </li>
+							<li>(+84) 28 6686 3208</li>
+							<li>(+84) 28 6686 3208</li>
+							<li>contact@miraihuman.com</li>
+							<li>www.miraihuman.com</li>
+						</ul>
+					</div>
+					<div class="col-6 col-md-3">
+						<div class="footer-header">CƠ SỞ 2</div>
+						<ul>
+							<li>27/3 Đường số 10 - KP 3, P. Bình Thuận, Quận 7, TP Hồ Chí Minh</li>
+							<li>(+84) 902 763 882</li>
+							<li>www.miraihuman.com</li>
+						</ul>
+					</div>
+					<div class="col-6 col-md-3">
+						<div class="footer-header">CƠ SỞ 3</div>
+						<ul>
+							<li>11/2 Đường số 10, P. Bình Thuận, Quận 7, TP Hồ Chí Minh</li>
+							<li>(+84) 938 212 028</li>
+							<li>(+84) 28 6272 0651</li>
+							<li>contact@miraihuman.com</li>
+							<li>www.miraihuman.com</li>
+						</ul>
+					</div>
+					<div class="col-6 col-md-3">
+						<div class="footer-header"> VĂN PHÒNG TẠI TOKYO</div>
+						<ul>
+							<li>〒141-0021 Tokyouto Shinagawaku Kamioosaki 2 Choume 13 Ban 32 Gou Tomita Biru 401</li>
+							<li>（+81）80 2274 5232</li>
+							<li>contact@miraihuman.com</li>
+							<li>www.miraihuman.com</li>
+						</ul>
+					</div>
+					<div class="col-6 col-md-3">
+						<div class="footer-header"> VĂN PHÒNG TẠI KANAGAWA </div>
+						<ul>
+							<li>〒 211-0002 2-1341-10 kamimaruko sannocho, nakahara ku, kawasaki shi, kanagawa ken</li>
+							<li>(+81) 44 - 863 - 8515</li>
+							<li>contact@miraihuman.com</li>
+							<li>www.miraihuman.com</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<div class="container d-flex justify-content-between align-items-center flex-column flex-md-row">
+					<div class="icon-social"><a class="mdi mdi-facebook" href="https://www.facebook.com/fanpage.mirai" target="_blank"></a><a class="mdi mdi-youtube" href="https://www.youtube.com/channel/UC_aPd7LFRhF27FXPqYrILoA" target="_blank"></a></div>
+					<div class="text-center">COPYRIGHT © <span id="year"></span> MIRAIHUMAN. ALL RIGHT RESERVED.</div>
+				</div>
+			</div>
+		</footer>
+		<script src="./js/global.min.js"></script>
+		<script src="./js/main.min.js"></script>
+	</body>
+</html>
