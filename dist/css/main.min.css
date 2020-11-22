@@ -2611,6 +2611,14 @@ img {
     color: transparent; }
   .form__field::placeholder {
     color: transparent; }
+  .form__field:-moz-placeholder-shown ~ .form__label {
+    top: 24px;
+    font-size: 1rem;
+    cursor: text; }
+  .form__field:-ms-input-placeholder ~ .form__label {
+    top: 24px;
+    font-size: 1rem;
+    cursor: text; }
   .form__field:placeholder-shown ~ .form__label {
     top: 24px;
     font-size: 1rem;
